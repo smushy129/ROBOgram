@@ -28,7 +28,7 @@ FUTUREgram is a full-stack web application inspired by Instagram.  It utilizes R
 - Infinite Scrolling of Images
 
 ## Design Docs
-- [View Wireframes](/wireframes)
+- [View Wireframes](/https://github.com/kingsleyliao/futuregram/tree/master/docs/wireframes)
 - [React Components](component-hierarchy.md)
 - [API endpoints](api-endpoints.md)
 - [DB schema](schema.md)
@@ -51,5 +51,5 @@ FUTUREgram is a full-stack web application inspired by Instagram.  It utilizes R
 ### Phase 5: Followers/Following (1/2 day)
 **Objective**: Users can follow other users and show followers and following users' count on user profile.
 
-### Phase 6: Photo Feed and Infinite Scroll (1 day)
-**Objective**: Display following users' photos with infinite scroll on the home page.
+### Phase 6: Photo Feed and Search (1 day)
+**Objective**: Display following users' photos and search bar.
