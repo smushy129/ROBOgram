@@ -1,6 +1,6 @@
 # InstagramClone
 
-# FresherNote
+# FUTUREgram
 
 [FUTUREgram live][heroku]
 
@@ -20,7 +20,7 @@ FUTUREgram is a full-stack web application inspired by Instagram.  It utilizes R
 - Image Comments
 - User Search
 
-BONUSES
+### BONUSES
 - Videos
 - Hashtags
 - Collapsing Comments
