@@ -27,6 +27,13 @@ FUTUREgram is a full-stack web application inspired by Instagram.  It utilizes R
 - Direct Messaging
 - Infinite Scrolling of Images
 
+## Design Docs
+- [View Wireframes](/wireframes)
+- [React Components](component-hierarchy.md)
+- [API endpoints](api-endpoints.md)
+- [DB schema](schema.md)
+- [Sample State](sample-state.md)
+
 ## Implementation Timeline
 
 ### Phase 1: Backend Setup, Front-End User Authentication (2 days)
