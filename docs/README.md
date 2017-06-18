@@ -39,17 +39,17 @@ FUTUREgram is a full-stack web application inspired by Instagram.  It utilizes R
 ### Phase 1: Backend Setup, Front-End User Authentication (2 days)
 **Objective:** Functioning Rails project with Front-End Authentication.
 
-### Phase 2: Images Model, API, and components (2 days)
-**Objective:** Images can be created and destroyed through the API. Display images on the home page/user profile
+### Phase 2: Backend Setup for Images. Build Frontend Components for Images (2 days)
+**Objective:** Photos can be created and destroyed through a Photos API. Images are rendered on the main and user profile pages
 
-### Phase 3: Likes (1 day)
-**Objective**: Likes can be created (liked) and destroyed (un-liked) with a count of likes shown on each image.
+### Phase 3: Implement Followers/Following feature (1 day)
+**Objective**: Users can follow and unfollow other users. Followers/Following count rendered on user profile page
 
-### Phase 4: Comments (1 day)
-**Objective**: Comments can be created and destroyed with all comments shown on each image.
+### Phase 4: Photo Feed and Search (1 day)
+**Objective**: Display following users' photos. Users can be searched by the search bar.
 
-### Phase 5: Followers/Following (1/2 day)
-**Objective**: Users can follow other users and show followers and following users' count on user profile.
+### Phase 5: Comments (1 day)
+**Objective**: A users's own comments can be created and destroyed on an image. Users cannot remove comments by other users.
 
-### Phase 6: Photo Feed and Search (1 day)
-**Objective**: Display following users' photos and search bar.
+### Phase 6: Likes (1 day)
+**Objective**: Images can be liked and unliked. A count of number of likes are shown on each image.
