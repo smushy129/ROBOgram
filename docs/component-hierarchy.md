@@ -12,7 +12,7 @@
 
 The SearchBar will allow the user to search for links to user profiles. Upon click, search bar background color will change from grey to white. The placeholder text will align left upon click.
 
-###NavBarContainer
+### NavBarContainer
 - User Links
 
 The Navigation bar will contain links to the UserShowPage, ImageUploadModal,

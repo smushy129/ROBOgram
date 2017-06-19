@@ -6,12 +6,12 @@
 |--------|-----|---------------------|
 | `GET`  | `/` | Loads React Web App |
 
-##JSON API
+## JSON API
 ### Users
 | Method | URI                 | Description               |
 |--------|---------------------|---------------------------|
 | `GET`  | `/`                 | Loads React Web App       |
-| `POST` | `/api.users`        | Create new user           |
+| `POST` | `/api/users`        | Create new user           |
 | `GET`  | `/api/users/:id`    | Get user by id or username|
 | `PATCH`| `/api/users/:id`    | Update user data          |
 | `GET`  | `/api/users/search` | Search user by keyword    |
@@ -25,22 +25,22 @@
 ### Photos
 | Method | URI                            | Description               |
 |----------|------------------------------|---------------------------|
-| `GET`    | `/api/photos`                | Get all photos            |
-| `POST`   | `/api/photos`                | Create new photo          |
-| `GET`    | `/api/photos/:id`            | Get photo by id           |
-| `DELETE` | `/api/photos/:id`            | Delete photo by id        |
-| `GET`    | `/api/users/:user_id/photos` | Get all photos by user id |
+| `GET`    | `/api/images`                | Get all images            |
+| `POST`   | `/api/images`                | Create new image          |
+| `GET`    | `/api/images/:id`            | Get image by id           |
+| `DELETE` | `/api/images/:id`            | Delete image by id        |
+| `GET`    | `/api/users/:user_id/images` | Get all images by user id |
 
 ### Likes
 | Method   | URI                                | Description               |
 |----------|------------------------------------|---------------------------|
-| `POST`   | `/api/photos/:photo_id/likes`      | Likes a photo             |
-| `DELETE` | `/api/photos/:photo_id/likes`      | Unlikes a photos          |
+| `POST`   | `/api/images/:image_id/likes`      | Likes a image             |
+| `DELETE` | `/api/images/:image_id/likes`      | Unlikes a images          |
 
 ### Comments
 | Method   | URI                                | Description               |
 |----------|------------------------------------|---------------------------|
-| `POST`   | `/api/comments`                    | Create comment for a photo|
+| `POST`   | `/api/comments`                    | Create comment for a image|
 | `DELETE` | `/api/comments/:id`                | Delete comment by id      |
 
 ### Follows

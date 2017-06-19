@@ -9,7 +9,7 @@
     },
     errors: []
   },
-  photos: {
+  images: {
     3: {
       id: 3,
       username: "Kingsley",
@@ -62,7 +62,7 @@
     username: "Kingsley",
     name: "Kingsley",
     bio: "I am a robot. I swear.",
-    isprofilePic: true,
+    isProfilePic: true,
     profilePic: "Kingsley_profilePic.png",
     followersCount: 3,
     followers: {
@@ -102,36 +102,35 @@
         createdAt: "2017-05-04T11:59:59:00"
       }
     },
-    photos: {
+    images: {
       5: {
         id: 5,
-        urlMedium: "selfRaisingSpoon.png",
+        url: "selfRaisingSpoon.png",
         createdAt: "2017-05-21T11:59:59:00",
         likesCount: 5,
         commentsCount: 0
       },
       3: {
         id: 3,
-        urlMedium: "warpDrive.png",
+        url: "warpDrive.png",
         createdAt: "2017-05-07T11:59:59:00",
         likesCount: 2,
         commentsCount: 2
       },
       1: {
         id: 1,
-        urlMedium: "selfWalkingShoes.png",
+        url: "selfWalkingShoes.png",
         createdAt: "2017-05-01T11:59:59:00",
         likesCount: 2,
         commentsCount: 2
       }
     }
   },
-  photoDetail: {
+  imageDetail: {
     id: 1,
     username: "Kingsley",
     profilePic: "Kingsley_profilePic.png",
     url: "selfWalkingShoes.png",
-    urlMedium: "150/150/selfWalkingShoes.png",
     caption: "i don't need legs anymore",
     createdAt: "2017-03-27T09:00:00-07:00",
     uploadedAt: "51 days ago",
@@ -154,7 +153,7 @@
     }
   },
   errors: {
-    photoUpload: [],
+    imageUpload: [],
     profilePicUpload: [],
     accountEdit: ["Username can't be blank"],
     accountPassword: []
