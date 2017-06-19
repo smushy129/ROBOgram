@@ -1,4 +1,4 @@
-#Component Hierarchy
+# Component Hierarchy
 
 ### SignUpContainer
 - SignUpForm
@@ -84,9 +84,10 @@ The CommentsContainer should dispatch a addCommentToImage action or removeCommen
 ### FollowsContainer
 The FollowsContainer should dispatch a followUser action or unfollowUser action.
 
-| Path	      | Component              |
---------------|------------------------|
-| "/sign-up"  | "AuthFormContainer"    |
-| "/sign-in"  |	"AuthFormContainer"    |
-| "/"	        | "MainContainer"        |
-| "/:username"|	"UserProfileContainer" |
+| Path	          | Component              |
+------------------|------------------------|
+| "/sign-up"      | "AuthFormContainer"    |
+| "/sign-in"      | "AuthFormContainer"    |
+| "/"	            | "MainContainer"        |
+| "/:username"    | "UserProfileContainer" |
+| "/account/edit/ | "EditProfileContainer" |
