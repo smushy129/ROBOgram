@@ -1,5 +1,3 @@
-# InstagramClone
-
 # FUTUREgram
 
 [FUTUREgram live][heroku]
@@ -12,7 +10,7 @@ FUTUREgram is a full-stack web application inspired by Instagram.  It utilizes R
 
 - Hosting on Heroku
 - New Account Creation
-- Login, Logout
+- Login & Logout
 - User Profiles with User Images
 - Image Upload & Delete
 - Image Feed & Follow
