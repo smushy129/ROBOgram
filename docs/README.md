@@ -1,12 +1,12 @@
-# FUTUREgram
+# ROBOgram
 
-[FUTUREgram live][heroku]
+[ROBOgram live][heroku]
 
-[heroku]: http://www.herokuapp.com/futuregram
+[heroku]: http://www.herokuapp.com/ROBOgram
 
 ## Minimum Viable Product
 
-FUTUREgram is a full-stack web application inspired by Instagram.  It utilizes Ruby on Rails on the backend, a PostgreSQL database, and React.js with a Redux architectural framework on the frontend.  
+ROBOgram is a full-stack web application inspired by Instagram.  It utilizes Ruby on Rails on the backend, a PostgreSQL database, and React.js with a Redux architectural framework on the frontend.  
 
 - Hosting on Heroku
 - New Account Creation
@@ -26,7 +26,7 @@ FUTUREgram is a full-stack web application inspired by Instagram.  It utilizes R
 - Infinite Scrolling of Images
 
 ## Design Docs
-- [View Wireframes](/https://github.com/kingsleyliao/futuregram/tree/master/docs/wireframes)
+- [View Wireframes](/https://github.com/kingsleyliao/ROBOgram/tree/master/docs/wireframes)
 - [React Components](component-hierarchy.md)
 - [API endpoints](api-endpoints.md)
 - [DB schema](schema.md)
