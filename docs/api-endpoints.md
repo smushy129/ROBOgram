@@ -45,7 +45,7 @@
 
 ### Follows
 | Method	  | URI	                            | Description                       |
-|-----------|---------------------------------------------------------------------|
+|-----------|---------------------------------|-----------------------------------|
 | `GET`	    | `/api/users/:user_id/following`	| Get all followings                |
 | `GET`	    | `/api/users/:user_id/followers`	| Get all followers                 |
 | `POST`	  | `/api/users/:user_id/follows`	  | Follow another user               |
