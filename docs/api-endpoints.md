@@ -11,51 +11,40 @@
 | Method | URI                 | Description               |
 |--------|---------------------|---------------------------|
 | `GET`  | `/`                 | Loads React Web App       |
-|--------|---------------------|---------------------------|
 | `POST` | `/api.users`        | Create new user           |
-|--------|---------------------|---------------------------|
 | `GET`  | `/api/users/:id`    | Get user by id or username|
-|--------|---------------------|---------------------------|
 | `PATCH`| `/api/users/:id`    | Update user data          |
-|--------|---------------------|---------------------------|
 | `GET`  | `/api/users/search` | Search user by keyword    |
 
 ### Session
 | Method   | URI                 | Description               |
 |----------|---------------------|---------------------------|
 | `POST`   | `/api/session`      | Log in                    |
-|----------|---------------------|---------------------------|
 | `DELETE` | `/api/session`      | Log out                   |
 
 ### Photos
 | Method | URI                            | Description               |
 |----------|------------------------------|---------------------------|
 | `GET`    | `/api/photos`                | Get all photos            |
-|----------|------------------------------|---------------------------|
 | `POST`   | `/api/photos`                | Create new photo          |
-|----------|------------------------------|---------------------------|
 | `GET`    | `/api/photos/:id`            | Get photo by id           |
-|----------|------------------------------|---------------------------|
 | `DELETE` | `/api/photos/:id`            | Delete photo by id        |
-|----------|------------------------------|---------------------------|
 | `GET`    | `/api/users/:user_id/photos` | Get all photos by user id |
 
 ### Likes
 | Method   | URI                                | Description               |
 |----------|------------------------------------|---------------------------|
 | `POST`   | `/api/photos/:photo_id/likes`      | Likes a photo             |
-|----------|------------------------------------|---------------------------|
 | `DELETE` | `/api/photos/:photo_id/likes`      | Unlikes a photos          |
 
 ### Comments
 | Method   | URI                                | Description               |
 |----------|------------------------------------|---------------------------|
 | `POST`   | `/api/comments`                    | Create comment for a photo|
-|----------|------------------------------------|---------------------------|
 | `DELETE` | `/api/comments/:id`                | Delete comment by id      |
 
 ### Follows
-| Method	  | URI	Description                                                     |
+| Method	  | URI	                            | Description                       |
 |-----------|---------------------------------------------------------------------|
 | `GET`	    | `/api/users/:user_id/following`	| Get all followings                |
 | `GET`	    | `/api/users/:user_id/followers`	| Get all followers                 |
