@@ -55,7 +55,11 @@ class LoginForm extends React.Component {
 
   render() {
     return(
-      <section>
+      <section className="login-page">
+
+        <div className="auth-phone-img">
+          <img src="assets/auth_img1" />
+        </div>
 
         <div className='auth-form'>
           <h2 className='logo'>Robogram</h2>
@@ -89,7 +93,6 @@ class LoginForm extends React.Component {
 
             <div className="demo-login">
               <button
-                className="blue-button"
                 onClick={this.handleDemoLogin}
                 tabIndex> Demo Login
               </button>
@@ -97,13 +100,15 @@ class LoginForm extends React.Component {
 
             {this.displayErrors()}
           </form>
+
+          <div className='dont-have-account'>
+            <p>Don't have an account? <Link to="/signup">Sign up</Link> </p>
+          </div>
+
         </div>
 
 
 
-        <div className='dont-have-account'>
-          <p>Don't have an account? <Link to="/signup">Sign up</Link> </p>
-        </div>
 
       </section>
     );
