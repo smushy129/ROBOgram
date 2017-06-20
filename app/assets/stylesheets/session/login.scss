@@ -1,12 +1,12 @@
 .auth-form {
-  display: flex;
-  flex-direction: column;
+  // display: flex;
+  // flex-direction: column;
   background-color: #fff;
   border: 1px solid #e6e6e6;
   border-radius: 1px;
   margin: 0 0 10px;
   padding: 10px 0;
-  height: 387px;
+  height: 350px;
   width: 348px;
   text-align: center;
 }
@@ -14,6 +14,8 @@
 .logo {
   font-family: "Allura", cursive;
   font-size: 48px;
+  margin-top: 22px;
+  margin-bottom: 8;
 }
 
 .login-form {
@@ -22,7 +24,8 @@
   padding: 20px 40px;
 }
 
-.login-form input {
+
+.auth-form input {
   background: 0 0;
   border: 1px solid #efefef;
   border-radius: 3px;
@@ -33,9 +36,10 @@
   padding: 9px 8px 7px;
   -webkit-appearance: none;
   width: 100%;
+  margin: 6px 0;
 }
 
-.login-form button {
+.auth-form button {
   padding: 0 8px;
   background: #3897f0;
   border-color: #3897f0;
@@ -52,4 +56,52 @@
   text-overflow: ellipsis;
   white-space: nowrap;
   width: 100%;
+  margin-top: 4px;
+  margin-bottom: 14px;
+}
+
+.or-divide {
+  display: flex;
+  flex-direction: row;
+  margin-top: 5px;
+  margin-bottom: 14px;
+}
+
+.or-divide-line {
+  width: 100%;
+  height: 1px;
+  background: #999999;
+  align-self: center;
+}
+
+.or-divide-or {
+  margin: 0 8px;
+  color: #999;
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 15px;
+}
+
+.errors {
+  color: #ed4956;
+  margin: 10px 40px;
+  font-family: sans-serif;
+}
+
+.dont-have-account {
+  text-align: center;
+  background-color: #fff;
+  border: 1px solid #e6e6e6;
+  border-radius: 1px;
+  margin: 0 0 10px;
+  padding: 10px 0;
+  height: 70px;
+  width: 348px;
+  color: #262626;
+  font-size: 14px;
+  font-family: sans-serif;
+}
+
+.dont-have-account p {
+  margin-top: 28px;
 }

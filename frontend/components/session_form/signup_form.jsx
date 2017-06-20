@@ -21,7 +21,7 @@ class SignupForm extends React.Component {
       });
 
       return (
-        <ul>
+        <ul className="errors">
           {errorItems}
         </ul>
       );
@@ -47,39 +47,42 @@ class SignupForm extends React.Component {
     return(
       <section>
 
-        <form onSubmit={this.handleSubmit} className='signup-form'>
-          <h2>ROBOgram</h2>
+        <div className='auth-form'>
+          <h2 className='logo'>Robogram</h2>
+          <form onSubmit={this.handleSubmit} className='signup-form'>
 
-          <p>Sign up to see photos from your robo friends.</p>
+          <div className="signup-blurb">
+            <p>Sign up to see photos from</p>
+            <p>all your robot friends.</p>
+          </div>
 
-          <label>
-            <input
-              type='text'
-              onChange={this.update("username")}
-              placeholder="Username"
-              value={this.state.username}
-              />
-          </label>
+            <label>
+              <input
+                type='text'
+                onChange={this.update("username")}
+                placeholder="Username"
+                value={this.state.username}
+                />
+            </label>
 
-          <br></br>
+            <label>
+              <input
+                type='text'
+                onChange={this.update("password")}
+                placeholder="Password"
+                value={this.state.password}
+                />
+            </label>
 
-          <label>
-            <input
-              type='text'
-              onChange={this.update("password")}
-              placeholder="Password"
-              value={this.state.password}
-              />
-          </label>
+            <br></br>
 
-          <br></br>
+            <button className='signup-button'>Sign Up</button>
+            {this.displayErrors()}
+          </form>
+        </div>
 
-          <button className='signup-button'>Sign Up</button>
-        </form>
 
-        {this.displayErrors()}
-
-        <div className='have-account'>
+        <div className='has-account'>
           <p>Have an account? <Link to="/login">Log in</Link> </p>
         </div>
 

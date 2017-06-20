@@ -10,7 +10,6 @@ import SignupFormContainer from './session_form/signup_container';
 const App = () => (
   <div>
     <header>
-      <h1>Welcome to ROBOgram</h1>
       <GreetingContainer />
     </header>
 

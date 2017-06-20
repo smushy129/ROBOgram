@@ -10,6 +10,7 @@ class LoginForm extends React.Component {
     };
     this.displayErrors = this.displayErrors.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.handleDemoLogin = this.handleDemoLogin.bind(this);
   }
 
   displayErrors() {
@@ -42,6 +43,15 @@ class LoginForm extends React.Component {
     };
   }
 
+  handleDemoLogin(e) {
+   e.preventDefault();
+
+   this.props.login({
+     username: 'Kingsley',
+     password: 'password'
+   });
+ }
+
 
   render() {
     return(
@@ -71,9 +81,24 @@ class LoginForm extends React.Component {
 
             <button className='login-button'>Login</button>
 
+            <div className='or-divide'>
+              <div className="or-divide-line"></div>
+              <div className="or-divide-or">OR</div>
+              <div className="or-divide-line"></div>
+            </div>
+
+            <div className="demo-login">
+              <button
+                className="blue-button"
+                onClick={this.handleDemoLogin}
+                tabIndex> Demo Login
+              </button>
+            </div>
+
             {this.displayErrors()}
           </form>
         </div>
+
 
 
         <div className='dont-have-account'>
