@@ -52,7 +52,7 @@ class SignupForm extends React.Component {
       <section className='auth-page'>
 
       <div className="auth-phone-img">
-        <img src="assets/auth_img1" />
+        <img src={window.images.auth_img} />
       </div>
 
         <div className='auth-form'>
