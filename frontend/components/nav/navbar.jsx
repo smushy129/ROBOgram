@@ -6,8 +6,6 @@ class navbar extends React.Component {
     super(props);
   }
 
-
-
   render() {
     const { logout } = this.props;
     return (
@@ -20,7 +18,7 @@ class navbar extends React.Component {
           <div className="nav-links">
             <Link to="/">{<img src="assets/upload" />}</Link>
             <Link to="/">{<img src="assets/profile" />}</Link>
-            <Link  onClick={ logout } to="/login">{<img src="assets/logout" />}</Link>
+            <Link onClick={ logout } to="/login">{<img src="assets/logout" />}</Link>
           </div>
         </hgroup>
       ) : null

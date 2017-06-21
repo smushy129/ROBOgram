@@ -19,7 +19,7 @@ COMMENT
 belong_to :user
 belong_to :photo
 
-FOLLOW
+FOLLOWS
 belongs_to :follower, class: User
 belongs_to :followee, class: User
 
