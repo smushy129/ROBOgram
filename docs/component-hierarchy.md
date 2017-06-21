@@ -70,19 +70,19 @@ The EditProfileContainer will have a form that allows a user to edit their Name,
 - CommentBox
 
 The ImageIndexItemContainer will contain all the relevant data about a post.
-When a user clicks on an image to open the modal, it should dispatch a fetchSingleImage action. When a user submits a comment, it should dispatch a addCommentToImage action. When a user likes a photo, it should dispatch a addLikeToImage action.
+When a user clicks on an image to open the modal, it should dispatch a fetchSingleImage action. When a user submits a comment, it should dispatch an addCommentToImage action. When a user likes a photo, it should dispatch an addLikeToImage action.
 
 ### UploadImageContainer(modal)
 The UploadImageContainer will have a modal form that allows a user to upload an image with a caption. It should dispatch a createImage action.
 
 ### LikesContainer
-The LikesContainer should dispatch a addLikeToImage action or removeLikeFromImage action.
+The LikesContainer should dispatch an addLikeToImage action or removeLikeFromImage action.
 
 ### CommentsContainer
-The CommentsContainer should dispatch a addCommentToImage action or removeCommentFromImage action.
+The CommentsContainer should dispatch an addCommentToImage action or removeCommentFromImage action.
 
 ### FollowsContainer
-The FollowsContainer should dispatch a followUser action or unfollowUser action.
+The FollowsContainer should dispatch an followUser action or unfollowUser action.
 
 | Path	           | Component              |
 -------------------|------------------------|
