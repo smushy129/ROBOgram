@@ -12,7 +12,7 @@
 class Follow < ActiveRecord::Base
   validates :follower, :followee, presence: true
 
-  belongs_to :follower
+  belongs_to :follower,
     class_name: "User",
     primary_key: :id,
     foreign_key: :follower_id
