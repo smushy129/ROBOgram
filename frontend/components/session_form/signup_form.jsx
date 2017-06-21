@@ -45,7 +45,11 @@ class SignupForm extends React.Component {
 
   render() {
     return(
-      <section>
+      <section className='auth-page'>
+
+      <div className="auth-phone-img">
+        <img src="assets/auth_img1" />
+      </div>
 
         <div className='auth-form'>
           <h2 className='logo'>Robogram</h2>
@@ -79,12 +83,13 @@ class SignupForm extends React.Component {
             <button className='signup-button'>Sign Up</button>
             {this.displayErrors()}
           </form>
+
+          <div className='has-account'>
+            <p>Have an account? <Link to="/login">Log in</Link> </p>
+          </div>
         </div>
 
 
-        <div className='has-account'>
-          <p>Have an account? <Link to="/login">Log in</Link> </p>
-        </div>
 
       </section>
     );

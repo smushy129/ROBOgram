@@ -55,7 +55,7 @@ class LoginForm extends React.Component {
 
   render() {
     return(
-      <section className="login-page">
+      <section className="auth-page">
 
         <div className="auth-phone-img">
           <img src="assets/auth_img1" />
@@ -106,9 +106,6 @@ class LoginForm extends React.Component {
           </div>
 
         </div>
-
-
-
 
       </section>
     );

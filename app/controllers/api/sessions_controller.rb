@@ -21,7 +21,7 @@ class Api::SessionsController < ApplicationController
 		@user = current_user
 		if @user
 			logout
-			render "api/users/show"
+			render json: {}
 		else
 			render(
         json: ["Sign in required for this action"],
