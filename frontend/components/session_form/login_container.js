@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import LoginForm from './login_form';
-import { login, logout } from '../../actions/session_actions';
+import { login, unDisplayErrors } from '../../actions/session_actions';
 
 
 const mapStateToProps = (state, ownProps) => {
@@ -16,7 +16,8 @@ const mapStateToProps = (state, ownProps) => {
 
 const mapDispatchToProps = (dispatch, ownProps) => {
   return ({
-    login: (user) => { return dispatch(login(user)); }
+    login: (user) => { return dispatch(login(user)); },
+    unDisplayErrors: () => { return dispatch(unDisplayErrors()); }
   });
 };
 

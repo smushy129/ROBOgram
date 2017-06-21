@@ -12,6 +12,10 @@ class SignupForm extends React.Component {
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
+  componentDidMount() {
+    this.props.unDisplayErrors();
+  }
+
   displayErrors() {
     if (this.props.errors) {
       const errorItems = this.props.errors.map( (errorMsg, idx) => {
