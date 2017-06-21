@@ -7,7 +7,7 @@ class photoFeed extends React.Component {
 
   render() {
     return (
-      <h1>AMAZING PHOTOS HERE</h1>
+      <h1 className='photo-feed'>AMAZING PHOTOS HERE</h1>
     );
   }
 }

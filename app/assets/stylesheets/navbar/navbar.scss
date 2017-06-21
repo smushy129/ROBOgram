@@ -1,0 +1,23 @@
+.nav-group {
+  display: flex;
+  justify-content: space-between;
+  padding: 35px;
+  background-color: #fff;
+}
+
+.logo {
+  margin: 0;
+}
+
+.nav-links a img {
+  padding-top: 7px;
+}
+
+.nav-group a {
+  text-decoration: none;
+  color: black;
+  font-size: 28px;
+  font-family: sans-serif;
+  font-weight: lighter;
+  margin: 0 17px;
+}
