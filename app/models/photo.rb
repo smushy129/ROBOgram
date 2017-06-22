@@ -25,6 +25,4 @@ class Photo < ActiveRecord::Base
     primary_key: :id,
     foreign_key: :user_id
 
-
-
 end

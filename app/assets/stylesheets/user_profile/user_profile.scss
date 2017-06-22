@@ -1,10 +1,13 @@
+.user-data {
+
+}
+
 .user-profile {
   display: flex;
-  // justify-content: center;
-  margin-left: 26%;
+  margin-left: 30%;
   font-family: sans-serif;
   padding-top: 3%;
-  padding-bottom: 1%;
+  padding-bottom: 2%;
 }
 
 .user-profile a {
@@ -36,4 +39,24 @@
 
 .user-profile-name {
   font-weight: bold;
+}
+
+.user-photos-section {
+  margin-left: 26%
+}
+
+.user-photos-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: left;
+  width: 1000px;
+}
+
+.user-photo-list-item {
+}
+
+.user-photo-list-item img {
+  width: 293px;
+  height: 293px;
+  padding: 15px;
 }
