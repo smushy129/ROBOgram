@@ -1,0 +1,39 @@
+.user-profile {
+  font-family: sans-serif;
+  display: flex;
+}
+
+.awesomo-img img {
+  border-radius: 50%;
+  margin-left: 50px;
+  display: inline-block;
+  padding: 50px;
+}
+
+.username-details {
+  margin-left: 80px;
+}
+
+.username-details {
+  margin-top: 50px;
+}
+
+.user-profile-username {
+  font-size: 32px;
+  line-height: 40px;
+  font-weight: 200;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.user-profile-details {
+  display: flex;
+  flex-direction: row;
+}
+
+.user-profile-website a {
+  text-decoration: none;
+  color: #003569;
+  font-weight: 600;
+}

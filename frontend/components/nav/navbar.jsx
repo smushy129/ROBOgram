@@ -7,9 +7,9 @@ class navbar extends React.Component {
   }
 
   render() {
-    const { logout } = this.props;
+    const { currentUser, logout } = this.props;
     return (
-      this.props.currentUser ? (
+      currentUser ? (
         <hgroup className="nav-group">
           <div className="logo">
             <Link to="/"><img src={window.images.logo_img} /></Link>
@@ -17,7 +17,7 @@ class navbar extends React.Component {
 
           <div className="nav-links">
             <Link to="/"><img src={window.images.upload_icon} /></Link>
-            <Link to="/"><img src={window.images.profile_icon} /></Link>
+            <Link to={`/users/${currentUser.id}`}><img src={window.images.profile_icon} /></Link>
             <Link onClick={ logout } to="/login"><img src={window.images.logout_icon} /></Link>
           </div>
         </hgroup>

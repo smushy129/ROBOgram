@@ -16,13 +16,15 @@ const Auth = ({component: Component, path, loggedIn}) => (
 
 const Protected = ({ component: Component, path, loggedIn }) => (
   <Route path={path} render={(props) => {
-      return (
-        loggedIn ? (
-          <Component {...props} />
-        ) : (
-          <Redirect to="/login" />
-        )
-      )}
+      
+        if(loggedIn) {
+
+          return (<Component {...props} />)
+        } else {
+
+          return (<Redirect to="/login" />)
+        }
+      }
     }/>
 );
 
