@@ -18,22 +18,15 @@ class userProfile extends React.Component {
           <img src={window.images.awesomo_img} />
         </div>
 
-        <div className='username-details'>
-          <div className='user-profile-username'>{user.username}</div>
-          <br />
-          <br />
-          <br />
-          <br />
-          <br />
-          <ul className='user-profile-details'>
+        <ul className='user-profile-details'>
+          <li className='user-profile-username'>{user.username}</li>
+
+          <div className='deets'>
             <li className='user-profile-name'>{user.name}</li>
             &nbsp;
-            <li className='user-profile-bio'>{user.bio}</li>
-            &nbsp;
-            <li className='user-profile-website'><a href={user.website}>{user.website}</a></li>
-          </ul>
-        </div>
-
+            <li>{user.bio} <a href={user.website}>{user.website}</a></li>
+          </div>
+        </ul>
 
       </section>
     );

@@ -12,9 +12,11 @@
  *
  *= require_self
  */
- @import "reset.scss";
- @import "./session/login.scss";
- @import "./session/signup.scss";
- @import "./navbar/navbar.scss";
- @import "./photofeed/photo_feed.scss";
- @import "./user_profile/user_profile.scss";
+
+@import "./reset.scss";
+@import "./fonts.scss";
+@import "./session/login.scss";
+@import "./session/signup.scss";
+@import "./navbar/navbar.scss";
+@import "./photofeed/photo_feed.scss";
+@import "./user_profile/user_profile.scss";

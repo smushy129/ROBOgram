@@ -1,39 +1,38 @@
 .user-profile {
-  font-family: sans-serif;
   display: flex;
+  justify-content: center;
+  font-family: sans-serif;
+  padding-top: 3%;
+  padding-bottom: 1%;
+}
+
+.user-profile a {
+  text-decoration: none;
+  color: #003569;
+  font-weight: 600;
 }
 
 .awesomo-img img {
   border-radius: 50%;
-  margin-left: 50px;
-  display: inline-block;
-  padding: 50px;
+  margin-right: 80px;
 }
 
-.username-details {
-  margin-left: 80px;
+.user-profile-details {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  margin-right: 180px;
 }
-
-.username-details {
-  margin-top: 50px;
+.deets {
+  display: flex;
 }
 
 .user-profile-username {
   font-size: 32px;
   line-height: 40px;
   font-weight: 200;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
 }
 
-.user-profile-details {
-  display: flex;
-  flex-direction: row;
-}
-
-.user-profile-website a {
-  text-decoration: none;
-  color: #003569;
-  font-weight: 600;
+.user-profile-name {
+  font-weight: bold;
 }
