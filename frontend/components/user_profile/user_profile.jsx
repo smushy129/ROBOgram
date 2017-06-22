@@ -15,7 +15,7 @@ class userProfile extends React.Component {
       <section className ='user-profile'>
 
         <div className="awesomo-img">
-          <img src={window.images.awesomo_img} />
+          <img src={user.avatar_url} />
         </div>
 
         <ul className='user-profile-details'>

@@ -13,10 +13,9 @@ gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.1.0'
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
-gem 'annotate'
-
 gem 'rails_12factor'
 
+gem 'annotate'
 gem 'bcrypt'
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
@@ -25,6 +24,9 @@ gem 'jbuilder', '~> 2.0'
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc', '~> 0.4.0', group: :doc
 
+gem "paperclip", '~> 5.0.0'
+gem 'figaro'
+gem 'aws-sdk', '>= 2.0'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 

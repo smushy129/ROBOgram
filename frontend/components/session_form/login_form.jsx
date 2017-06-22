@@ -52,7 +52,7 @@ class LoginForm extends React.Component {
    e.preventDefault();
 
    this.props.login({
-     username: 'awesomo',
+     username: 'A.W.E.S.O.M-o',
      password: 'password'
    });
  }

@@ -26,7 +26,7 @@ ROBOgram is a full-stack web application inspired by Instagram.  It utilizes Rub
 - Infinite Scrolling of Images
 
 ## Design Docs
-- [View Wireframes](/https://github.com/kingsleyliao/ROBOgram/tree/master/docs/wireframes)
+- [View Wireframes](https://github.com/kingsleyliao/ROBOgram/tree/master/docs/wireframes)
 - [React Components](component-hierarchy.md)
 - [API endpoints](api-endpoints.md)
 - [DB schema](schema.md)
