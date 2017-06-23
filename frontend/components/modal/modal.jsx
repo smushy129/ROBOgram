@@ -3,12 +3,19 @@ import React from 'react';
 class Modal extends React.Component {
   constructor(props) {
     super(props);
+    console.log(props);
   }
 
   render() {
-    return (
-      <h1>awesome modal here</h1>
-    );
+    const { isOpen, component } = this.props;
+
+    if (isOpen) {
+      return (
+        <div>{ component }</div>
+      );
+    } else {
+      return null;
+    }
   }
 }
 

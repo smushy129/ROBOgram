@@ -4,19 +4,18 @@ import { connect } from 'react-redux';
 import Modal from './modal';
 import { openModal } from '../../actions/modal_actions';
 
-const mapStateToProps = (component) => {
+const mapStateToProps = ({modal}) => {
   return ({
-    component
+    isOpen: modal.isOpen,
+    component: modal.component
   });
 };
 
 const mapDispatchToProps = (dispatch) => {
   return ({
-    openModal: () => { return dispatch(openModal()); }
+    openModal: (component) => { return dispatch(openModal(component)); }
   });
 };
-
-
 
 export default connect(
   mapStateToProps,

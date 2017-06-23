@@ -3,7 +3,6 @@ import React from 'react';
 class PhotoFeed extends React.Component {
   constructor(props) {
     super(props);
-    console.log(props);
   }
 
   componentWillMount() {
@@ -12,7 +11,9 @@ class PhotoFeed extends React.Component {
 
   render() {
     return (
-      <h1 className='photo-feed'>AMAZING PHOTOS HERE</h1>
+      <div>
+        <h1 className='photo-feed'>AMAZING PHOTOS HERE</h1>
+      </div>
     );
   }
 }

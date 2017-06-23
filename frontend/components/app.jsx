@@ -13,6 +13,7 @@ import ModalContainer from './modal/modal_container';
 
 const App = () => (
   <div>
+    <ModalContainer />
     <header>
       <NavbarContainer />
     </header>
