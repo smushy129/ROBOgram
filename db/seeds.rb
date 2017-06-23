@@ -8,7 +8,7 @@
 
 users = User.create(
   {
-    username: "A.W.E.S.O.M-o",
+    username: "awesomo",
     password: "password",
     name: 'eric cartman',
     bio: 'i am a robot i swear.',
