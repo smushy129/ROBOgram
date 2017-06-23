@@ -1,5 +1,7 @@
 .header {
   background-color: #fff;
+  border-bottom: 1px solid rgba(0,0,0,.0975);
+  height: 76px;
 }
 
 .nav-group {
@@ -17,6 +19,7 @@
 
 .nav-links a img {
   padding-top: 7px;
+  max-height: 31px;
 }
 
 .nav-group a {

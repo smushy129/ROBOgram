@@ -5,8 +5,11 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+User.destroy_all
+Photo.destroy_all
 
 users = User.create(
+[
   {
     username: "awesomo",
     password: "password",
@@ -14,7 +17,15 @@ users = User.create(
     bio: 'i am a robot i swear.',
     website: 'iAmAwesomo.com',
     avatar: File.open("app/assets/images/awesomoAVATAR.png")
+  },
+  {
+    username: "robocop",
+    password: "password",
+    name: 'copper',
+    bio: 'i shoot things',
+    website: 'robocop.com',
   }
+]
 )
 
 photos = Photo.create(

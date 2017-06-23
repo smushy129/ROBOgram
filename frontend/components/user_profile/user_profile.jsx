@@ -10,6 +10,13 @@ class userProfile extends React.Component {
     this.props.fetchSingleUser(this.props.match.params.id);
   }
 
+  componentWillReceiveProps(nextProps) {
+    let destinationUserId = nextProps.match.params.id;
+    if(this.props.match.params.id !== destinationUserId) {
+      this.props.fetchSingleUser(destinationUserId);
+    }
+  }
+
   render() {
     const { user } = this.props.state;
     const photos = selectedPhotos(this.props.state);
@@ -28,12 +35,34 @@ class userProfile extends React.Component {
     return (
       <section className='user-data'>
         <div className ='user-profile'>
-          <div className="awesomo-img">
+          <div className="profile-img">
             <img src={user.avatar_url} />
           </div>
 
           <ul className='user-profile-details'>
-            <li className='user-profile-username'>{user.username}</li>
+            <div>
+              <li className='user-profile-username'>{user.username}</li>
+            </div>
+
+            <div className="user-meta-data">
+              <span className='post-count'>
+                <li>4</li>
+                &nbsp;
+                <p>posts</p>
+              </span>
+
+              <span className='follower-count'>
+                <li>9</li>
+                &nbsp;
+                <p>followers</p>
+              </span>
+
+              <span className='following-count'>
+                <li>2</li>
+                &nbsp;
+                <p>following</p>
+              </span>
+            </div>
 
             <div className='deets'>
               <li className='user-profile-name'>{user.name}</li>

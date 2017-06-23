@@ -8,6 +8,7 @@ import LoginFormContainer from './session_form/login_container';
 import SignupFormContainer from './session_form/signup_container';
 import PhotoFeedContainer from './photo_feed/photo_feed_container';
 import UserProfileContainer from './user_profile/user_profile_container';
+import ModalContainer from './modal/modal_container';
 
 
 const App = () => (

@@ -8,7 +8,6 @@ class LoginForm extends React.Component {
       username: "",
       password: ""
     };
-    console.log(props);
     this.displayErrors = this.displayErrors.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
     this.handleDemoLogin = this.handleDemoLogin.bind(this);

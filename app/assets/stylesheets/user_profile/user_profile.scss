@@ -4,10 +4,11 @@
 
 .user-profile {
   display: flex;
-  margin-left: 30%;
+  justify-content: center;
   font-family: sans-serif;
   padding-top: 3%;
-  padding-bottom: 2%;
+  padding-bottom: 1%;
+  margin-bottom: 8px;
 }
 
 .user-profile a {
@@ -16,25 +17,30 @@
   font-weight: 600;
 }
 
-.awesomo-img img {
+.profile-img img {
   border-radius: 50%;
-  margin-right: 80px;
+  margin-right: 100px;
 }
 
 .user-profile-details {
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
-  margin-right: 180px;
+  justify-content: center;
+  margin-right: 8%;
 }
+
+.user-profile-details div {
+  margin-bottom: 7%;
+}
+
 .deets {
   display: flex;
 }
 
 .user-profile-username {
   font-size: 32px;
-  line-height: 40px;
-  font-weight: 200;
+  font-weight: lighter;
+  font-family: -apple-system, system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
 }
 
 .user-profile-name {
@@ -42,7 +48,8 @@
 }
 
 .user-photos-section {
-  margin-left: 26%
+  display: flex;
+  justify-content: center;
 }
 
 .user-photos-list {
@@ -52,11 +59,17 @@
   width: 1000px;
 }
 
-.user-photo-list-item {
-}
-
 .user-photo-list-item img {
   width: 293px;
   height: 293px;
-  padding: 15px;
+  margin: 15px;
+}
+
+.user-meta-data {
+  display: flex;
+}
+
+.user-meta-data span {
+  display: flex;
+  margin-right: 40px;
 }

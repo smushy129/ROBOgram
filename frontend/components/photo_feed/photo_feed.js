@@ -1,8 +1,13 @@
 import React from 'react';
 
-class photoFeed extends React.Component {
+class PhotoFeed extends React.Component {
   constructor(props) {
     super(props);
+    console.log(props);
+  }
+
+  componentWillMount() {
+    this.props.fetchFeedPhotos();
   }
 
   render() {
@@ -12,4 +17,4 @@ class photoFeed extends React.Component {
   }
 }
 
-export default photoFeed;
+export default PhotoFeed;
