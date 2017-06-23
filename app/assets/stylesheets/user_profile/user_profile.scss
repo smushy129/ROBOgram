@@ -48,21 +48,45 @@
 }
 
 .user-photos-section {
+  // display: flex;
+  // justify-content: center;
   display: flex;
-  justify-content: center;
+  height: auto;
+  width: 100%;
 }
 
 .user-photos-list {
-  display: flex;
+  // display: flex;
+  // flex-wrap: wrap;
+  // justify-content: left;
+  // width: 75%;
+  margin: auto;
+  width: 75%;
   flex-wrap: wrap;
-  justify-content: left;
-  width: 1000px;
+  display: flex;
+  max-width: 940px;
 }
 
+.user-photo-list-item {
+  margin-right: 2%;
+  height: auto;
+  width: 31%;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1.5%;
+}
+
+
 .user-photo-list-item img {
-  width: 293px;
-  height: 293px;
-  margin: 15px;
+  // width: 293px;
+  // height: 293px;
+  // margin: 15px;
+  margin: auto;
+  width: 100%;
+  max-width: 293px;
+  max-height: 293px;
+  height: 100%;
+  object-fit: cover;
 }
 
 .user-meta-data {
