@@ -3,7 +3,6 @@ import React from 'react';
 class Modal extends React.Component {
   constructor(props) {
     super(props);
-    console.log(props);
   }
 
   render() {
@@ -11,7 +10,13 @@ class Modal extends React.Component {
 
     if (isOpen) {
       return (
-        <div>{ component }</div>
+        <div className='modal-body'>
+          <div className='modal-content'>
+            <div>
+              { component }
+            </div>
+          </div>
+        </div>
       );
     } else {
       return null;

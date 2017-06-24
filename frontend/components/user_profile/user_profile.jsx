@@ -23,9 +23,9 @@ class userProfile extends React.Component {
     let allUserPhotos;
 
     if (photos) {
-      allUserPhotos = photos.map( (photo) => {
+      allUserPhotos = photos.map( (photo, idx) => {
         return (
-          <li key={photo.id} className='user-photo-list-item'>
+          <li key={photo.id} className='user-photo-list-item' onClick={ () => this.props.openModal(allUserPhotos[idx]) }>
             <img src={photo.image_url} />
           </li>
         );

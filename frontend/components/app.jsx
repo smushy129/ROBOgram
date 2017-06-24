@@ -19,7 +19,7 @@ const App = () => (
     </header>
 
     <Switch>
-      <Route path='/users/:id' component={ UserProfileContainer }/>
+      <Route exact path='/users/:id' component={ UserProfileContainer }/>
       <AuthRoute exact path="/login" component={LoginFormContainer} />
       <AuthRoute exact path="/signup" component={SignupFormContainer} />
       <ProtectedRoute path="/" component={PhotoFeedContainer} />
