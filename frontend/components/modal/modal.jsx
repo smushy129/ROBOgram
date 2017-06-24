@@ -6,15 +6,13 @@ class Modal extends React.Component {
   }
 
   render() {
-    const { isOpen, component } = this.props;
+    const { isOpen, component, closeModal } = this.props;
 
     if (isOpen) {
       return (
-        <div className='modal-body'>
+        <div className='modal-body' onClick={ () => closeModal() }>
           <div className='modal-content'>
-            <div>
-              { component }
-            </div>
+            { component }
           </div>
         </div>
       );

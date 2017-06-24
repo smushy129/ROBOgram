@@ -1,8 +1,16 @@
 .modal-body {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  z-index: 3;
   background-color: rgba(0,0,0,.75);
 }
 
 .modal-content {
   width: 75%;
   margin: auto auto;
+}
+
+.modal-content li {
+  margin: 0;
 }

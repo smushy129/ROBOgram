@@ -9,7 +9,7 @@ import SignupFormContainer from './session_form/signup_container';
 import PhotoFeedContainer from './photo_feed/photo_feed_container';
 import UserProfileContainer from './user_profile/user_profile_container';
 import ModalContainer from './modal/modal_container';
-
+import PhotoDetailContainer from './photo_detail/photo_detail_container';
 
 const App = () => (
   <div>
@@ -22,6 +22,7 @@ const App = () => (
       <Route exact path='/users/:id' component={ UserProfileContainer }/>
       <AuthRoute exact path="/login" component={LoginFormContainer} />
       <AuthRoute exact path="/signup" component={SignupFormContainer} />
+      <ProtectedRoute exact path="/photos/:id" component={PhotoDetailContainer} />
       <ProtectedRoute path="/" component={PhotoFeedContainer} />
     </Switch>
   </div>

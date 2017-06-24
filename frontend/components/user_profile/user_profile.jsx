@@ -1,5 +1,7 @@
 import React from 'react';
 import { selectedPhotos } from '../../reducers/selectors';
+import PhotoDetailContainer from '../photo_detail/photo_detail_container';
+import { Link } from 'react-router-dom';
 
 class userProfile extends React.Component {
   constructor(props) {
@@ -25,7 +27,8 @@ class userProfile extends React.Component {
     if (photos) {
       allUserPhotos = photos.map( (photo, idx) => {
         return (
-          <li key={photo.id} className='user-photo-list-item' onClick={ () => this.props.openModal(allUserPhotos[idx]) }>
+            <li key={photo.id} className='user-photo-list-item'
+            onClick={ () => this.props.openModal(<PhotoDetailContainer id={photo.id}/>) }>
             <img src={photo.image_url} />
           </li>
         );

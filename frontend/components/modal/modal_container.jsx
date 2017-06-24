@@ -2,7 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 
 import Modal from './modal';
-import { openModal } from '../../actions/modal_actions';
+import { openModal, closeModal } from '../../actions/modal_actions';
 
 const mapStateToProps = ({modal}) => {
   return ({
@@ -13,7 +13,8 @@ const mapStateToProps = ({modal}) => {
 
 const mapDispatchToProps = (dispatch) => {
   return ({
-    openModal: (component) => { return dispatch(openModal(component)); }
+    openModal: (component) => { return dispatch(openModal(component)); },
+    closeModal: () => { return dispatch(closeModal()); }
   });
 };
 
