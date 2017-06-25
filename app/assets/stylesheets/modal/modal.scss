@@ -1,16 +1,15 @@
 .modal-body {
   height: 100%;
   width: 100%;
-  position: absolute;
-  z-index: 3;
+  position: fixed;
+  display: flex;
+  z-index: 1;
   background-color: rgba(0,0,0,.75);
+  justify-content: center;
+  align-items: center;
 }
 
 .modal-content {
-  width: 75%;
-  margin: auto auto;
-}
-
-.modal-content li {
-  margin: 0;
+  margin: auto;
+  position: fixed;
 }

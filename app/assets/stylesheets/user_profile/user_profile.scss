@@ -1,5 +1,6 @@
 .user-data {
-
+  display: flex;
+  flex-direction: column;
 }
 
 .user-profile {
@@ -20,6 +21,10 @@
 .profile-img img {
   border-radius: 50%;
   margin-right: 100px;
+  width: 100%;
+  height: 100%;
+  max-width: 150px;
+  max-height: 150px;
 }
 
 .user-profile-details {
@@ -61,19 +66,18 @@
   // justify-content: left;
   // width: 75%;
   margin: auto;
-  width: 75%;
+  width: 80%;
   flex-wrap: wrap;
   display: flex;
   max-width: 940px;
 }
 
 .user-photo-list-item {
-  margin-right: 2%;
+  margin: 1%;
   height: auto;
   width: 31%;
   justify-content: center;
   align-items: center;
-  margin-top: 1.5%;
 }
 
 
@@ -83,9 +87,9 @@
   // margin: 15px;
   margin: auto;
   width: 100%;
+  height: 100%;
   max-width: 293px;
   max-height: 293px;
-  height: 100%;
   object-fit: cover;
 }
 

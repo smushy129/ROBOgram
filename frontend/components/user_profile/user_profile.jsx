@@ -1,12 +1,11 @@
 import React from 'react';
 import { selectedPhotos } from '../../reducers/selectors';
 import PhotoDetailContainer from '../photo_detail/photo_detail_container';
-import { Link } from 'react-router-dom';
 
 class userProfile extends React.Component {
   constructor(props) {
     super(props);
-  }
+   }
 
   componentDidMount() {
     this.props.fetchSingleUser(this.props.match.params.id);
@@ -19,8 +18,7 @@ class userProfile extends React.Component {
     }
   }
 
-  render() {
-    const { user } = this.props.state;
+  userPhotos() {
     const photos = selectedPhotos(this.props.state);
     let allUserPhotos;
 
@@ -33,7 +31,16 @@ class userProfile extends React.Component {
           </li>
         );
       });
+    } else {
+      return (
+        <h1> loading </h1>
+      );
     }
+    return allUserPhotos;
+  }
+
+  render() {
+    const { user } = this.props.state;
 
     return (
       <section className='user-data'>
@@ -77,7 +84,7 @@ class userProfile extends React.Component {
 
         <section className='user-photos-section'>
           <ul className='user-photos-list'>
-            { allUserPhotos }
+            {this.userPhotos()}
           </ul>
 
         </section>

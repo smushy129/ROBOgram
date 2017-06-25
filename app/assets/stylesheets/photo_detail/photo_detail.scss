@@ -1,0 +1,47 @@
+.modal-photo-detail {
+  display: flex;
+  flex-direction: row;
+}
+
+.modal-photo-detail-image {
+  margin: auto;
+  max-height: 600px;
+  max-width: 600px;
+  width: 100%;
+  height: 100%;
+}
+
+.modal-photo-detail-info {
+  background-color: #fff;
+  padding: 1.5%;
+  width: 350px;
+  display: flex;
+  flex-direction: column;
+  font-family: sans-serif;
+
+  a {
+    text-decoration: none;
+  }
+}
+
+.modal-photo-detail-header {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.modal-photo-detail-header-username {
+
+}
+
+.modal-photo-detail-header img {
+  padding: 10px;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+}
+
+.modal-photo-detail-caption {
+  display: flex;
+  padding: 10px;
+}
