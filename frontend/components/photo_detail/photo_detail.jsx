@@ -22,17 +22,24 @@ class PhotoDetail extends React.Component {
 
           <div className='modal-photo-detail-info'>
             <div className='modal-photo-detail-header'>
-                <img src={ user.avatar_url }/>
 
-                <div className='modal-photo-detail-header-username'>
-                  <p onClick={ () => closeModal() }>{ user.username }</p>
-                </div>
+              <div className='modal-photo-detail-avatar' onClick={ () => closeModal() }>
+                <img src={ user.avatar_url } />
+              </div>
+
+              <div className='modal-photo-detail-header-username'>
+                <p onClick={ () => closeModal() }>{ user.username }</p>
+              </div>
             </div>
 
             <div className='modal-photo-detail-caption'>
-              <p onClick={ () => closeModal() }>{ user.username }</p>
-                &nbsp;
-              { photoDetail.caption }
+              <p>
+                <span className='modal-photo-detail-header-username' onClick={ () => closeModal() }>
+                  { user.username }
+                </span>
+                 &nbsp;
+                { photoDetail.caption }
+              </p>
             </div>
 
             <div className='modal-photo-detail-body'>
