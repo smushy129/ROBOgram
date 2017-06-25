@@ -14,7 +14,8 @@
  */
 
 @import "./reset.scss";
-@import "./fonts.scss";
+@import "font-awesome-sprockets";
+@import "font-awesome";
 @import "./session/login.scss";
 @import "./session/signup.scss";
 @import "./navbar/navbar.scss";

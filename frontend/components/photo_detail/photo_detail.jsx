@@ -4,11 +4,29 @@ import { Link } from 'react-router-dom';
 class PhotoDetail extends React.Component {
   constructor(props) {
     super(props);
-
   }
 
   componentDidMount() {
     this.props.fetchSinglePhoto(this.props.id);
+  }
+
+  getMonth() {
+    const MONTH = {
+      1: "January",
+      2: "February",
+      3: "March",
+      4: "April",
+      5: "May",
+      6: "June",
+      7: "July",
+      8: "August",
+      9: "September",
+      10: "October",
+      11: "November",
+      12: "December"
+    };
+
+    return MONTH[this.props.state.photoDetail.created_at_month];
   }
 
   render() {
@@ -28,7 +46,7 @@ class PhotoDetail extends React.Component {
               </div>
 
               <div className='modal-photo-detail-header-username'>
-                <p onClick={ () => closeModal() }>{ user.username }</p>
+                <span onClick={ () => closeModal() }>{ user.username }</span>
               </div>
             </div>
 
@@ -43,23 +61,36 @@ class PhotoDetail extends React.Component {
             </div>
 
             <div className='modal-photo-detail-body'>
-
+              <ul>
+                <li><span>robocop</span> nice outfit!</li>
+                <li><span>terminator</span> i have the same shoes!</li>
+                <li><span>wall-E</span> *machine noises*</li>
+              </ul>
             </div>
 
             <div className='modal-photo-detail-like-comment'>
+              <button className='unliked-button'>
+                <i className="fa fa-heart-o" aria-hidden="false"></i>
+              </button>
+              &nbsp;
+              <button className='comment-button'>
+                <i className="fa fa-comment-o" aria-hidden="true"></i>
+              </button>
 
             </div>
 
             <div className='modal-photo-detail-like-count'>
-
+              <span>9001 likes</span>
             </div>
 
             <div className='modal-photo-detail-timestamp'>
-
+              {this.getMonth()} {photoDetail.created_at_day}
             </div>
 
-            <div className='modal-photo-detail-comments'>
-
+            <div className='modal-photo-detail-comments-section'>
+              <textarea className='modal-photo-detail-comments-box'
+                aria-label="Add a comment…" placeholder="Add a comment…">
+              </textarea>
             </div>
 
           </div>
@@ -72,3 +103,5 @@ class PhotoDetail extends React.Component {
 }
 
 export default PhotoDetail;
+
+// <i className="fa fa-heart" aria-hidden="true"></i>

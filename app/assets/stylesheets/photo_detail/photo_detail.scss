@@ -1,4 +1,4 @@
-.modal-photo-detail {
+  .modal-photo-detail {
   display: flex;
   flex-direction: row;
 }
@@ -21,6 +21,10 @@
 
   a {
     text-decoration: none;
+  }
+
+  span {
+    font-weight: bold;
   }
 }
 
@@ -45,4 +49,73 @@
 .modal-photo-detail-caption {
   display: flex;
   padding: 10px;
+}
+
+.modal-photo-detail-body {
+  height: 70%;
+}
+
+.modal-photo-detail-body ul {
+  padding: 0 10px;
+}
+
+.modal-photo-detail-body li {
+  padding: 5px 0;
+}
+
+.modal-photo-detail-like-comment {
+  display: flex;
+  padding: 5px 0px;
+}
+
+.unliked-button {
+  font-size: 26px;
+  background-color: Transparent;
+  background-repeat:no-repeat;
+  border: none;
+  cursor:pointer;
+  overflow: hidden;
+}
+
+.comment-button {
+  font-size: 27px;
+  background-color: Transparent;
+  background-repeat:no-repeat;
+  border: none;
+  cursor:pointer;
+  overflow: hidden;
+}
+
+.modal-photo-detail-like-count {
+  padding-top: 10px;
+  padding: 5px;
+}
+
+.modal-photo-detail-timestamp {
+  padding-top: 10px;
+  padding: 5px;
+  font-size: 11px;
+  letter-spacing: .2px;
+  color: #999;
+  margin-bottom: 5px;
+  text-transform: uppercase;
+}
+
+.modal-photo-detail-comments-section {
+  padding-top: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+.modal-photo-detail-comments-box {
+  background: 0 0;
+  width: 100%;
+  border: none;
+  color: #262626;
+  font-size: inherit;
+  outline: none;
+  padding: 0;
+  resize: none;
+  max-height: 80px;
+  overflow: hidden;
 }

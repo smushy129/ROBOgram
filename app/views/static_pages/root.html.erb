@@ -1,19 +1,19 @@
 <script type="text/javascript">
-  <% if logged_in? %>
-    window.currentUser = <%= render(
-      "api/users/user.json.jbuilder",
-      user: current_user
-    ).html_safe %>
-  <% end %>
+    <% if logged_in? %>
+      window.currentUser = <%= render(
+        "api/users/user.json.jbuilder",
+        user: current_user
+      ).html_safe %>
+    <% end %>
 
-  window.images = {
-    auth_img: "<%=image_path('auth_img1.png')%>",
-    logo_img: "<%=image_path('logo.png')%>",
-    logout_icon: "<%=image_path('logout.png')%>",
-    profile_icon: "<%=image_path('profile.png')%>",
-    upload_icon: "<%=image_path('upload.png')%>",
-    awesomo_img: "<%=image_path('awesomo.png')%>"
-  }
-</script>
+    window.images = {
+      auth_img: "<%=image_path('auth_img1.png')%>",
+      logo_img: "<%=image_path('logo.png')%>",
+      logout_icon: "<%=image_path('logout.png')%>",
+      profile_icon: "<%=image_path('profile.png')%>",
+      upload_icon: "<%=image_path('upload.png')%>",
+      awesomo_img: "<%=image_path('awesomo.png')%>"
+    }
+  </script>
 
 <main id="root"></main>
