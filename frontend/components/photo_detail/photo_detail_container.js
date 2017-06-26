@@ -1,8 +1,9 @@
 import React from 'react';
 import { connect } from 'react-redux';
 
+
 import PhotoDetail from './photo_detail';
-import { fetchSinglePhoto } from '../../actions/photo_detail_actions';
+import { fetchSinglePhoto, deletePhoto } from '../../actions/photo_detail_actions';
 import { closeModal } from '../../actions/modal_actions';
 
 const mapStateToProps = (state) => ({
@@ -11,7 +12,8 @@ const mapStateToProps = (state) => ({
 
 const mapDispatchToProps = (dispatch) => ({
   fetchSinglePhoto: (id) => { return dispatch(fetchSinglePhoto(id)); },
-  closeModal: () => { return dispatch(closeModal()); }
+  closeModal: () => { return dispatch(closeModal()); },
+  deletePhoto: (id, callback) => { return dispatch(deletePhoto(id, callback)); }
 });
 
 export default connect(

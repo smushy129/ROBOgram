@@ -17,3 +17,13 @@ export const uploadPhoto = (photo, callback) => {
     }
   });
 };
+
+export const deletePhoto = (id, callback) => {
+  return $.ajax({
+    method: 'DELETE',
+    url: `/api/photos/${id}`,
+    success: function() {
+      callback();
+    }
+  });
+};

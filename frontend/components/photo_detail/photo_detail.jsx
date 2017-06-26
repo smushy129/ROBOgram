@@ -4,6 +4,8 @@ import { Link } from 'react-router-dom';
 class PhotoDetail extends React.Component {
   constructor(props) {
     super(props);
+
+    this.goBack = this.goBack.bind(this);
   }
 
   componentDidMount() {
@@ -29,9 +31,14 @@ class PhotoDetail extends React.Component {
     return MONTH[this.props.state.photoDetail.created_at_month];
   }
 
+  goBack() {
+    const { currentUser } = this.props.state.session;
+    this.props.closeModal();
+ }
+
   render() {
     const { photoDetail, user } = this.props.state;
-    const { closeModal } = this.props;
+    const { closeModal, deletePhoto, id } = this.props;
 
     if (photoDetail) {
       return(
@@ -48,6 +55,10 @@ class PhotoDetail extends React.Component {
               <div className='modal-photo-detail-header-username'>
                 <span onClick={ () => closeModal() }>{ user.username }</span>
               </div>
+
+              <button onClick={ () => deletePhoto(id, this.goBack) }>
+                <i className="fa fa-trash-o" aria-hidden="true"></i>
+              </button>
             </div>
 
             <div className='modal-photo-detail-caption'>
