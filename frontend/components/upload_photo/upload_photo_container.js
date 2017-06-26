@@ -1,15 +1,21 @@
 import { connect } from 'react-redux';
-import uploadPhoto from './upload_photo';
+import UploadPhoto from './upload_photo';
+import { uploadPhoto } from '../../actions/photo_detail_actions';
+import { closeModal } from '../../actions/modal_actions';
 
 const mapStateToProps = (state) => {
-
+  return ({
+    state
+  });
 };
 
 const mapDispatchToProps = (dispatch) => {
-
+  return ({
+    uploadPhoto: (photo) => { return dispatch(uploadPhoto(photo)); }
+  });
 };
 
 export default connect(
   mapStateToProps,
   mapDispatchToProps
-)(uploadPhoto);
+)(UploadPhoto);

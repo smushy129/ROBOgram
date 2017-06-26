@@ -12,3 +12,8 @@ export const fetchSinglePhoto = (id) => (dispatch) => {
   return APIUtil.fetchSinglePhoto(id)
     .then( (photoDetail) => { return dispatch(receiveSinglePhoto(photoDetail)); });
 };
+
+export const uploadPhoto = (photo) => (dispatch) => {
+  return APIUtil.uploadPhoto(photo)
+    .then( (photo) => { return dispatch(receiveSinglePhoto(photo)); });
+};

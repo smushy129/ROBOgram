@@ -4,3 +4,13 @@ export const fetchSinglePhoto = (id) => {
     url: `/api/photos/${id}`
   });
 };
+
+export const uploadPhoto = (photo, callback) => {
+  return $.ajax({
+    method: 'POST',
+    url: `/api/photos`,
+    contentType: false,
+    processData: false,
+    data: photo,
+  });
+};

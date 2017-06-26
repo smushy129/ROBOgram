@@ -1,5 +1,5 @@
 import merge from 'lodash/merge';
-import { RECEIVE_SINGLE_PHOTO } from '../actions/photo_detail_actions';
+import { RECEIVE_SINGLE_PHOTO} from '../actions/photo_detail_actions';
 
 const _defaultState = {};
 
