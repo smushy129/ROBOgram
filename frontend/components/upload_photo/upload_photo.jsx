@@ -1,8 +1,10 @@
 import React from 'react';
+import { Redirect } from 'react-router-dom';
 
 class UploadPhoto extends React.Component {
   constructor(props){
     super(props);
+
     this.state = {
       caption: "",
       imageFile: null,
@@ -34,7 +36,9 @@ class UploadPhoto extends React.Component {
   }
 
   goBack() {
-   this.context.router.push("/");
+    const { currentUser } = this.props.state.session;
+    this.props.closeModal();
+    this.props.history.push(`/users/${currentUser.id}`);
  }
 
   handleSubmit(e) {
@@ -42,7 +46,6 @@ class UploadPhoto extends React.Component {
     formData.append("photo[caption]", this.state.caption);
     formData.append("photo[image]", this.state.imageFile);
     this.props.uploadPhoto(formData, this.goBack);
-    this.props.closeModal();
   }
 
   render() {
