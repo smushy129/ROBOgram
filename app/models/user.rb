@@ -30,22 +30,22 @@ class User < ActiveRecord::Base
     primary_key: :id,
     foreign_key: :user_id
 
-  has_many :follower_follows,
+  has_many :follows_as_follower,
     class_name: "Follow",
     primary_key: :id,
     foreign_key: :follower_id
 
-  has_many :followee_follows,
+  has_many :follows_as_followee,
     class_name: "Follow",
     primary_key: :id,
     foreign_key: :followee_id
 
   has_many :followers,
-    through: :followee_follows,
+    through: :follows_as_followee,
     source: :follower
 
   has_many :followees,
-    through: :follower_follows,
+    through: :follows_as_follower,
     source: :followee
 
   attr_reader :password
