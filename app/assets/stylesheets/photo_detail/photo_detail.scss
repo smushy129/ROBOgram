@@ -119,3 +119,19 @@
   max-height: 80px;
   overflow: hidden;
 }
+
+.delete-photo-btn {
+  font-size: 27px;
+  background-color: Transparent;
+  background-repeat:no-repeat;
+  border: none;
+  cursor:pointer;
+  overflow: hidden;
+}
+
+.username-and-delete {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 75%;
+}

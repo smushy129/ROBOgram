@@ -52,13 +52,15 @@ class PhotoDetail extends React.Component {
                 <img src={ user.avatar_url } />
               </div>
 
-              <div className='modal-photo-detail-header-username'>
-                <span onClick={ () => closeModal() }>{ user.username }</span>
-              </div>
+              <div className='username-and-delete'>
+                <div className='modal-photo-detail-header-username'>
+                  <span onClick={ () => closeModal() }>{ user.username }</span>
+                </div>
 
-              <button onClick={ () => deletePhoto(id, this.goBack) }>
-                <i className="fa fa-trash-o" aria-hidden="true"></i>
-              </button>
+                <button className='delete-photo-btn' onClick={ () => deletePhoto(id, this.goBack) }>
+                  <i className="fa fa-trash-o" aria-hidden="true"></i>
+                </button>
+              </div>
             </div>
 
             <div className='modal-photo-detail-caption'>
