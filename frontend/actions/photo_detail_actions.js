@@ -13,7 +13,7 @@ export const fetchSinglePhoto = (id) => (dispatch) => {
     .then( (photoDetail) => { return dispatch(receiveSinglePhoto(photoDetail)); });
 };
 
-export const uploadPhoto = (photo) => (dispatch) => {
-  return APIUtil.uploadPhoto(photo)
+export const uploadPhoto = (photo, callback) => (dispatch) => {
+  return APIUtil.uploadPhoto(photo, callback)
     .then( (photo) => { return dispatch(receiveSinglePhoto(photo)); });
 };

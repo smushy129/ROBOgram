@@ -1,0 +1,86 @@
+.upload-modal {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fff;
+  font-family: sans-serif;
+  width: 700px;
+  height: 400px;
+
+  input {
+    font-size: 14px;
+    border: 0;
+    border: none;
+  }
+
+  input:focus {
+    outline: none;
+  }
+
+  label {
+    width: 100%;
+  }
+
+  img {
+    height: 150px;
+    width: 150px;
+  }
+
+  p {
+    font-size: 32px;
+    font-weight: bold;
+    text-align: center;
+  }
+
+  button {
+    padding: 14px 8px;
+    background: #3897f0;
+    border-color: #3897f0;
+    color: #fff;
+    -webkit-appearance: none;
+    border-style: solid white;
+    border-width: 1px;
+    font-size: 28px;
+    font-weight: 600;
+    outline: none;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 100%;
+    cursor: pointer;
+  }
+}
+
+.file-name {
+  width: 60%;
+  margin: auto;
+  padding-left: 15px;
+}
+
+.upload-modal-content {
+  padding-top: 3%;
+  width: 700px;
+  height: 85%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.upload-caption {
+  align-content: center;
+  padding: 15px 15px;
+  width: auto;
+}
+
+.img-preview {
+  width: 150px;
+  height: 150px;
+  background-color: lightgrey;
+}
+
+.cancel-submit {
+  display: flex;
+  width: 100%;
+}

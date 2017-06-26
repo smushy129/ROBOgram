@@ -11,7 +11,8 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = (dispatch) => {
   return ({
-    uploadPhoto: (photo) => { return dispatch(uploadPhoto(photo)); }
+    uploadPhoto: (photo) => { return dispatch(uploadPhoto(photo)); },
+    closeModal: () => { return dispatch(closeModal()); }
   });
 };
 

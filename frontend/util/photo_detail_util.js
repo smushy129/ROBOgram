@@ -12,5 +12,8 @@ export const uploadPhoto = (photo, callback) => {
     contentType: false,
     processData: false,
     data: photo,
+    success: function() {
+      callback();
+    }
   });
 };

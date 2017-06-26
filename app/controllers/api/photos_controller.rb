@@ -18,12 +18,12 @@ class Api::PhotosController < ApplicationController
   end
 
   def show
-    @photo = Photo.find(params[:id])
+    @photo = Photo.find_by(id: params[:id])
     render :show
   end
 
   def destroy
-    @photo = current_user.photos.find(params[:id])
+    @photo = current_user.photos.find_by(id: params[:id])
 
     if @photo.destroy
       render "/api/users/show/#{current_user.id}"
