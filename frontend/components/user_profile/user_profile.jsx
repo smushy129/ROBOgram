@@ -63,6 +63,12 @@ class userProfile extends React.Component {
   render() {
     const { user } = this.props.state;
     let userPhotos = this.userPhotos();
+    let numPhotos = 0;
+
+    if (userPhotos.length > 0) {
+      numPhotos = userPhotos.length;
+    }
+    
 
     return (
       <section className='user-data'>
@@ -79,7 +85,7 @@ class userProfile extends React.Component {
 
             <div className="user-meta-data">
               <span className='post-count'>
-                <li>{userPhotos.length}</li>
+                <li>{numPhotos}</li>
                 &nbsp;
                 <p>posts</p>
               </span>
