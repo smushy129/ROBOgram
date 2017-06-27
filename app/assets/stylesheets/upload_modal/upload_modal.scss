@@ -72,8 +72,18 @@
 
 .upload-caption {
   align-content: center;
-  padding: 15px 15px;
+  padding: 15px;
   width: auto;
+  background: 0 0;
+  border: none;
+  color: #262626;
+  font-size: inherit;
+  outline: none;
+  resize: none;
+  max-height: 80px;
+  overflow: hidden;
+  height: 18px;
+  width: 100%;
 }
 
 .img-preview {

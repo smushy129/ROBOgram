@@ -1,4 +1,5 @@
 import * as APIUtil from '../util/session_api_util';
+import { removeFeed } from './photo_feed_actions';
 
 export const RECEIVE_CURRENT_USER = 'RECEIVE_CURRENT_USER';
 export const RECEIVE_ERRORS = 'RECEIVE_ERRORS';
@@ -51,6 +52,6 @@ export const login = user => dispatch => (
 
 export const logout = () => dispatch => (
   APIUtil.logout().then(user => (
-    dispatch(signOut(null))
-  ))
+    dispatch(signOut(null))))
+    .then(() => dispatch(removeFeed()))
 );
