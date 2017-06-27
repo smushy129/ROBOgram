@@ -8,10 +8,13 @@ const _defaultState = {
 const PhotoFeedReducer = (state = _defaultState, action) => {
   switch (action.type) {
     case RECEIVE_FEED_PHOTOS:
-      return merge({}, state, { photos :action.photos });
+      return merge({}, _defaultState, { photos :action.photos });
 
     case REMOVE_FEED:
       return _defaultState;
+
+    // case INFINITE_FEED_PHOTOS:
+    //   return merge({}, state, { photos :action.photos });
 
     default:
       return state;

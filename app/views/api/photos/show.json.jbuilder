@@ -1,5 +1,6 @@
 json.id @photo.id
 json.username @photo.user.username
+json.user_id @photo.user.id
 json.avatar asset_path(@photo.user.avatar.url)
 json.image_url asset_path(@photo.image.url)
 json.caption @photo.caption

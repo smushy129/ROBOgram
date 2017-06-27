@@ -38,7 +38,7 @@ class PhotoDetail extends React.Component {
 
   render() {
     const { photoDetail, user } = this.props;
-    const { closeModal, deletePhoto, id } = this.props;
+    const { closeModal, deletePhoto, id, fetchFeedPhotos } = this.props;
 
     if (photoDetail) {
       return(
@@ -57,7 +57,7 @@ class PhotoDetail extends React.Component {
                   <span onClick={ () => closeModal() }>{ user.username }</span>
                 </div>
 
-                <button className='delete-photo-btn' onClick={ () => deletePhoto(id, this.goBack) }>
+                <button className='delete-photo-btn' onClick={ () => deletePhoto(id, this.goBack).then( () => fetchFeedPhotos()) }>
                   <i className="fa fa-trash-o" aria-hidden="true"></i>
                 </button>
               </div>
