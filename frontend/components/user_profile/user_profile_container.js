@@ -7,7 +7,9 @@ import { createFollow, deleteFollow } from '../../actions/follow_actions';
 
 export const mapStateToProps = (state) => {
   return ({
-    state
+    user: state.user,
+    currentUser: state.session.currentUser,
+    photos: state.photos,
   });
 };
 

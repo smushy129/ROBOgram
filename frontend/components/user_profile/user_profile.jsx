@@ -21,7 +21,7 @@ class userProfile extends React.Component {
   }
 
   userPhotos() {
-    const photos = selectedPhotos(this.props.state);
+    const photos = selectedPhotos(this.props);
     let allUserPhotos;
 
     if (photos) {
@@ -38,12 +38,12 @@ class userProfile extends React.Component {
         <h1> No photos yet! </h1>
       );
     }
-    return allUserPhotos;
+    return allUserPhotos.reverse();
   }
 
   followOrEditProfileButton() {
-    let currentUser = this.props.state.session.currentUser;
-    let currentUserProfile = this.props.state.user;
+    let currentUser = this.props.currentUser;
+    let currentUserProfile = this.props.user;
     const { deleteFollow, createFollow } = this.props;
 
 
@@ -61,7 +61,7 @@ class userProfile extends React.Component {
   }
 
   render() {
-    const { user } = this.props.state;
+    const { user } = this.props;
     let userPhotos = this.userPhotos();
     let numPhotos = 0;
 

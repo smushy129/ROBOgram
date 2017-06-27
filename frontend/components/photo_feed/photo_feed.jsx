@@ -32,7 +32,7 @@ class PhotoFeed extends React.Component {
      let photosList;
 
      if (this.ifNotEmptyObj(this.props.photoFeed.photos)) {
-       photosList = this.parsePhotos();
+       photosList = this.parsePhotos().reverse();
      }
 
     return (

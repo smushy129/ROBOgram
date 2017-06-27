@@ -2,15 +2,15 @@ class Api::PhotosController < ApplicationController
   before_action :require_logged_in
 
   def index
-    follower_photos = []
+    followee_photos = []
 
-    follower_photos.concat(current_user.photos)
+    followee_photos.concat(current_user.photos)
 
-    current_user.followers.each_with_index do |follower, idx|
-      follower_photos.concat(follower.photos)
+    current_user.followees.each_with_index do |followee, idx|
+      followee_photos.concat(followee.photos)
     end
 
-    @photos = follower_photos.sort_by { |photo| photo.created_at }
+    @photos = followee_photos
 
     render :index
   end

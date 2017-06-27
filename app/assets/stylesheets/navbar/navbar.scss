@@ -12,6 +12,10 @@
   overflow: hidden;
 }
 
+.header button:focus {
+  outline:0;
+}
+
 .nav-group {
   display: flex;
   justify-content: space-between;
