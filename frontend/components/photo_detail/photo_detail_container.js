@@ -7,7 +7,9 @@ import { fetchSinglePhoto, deletePhoto } from '../../actions/photo_detail_action
 import { closeModal } from '../../actions/modal_actions';
 
 const mapStateToProps = (state) => ({
-  state
+  photoDetail: state.photoDetail,
+  currentUser: state.currentUser,
+  user: state.user,
 });
 
 const mapDispatchToProps = (dispatch) => ({

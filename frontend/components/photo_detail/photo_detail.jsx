@@ -28,16 +28,16 @@ class PhotoDetail extends React.Component {
       12: "December"
     };
 
-    return MONTH[this.props.state.photoDetail.created_at_month];
+    return MONTH[this.props.photoDetail.created_at_month];
   }
 
   goBack() {
-    const { currentUser } = this.props.state.session;
+    const { currentUser } = this.props.currentUser;
     this.props.closeModal();
  }
 
   render() {
-    const { photoDetail, user } = this.props.state;
+    const { photoDetail, user } = this.props;
     const { closeModal, deletePhoto, id } = this.props;
 
     if (photoDetail) {

@@ -8,10 +8,26 @@
 .photo-card {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  width: 600px;
+  margin: auto;
+  margin-top: 60px;
 }
 
-.photo-card-image {
+.photo-card-image img {
+  width: 600px;
+  height: 600px;
+}
 
+.photo-card-header {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding: 16px;
+  height: 27px;
+}
+
+.photo-card-avatar {
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
 }
