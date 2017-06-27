@@ -5,6 +5,8 @@ import PhotoDetailContainer from '../photo_detail/photo_detail_container';
 class userProfile extends React.Component {
   constructor(props) {
     super(props);
+
+    this.followOrEditProfileButton = this.followOrEditProfileButton.bind(this);
    }
 
   componentDidMount() {
@@ -39,8 +41,28 @@ class userProfile extends React.Component {
     return allUserPhotos;
   }
 
+  followOrEditProfileButton() {
+    let currentUser = this.props.state.session.currentUser;
+    let currentUserProfile = this.props.state.user;
+    const { deleteFollow, createFollow } = this.props;
+
+
+    if (currentUserProfile.followers) {
+      if (Object.keys(currentUserProfile.followers).includes(currentUser.id.toString())) {
+        return <button className='follow-btn' onClick={ () => deleteFollow(currentUserProfile.id) }>Following</button>;
+      }
+    }
+
+    if (currentUser.id === currentUserProfile.id) {
+      return <button className='edit-profile-btn'>Edit Profile</button>;
+    } else {
+      return <button className='follow-btn' onClick={ () => createFollow(currentUserProfile.id) }>Follow</button>;
+    }
+  }
+
   render() {
     const { user } = this.props.state;
+    let userPhotos = this.userPhotos();
 
     return (
       <section className='user-data'>
@@ -52,11 +74,12 @@ class userProfile extends React.Component {
           <ul className='user-profile-details'>
             <div>
               <li className='user-profile-username'>{user.username}</li>
+              { this.followOrEditProfileButton() }
             </div>
 
             <div className="user-meta-data">
               <span className='post-count'>
-                <li>4</li>
+                <li>{userPhotos.length}</li>
                 &nbsp;
                 <p>posts</p>
               </span>
@@ -84,7 +107,7 @@ class userProfile extends React.Component {
 
         <section className='user-photos-section'>
           <ul className='user-photos-list'>
-            {this.userPhotos()}
+            {userPhotos}
           </ul>
 
         </section>
