@@ -6,8 +6,12 @@ class PhotoFeedIndexItem extends React.Component {
   }
 
   render() {
-    
+    const { photo } = this.props;
+
+    return (
+      <li><img src={ photo.image_url } /></li>
+    );
   }
 }
 
-export default PhotoFeedItem;
+export default PhotoFeedIndexItem;

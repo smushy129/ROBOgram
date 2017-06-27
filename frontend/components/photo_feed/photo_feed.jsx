@@ -1,4 +1,5 @@
 import React from 'react';
+import PhotoFeedIndexItem from './photo_feed_index_item';
 
 class PhotoFeed extends React.Component {
   constructor(props) {
@@ -12,18 +13,31 @@ class PhotoFeed extends React.Component {
   }
 
   parsePhotos() {
-    const { photoFeed } = this.props;
+    const { photos } = this.props.photoFeed;
 
-    photoFeedArray = Object.keys(photoFeed).map(id => photoFeed[id]);
-    console.log(photoFeedArray);
+    let photosList = Object.keys(photos).map( (id) => {
+      return (
+        <PhotoFeedIndexItem photo={ photos[id]} key={ id } />
+      );
+    });
+
+    return photosList;
+  }
+
+  ifNotEmptyObj(obj) {
+    return Object.keys(obj).length !== 0;
   }
 
   render() {
-    // debugger;
-    // this.parsePhotos();
+     let photosList;
+
+     if (this.ifNotEmptyObj(this.props.photoFeed.photos)) {
+       photosList = this.parsePhotos();
+     }
+
     return (
       <div>
-        <h1 className='photo-feed'>AMAZING PHOTOS HERE</h1>
+        <div className='photo-feed'>{photosList}</div>
       </div>
     );
   }
