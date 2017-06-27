@@ -3,6 +3,13 @@
   margin: auto;
   justify-content: center;
   align-items: center;
+  font-family: sans-serif;
+
+  a {
+    text-decoration: none;
+    color: #262626;
+    font-weight: 600;
+  }
 }
 
 .photo-card {
@@ -21,13 +28,61 @@
 .photo-card-header {
   display: flex;
   justify-content: flex-start;
-  align-items: flex-start;
+  align-items: center;
   padding: 16px;
   height: 27px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  padding-left: 5px;
+  margin-left: -5px;
+
+  a {
+    font-size: 16px;
+    line-height: 18px;
+  }
 }
 
 .photo-card-avatar {
   border-radius: 50%;
   width: 30px;
   height: 30px;
+  margin-right: 10px;
+}
+
+.photo-card-info {
+  padding: 0 16px;
+}
+
+.unliked-button {
+  padding: 8px;
+}
+
+.comment-button {
+  padding: 8px;
+}
+
+.unliked-button:focus {
+  outline: none;
+}
+
+.comment-button:focus {
+  outline: none;
+}
+
+.photo-card-num-likes {
+  margin-bottom: 8px;
+}
+
+.photo-card-comments {
+  margin-bottom: 4px;
+  line-height: 23px;
+}
+
+.time-ago {
+  font-size: 10px;
+  letter-spacing: .2px;
+  color: #999;
+  text-transform: uppercase;
+  line-height: 18px;
 }

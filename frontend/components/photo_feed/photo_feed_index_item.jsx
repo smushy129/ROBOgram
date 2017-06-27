@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 class PhotoFeedIndexItem extends React.Component {
   constructor(props) {
@@ -12,14 +13,41 @@ class PhotoFeedIndexItem extends React.Component {
       <li className='photo-card'>
         <div className='photo-card-header'>
           <img className='photo-card-avatar' src={ photo.avatar_url } />
-          <p>{ photo.username }</p>
+          <Link to={`/users/${photo.user_id}`}>{ photo.username }</Link>
         </div>
-
 
         <div className='photo-card-image'>
           <img src={ photo.image_url } />
         </div>
 
+        <div className='photo-card-info'>
+          <div className='photo-card-like-comment-btn'>
+            <button className='unliked-button'>
+              <i className="fa fa-heart-o" aria-hidden="false"></i>
+            </button>
+            &nbsp;
+            <button className='comment-button'>
+              <i className="fa fa-comment-o" aria-hidden="true"></i>
+            </button>
+          </div>
+
+          <div className='photo-card-num-likes'>
+            <p>9001 likes</p>
+          </div>
+
+          <ul className='photo-card-comments'>
+            <li>
+              <Link to={`/users/${photo.user_id}`}>{ photo.username }</Link>
+              &nbsp; { photo.caption }
+            </li>
+         </ul>
+
+         <div className='time-ago'>
+            <p>{ photo.timestamp } ago</p>
+         </div>
+
+
+        </div>
       </li>
     );
   }

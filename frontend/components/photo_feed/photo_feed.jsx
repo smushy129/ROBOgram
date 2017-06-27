@@ -38,7 +38,7 @@ class PhotoFeed extends React.Component {
     return (
       <div>
         <ul className='photo-feed'>
-          {photosList}
+          { photosList }
         </ul>
       </div>
     );

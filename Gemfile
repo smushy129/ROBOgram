@@ -15,6 +15,8 @@ gem 'coffee-rails', '~> 4.1.0'
 # gem 'therubyracer', platforms: :ruby
 gem 'rails_12factor'
 
+gem 'time_ago_in_words'
+
 gem 'annotate'
 gem 'bcrypt'
 # Use jquery as the JavaScript library
