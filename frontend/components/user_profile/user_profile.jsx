@@ -60,13 +60,21 @@ class userProfile extends React.Component {
     }
   }
 
+  countFollows(followObj) {
+    return Object.keys(followObj).length;
+  }
+
   render() {
     const { user } = this.props;
     let userPhotos = this.userPhotos();
     let numPhotos = 0;
+    let numFollowers = 0;
+    let numFollowees = 0;
 
     if (userPhotos.length > 0) {
       numPhotos = userPhotos.length;
+      numFollowees = this.countFollows(user.followees);
+      numFollowers = this.countFollows(user.followers);
     }
 
 
@@ -91,13 +99,13 @@ class userProfile extends React.Component {
               </span>
 
               <span className='follower-count'>
-                <li>9</li>
+                <li>{numFollowers}</li>
                 &nbsp;
                 <p>followers</p>
               </span>
 
               <span className='following-count'>
-                <li>2</li>
+                <li>{numFollowees}</li>
                 &nbsp;
                 <p>following</p>
               </span>
