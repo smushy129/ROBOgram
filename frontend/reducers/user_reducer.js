@@ -22,10 +22,10 @@ const UserReducer = (state = _default_state, action) => {
       return newState;
 
     case RECEIVE_FOLLOW:
-      return merge({}, state, { followees: action.follow });
+      return merge({}, state, { followers: action.follow });
 
     case UNFOLLOW:
-      delete newState.followers[action.follow.follower_id];
+      delete newState.followers[Object.keys(action.follow)];
       return newState;
 
     default:
