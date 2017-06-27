@@ -1,3 +1,17 @@
 .photo-feed {
-  text-align: center;
+  width: 80%;
+  margin: auto;
+  justify-content: center;
+  align-items: center;
+}
+
+.photo-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.photo-card-image {
+
 }

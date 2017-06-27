@@ -9,7 +9,9 @@ class PhotoFeedIndexItem extends React.Component {
     const { photo } = this.props;
 
     return (
-      <li><img src={ photo.image_url } /></li>
+      <div className='photo-card'>
+        <li className='photo-card-image'><img src={ photo.image_url } /></li>
+      </div>
     );
   }
 }

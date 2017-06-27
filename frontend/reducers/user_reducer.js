@@ -8,7 +8,7 @@ const _default_state = Object.freeze({});
 const UserReducer = (state = _default_state, action) => {
   Object.freeze(state);
   const newState = Object.assign({}, state);
-
+  // debugger;
   switch (action.type) {
     case RECEIVE_SINGLE_USER:
       return action.user;
