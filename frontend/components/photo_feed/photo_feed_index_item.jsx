@@ -43,7 +43,13 @@ class PhotoFeedIndexItem extends React.Component {
          </ul>
 
          <div className='time-ago'>
-            <p>{ photo.timestamp } ago</p>
+            <div>{ photo.timestamp } ago</div>
+         </div>
+
+         <div className='photo-feed-comment'>
+           <textarea className='comments-box'
+             aria-label="Add a comment…" placeholder="Add a comment…">
+           </textarea>
          </div>
 
 

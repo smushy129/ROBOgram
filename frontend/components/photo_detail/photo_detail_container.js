@@ -8,7 +8,7 @@ import { closeModal } from '../../actions/modal_actions';
 
 const mapStateToProps = (state) => ({
   photoDetail: state.photoDetail,
-  currentUser: state.currentUser,
+  currentUser: state.session.currentUser,
   user: state.user,
 });
 
