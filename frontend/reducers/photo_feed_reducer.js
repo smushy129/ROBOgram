@@ -1,9 +1,9 @@
 import merge from 'lodash/merge';
-import { RECEIVE_FEED_PHOTOS } from '../actions/photo_actions';
+import { RECEIVE_FEED_PHOTOS } from '../actions/photo_feed_actions';
 
 const _defaultState = {};
 
-const PhotosReducer = (state = _defaultState, action) => {
+const PhotoFeedReducer = (state = _defaultState, action) => {
   switch (action.type) {
     case RECEIVE_FEED_PHOTOS:
       return merge({}, state, action.photos);
@@ -12,4 +12,4 @@ const PhotosReducer = (state = _defaultState, action) => {
   }
 };
 
-export default PhotosReducer;
+export default PhotoFeedReducer;

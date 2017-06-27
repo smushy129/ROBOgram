@@ -2,12 +2,11 @@ import React from 'react';
 import { connect } from 'react-redux';
 
 import PhotoFeed from './photo_feed';
-import { fetchFeedPhotos } from '../../actions/photo_actions';
+import { fetchFeedPhotos } from '../../actions/photo_feed_actions';
 
-const mapStateToProps = (state) => {
-  
+const mapStateToProps = ({photoFeed}) => {
   return ({
-    state
+    photoFeed: photoFeed
   });
 };
 

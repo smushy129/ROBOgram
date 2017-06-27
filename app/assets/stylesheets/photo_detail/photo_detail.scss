@@ -1,10 +1,13 @@
-  .modal-photo-detail {
+.modal-photo-detail {
   display: flex;
   flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 600px;
+  width: 940px;
 }
 
 .modal-photo-detail-image {
-  margin: auto;
   max-height: 600px;
   max-width: 600px;
   width: 100%;
@@ -13,8 +16,9 @@
 
 .modal-photo-detail-info {
   background-color: #fff;
-  padding: 1.5%;
-  width: 350px;
+  padding: 10px;
+  width: 340px;
+  height: 580px;
   display: flex;
   flex-direction: column;
   font-family: sans-serif;

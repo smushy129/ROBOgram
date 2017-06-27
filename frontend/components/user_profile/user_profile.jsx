@@ -35,7 +35,7 @@ class userProfile extends React.Component {
       });
     } else {
       return (
-        <h1> loading </h1>
+        <h1> No photos yet! </h1>
       );
     }
     return allUserPhotos;
@@ -49,7 +49,7 @@ class userProfile extends React.Component {
 
     if (currentUserProfile.followers) {
       if (Object.keys(currentUserProfile.followers).includes(currentUser.id.toString())) {
-        return <button className='follow-btn' onClick={ () => deleteFollow(currentUserProfile.id) }>Following</button>;
+        return <button className='following-btn' onClick={ () => deleteFollow(currentUserProfile.id) }>Following</button>;
       }
     }
 
@@ -68,7 +68,7 @@ class userProfile extends React.Component {
     if (userPhotos.length > 0) {
       numPhotos = userPhotos.length;
     }
-    
+
 
     return (
       <section className='user-data'>
@@ -78,7 +78,7 @@ class userProfile extends React.Component {
           </div>
 
           <ul className='user-profile-details'>
-            <div>
+            <div className='username-follow-btn'>
               <li className='user-profile-username'>{user.username}</li>
               { this.followOrEditProfileButton() }
             </div>

@@ -1,4 +1,4 @@
-import * as APIUtil from '../util/photos_util';
+import * as APIUtil from '../util/photo_feed_util';
 export const RECEIVE_FEED_PHOTOS = "RECEIVE_FEED_PHOTOS";
 
 export const receiveFeedPhotos = (photos) => {
