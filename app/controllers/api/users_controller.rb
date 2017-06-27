@@ -15,8 +15,7 @@ class Api::UsersController < ApplicationController
     @user = User.find_by(id: params[:id])
 
     if @user
-      @photos = @user.photos
-        .order('photos.created_at DESC')
+      @photos = @user.photos.order('photos.created_at DESC')
       render :show
     else
       render json: @user.errors.full_messages, status: 422
