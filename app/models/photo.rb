@@ -25,4 +25,14 @@ class Photo < ActiveRecord::Base
     primary_key: :id,
     foreign_key: :user_id
 
+  has_many :likes, :dependent :destroy,
+    class_name: "Like",
+    primary_key: :id,
+    foreign_key: :user_id
+
+  has_many :comments, :dependent :destroy,
+    class_name: "Comment",
+    primary_key: :id,
+    foreign_key: :user_id
+
 end

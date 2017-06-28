@@ -48,6 +48,16 @@ class User < ActiveRecord::Base
     through: :follows_as_follower,
     source: :followee
 
+  has_many :likes, :dependent :destroy,
+    class_name: "Like",
+    primary_key: :id,
+    foreign_key: :user_id
+
+  has_many :comments, :dependent :destroy,
+    class_name: "Comment",
+    primary_key: :id,
+    foreign_key: :user_id
+
   attr_reader :password
 
   after_initialize :ensure_session_token
