@@ -83,6 +83,10 @@ class User < ActiveRecord::Base
     self.session_token
   end
 
+  def isLiked(photo_id)
+    self.likes.include?(photo_id)
+  end
+
   private
   def ensure_session_token
     self.session_token ||= SecureRandom.urlsafe_base64(16)

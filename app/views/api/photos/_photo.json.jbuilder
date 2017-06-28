@@ -6,3 +6,5 @@ json.image_url asset_path(photo.image.url)
 json.caption photo.caption
 json.created_at photo.created_at
 json.timestamp time_ago_in_words(photo.created_at)
+json.likes photo.likes
+json.liked_by_current_user current_user.isLiked(photo.id)

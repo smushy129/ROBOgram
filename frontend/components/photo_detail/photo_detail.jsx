@@ -116,5 +116,3 @@ class PhotoDetail extends React.Component {
 }
 
 export default PhotoDetail;
-
-// <i className="fa fa-heart" aria-hidden="true"></i>

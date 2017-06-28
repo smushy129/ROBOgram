@@ -1,6 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
+import LikesContainer from '../likes/likes_container';
+
 class PhotoFeedIndexItem extends React.Component {
   constructor(props) {
     super(props);
@@ -22,9 +24,7 @@ class PhotoFeedIndexItem extends React.Component {
 
         <div className='photo-card-info'>
           <div className='photo-card-like-comment-btn'>
-            <button className='unliked-button'>
-              <i className="fa fa-heart-o" aria-hidden="false"></i>
-            </button>
+            <LikesContainer isLikedByCurrentUser={ photo.isLikedByCurrentUser} />
             &nbsp;
             <button className='comment-button'>
               <i className="fa fa-comment-o" aria-hidden="true"></i>
