@@ -60,23 +60,9 @@ class userProfile extends React.Component {
     }
   }
 
-  countFollows(followObj) {
-    return Object.keys(followObj).length;
-  }
-
   render() {
     const { user } = this.props;
     let userPhotos = this.userPhotos();
-    let numPhotos = 0;
-    let numFollowers = 0;
-    let numFollowees = 0;
-
-    if (userPhotos.length > 0) {
-      numPhotos = userPhotos.length;
-      numFollowees = this.countFollows(user.followees);
-      numFollowers = this.countFollows(user.followers);
-    }
-
 
     return (
       <section className='user-data'>
@@ -93,19 +79,19 @@ class userProfile extends React.Component {
 
             <div className="user-meta-data">
               <span className='post-count'>
-                <li>{numPhotos}</li>
+                <li>{user.num_photos}</li>
                 &nbsp;
                 <p>posts</p>
               </span>
 
               <span className='follower-count'>
-                <li>{numFollowers}</li>
+                <li>{user.num_followers}</li>
                 &nbsp;
                 <p>followers</p>
               </span>
 
               <span className='following-count'>
-                <li>{numFollowees}</li>
+                <li>{user.num_followees}</li>
                 &nbsp;
                 <p>following</p>
               </span>

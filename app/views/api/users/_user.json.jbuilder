@@ -1,5 +1,9 @@
 json.extract! user, :id, :username, :bio, :website, :name
 json.avatar_url asset_path(user.avatar.url)
+json.num_followers user.followers.length
+json.num_followees user.followees.length
+json.num_photos user.photos.length
+
 
 json.followers do
   user.followers.each do |follower|
