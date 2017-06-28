@@ -1,0 +1,28 @@
+.unliked-button {
+  padding: 8px;
+  font-size: 26px;
+  background-color: Transparent;
+  background-repeat:no-repeat;
+  border: none;
+  cursor:pointer;
+  overflow: hidden;
+}
+
+.liked-button {
+  padding: 8px;
+  font-size: 26px;
+  background-color: Transparent;
+  background-repeat:no-repeat;
+  border: none;
+  cursor:pointer;
+  overflow: hidden;
+  color: red;
+}
+
+.liked-button:focus {
+  outline:0;
+}
+
+.unliked-button:focus {
+  outline:0;
+}
