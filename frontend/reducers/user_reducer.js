@@ -2,13 +2,14 @@ import merge from 'lodash/merge';
 import { RECEIVE_SINGLE_USER } from '../actions/user_actions';
 import { RECEIVE_SINGLE_PHOTO, DELETE_PHOTO } from '../actions/photo_detail_actions';
 import { RECEIVE_FOLLOW, UNFOLLOW } from '../actions/follow_actions';
+import { REMOVE_FEED } from '../actions/photo_feed_actions';
 
-const _default_state = Object.freeze({});
+const _defaultState = Object.freeze({});
 
-const UserReducer = (state = _default_state, action) => {
+const UserReducer = (state = _defaultState, action) => {
   Object.freeze(state);
   const newState = Object.assign({}, state);
-  // debugger;
+  
   switch (action.type) {
     case RECEIVE_SINGLE_USER:
       return action.user;
@@ -27,6 +28,9 @@ const UserReducer = (state = _default_state, action) => {
     case UNFOLLOW:
       delete newState.followers[Object.keys(action.follow)];
       return newState;
+
+    case REMOVE_FEED:
+      return _defaultState;
 
     default:
       return state;

@@ -56,6 +56,12 @@
 }
 
 .following-btn {
+  margin-left: 20px;
+  padding: 0 24px;
+  background: 0 0;
+  border-color: #dbdbdb;
+  color: #262626;
+  cursor: pointer;
   -webkit-appearance: none;
   border-radius: 3px;
   border-style: solid;
@@ -67,13 +73,7 @@
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
-  width: 36%;
-  background: #3897f0;
-  border-color: #3897f0;
-  color: #fff;
-  padding: 0 24px;
-  margin-left: 20px;
-  cursor: pointer;
+  width: 40%;
 }
 
 .edit-profile-btn {

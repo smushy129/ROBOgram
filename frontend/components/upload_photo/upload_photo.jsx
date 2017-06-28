@@ -36,7 +36,7 @@ class UploadPhoto extends React.Component {
   }
 
   goBack() {
-    const { currentUser } = this.props.state.session;
+    const { currentUser } = this.props;
     this.props.closeModal();
     this.props.history.push(`/users/${currentUser.id}`);
  }
