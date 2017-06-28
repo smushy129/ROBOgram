@@ -84,7 +84,10 @@ class User < ActiveRecord::Base
   end
 
   def isLiked(photo_id)
-    self.likes.include?(photo_id)
+    self.likes.each do |like|
+      return true if like.photo_id == photo_id
+    end
+    false
   end
 
   private

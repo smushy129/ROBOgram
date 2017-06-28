@@ -22,7 +22,7 @@ export const createLike = photo_id => (dispatch) => {
     .then( (like) => { return dispatch(receiveLike(like)); });
 };
 
-export const destroyLike = photo_id => (dispatch) => {
-  return APIUtil.destroyLike()
+export const destroyLike = photoId => (dispatch) => {
+  return APIUtil.destroyLike(photoId)
     .then( (like) => { return dispatch(removeLike(like)); });
 };

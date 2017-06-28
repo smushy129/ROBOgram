@@ -24,7 +24,7 @@ class PhotoFeedIndexItem extends React.Component {
 
         <div className='photo-card-info'>
           <div className='photo-card-like-comment-btn'>
-            <LikesContainer isLikedByCurrentUser={ photo.isLikedByCurrentUser} />
+            <LikesContainer isLikedByCurrentUser={ photo.liked_by_current_user} photoId={ photo.id }/>
             &nbsp;
             <button className='comment-button'>
               <i className="fa fa-comment-o" aria-hidden="true"></i>

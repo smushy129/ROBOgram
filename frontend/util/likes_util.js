@@ -6,9 +6,9 @@ export const createLike = (photo_id) => {
   });
 };
 
-export const destroyLike = (photo_id) => {
+export const destroyLike = (photoId) => {
   return $.ajax({
     method: 'DELETE',
-    url: `api/likes/${photo_id}`
+    url: `api/likes/${photoId}`
   });
 };
