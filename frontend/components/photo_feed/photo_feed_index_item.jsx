@@ -8,6 +8,14 @@ class PhotoFeedIndexItem extends React.Component {
     super(props);
   }
 
+  likeOrLikes(num_likes) {
+    if (num_likes === 1)
+      return "like";
+    else {
+      return "likes";
+    }
+  }
+
   render() {
     const { photo } = this.props;
 
@@ -32,7 +40,7 @@ class PhotoFeedIndexItem extends React.Component {
           </div>
 
           <div className='photo-card-num-likes'>
-            <p>9001 likes</p>
+            <p>{ photo.num_likes } { this.likeOrLikes(photo.num_likes) }</p>
           </div>
 
           <ul className='photo-card-comments'>

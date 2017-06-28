@@ -1,5 +1,6 @@
 import merge from 'lodash/merge';
 import { RECEIVE_FEED_PHOTOS, REMOVE_FEED } from '../actions/photo_feed_actions';
+import { RECEIVE_LIKE, REMOVE_LIKE } from '../actions/like_actions';
 
 const _defaultState = {
   photos: {}

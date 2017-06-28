@@ -6,17 +6,17 @@ class Likes extends React.Component {
   }
 
   likeButtonToRender() {
-    const { isLikedByCurrentUser, createLike, destroyLike, photoId } = this.props;
+    const { isLikedByCurrentUser, createLike, destroyLike, photoId, fetchFeedPhotos } = this.props;
 
     if (isLikedByCurrentUser) {
       return (
-        <button className='liked-button' onClick={ () => destroyLike(photoId) }>
+        <button className='liked-button' onClick={ () => destroyLike(photoId).then( () => fetchFeedPhotos()) }>
           <i className="fa fa-heart" aria-hidden="true"></i>
         </button>
       );
     } else {
       return (
-        <button className='unliked-button' onClick={ () => createLike(photoId) }>
+        <button className='unliked-button' onClick={ () => createLike(photoId).then( () => fetchFeedPhotos()) }>
           <i className="fa fa-heart-o" aria-hidden="false"></i>
         </button>
       );
