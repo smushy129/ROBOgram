@@ -9,4 +9,5 @@ json.created_at_month @photo.created_at.month
 json.created_at_day @photo.created_at.day
 json.timestamp time_ago_in_words(@photo.created_at)
 json.likes @photo.likes
+json.num_likes @photo.likes.length
 json.liked_by_current_user current_user.isLiked(@photo.id)

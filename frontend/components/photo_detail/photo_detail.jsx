@@ -1,6 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
+import LikesContainer from '../likes/likes_container';
+
 class PhotoDetail extends React.Component {
   constructor(props) {
     super(props);
@@ -36,9 +38,17 @@ class PhotoDetail extends React.Component {
     this.props.closeModal();
  }
 
+ likeOrLikes(num_likes) {
+   if (num_likes === 1)
+     return "like";
+   else {
+     return "likes";
+   }
+ }
+
   render() {
     const { photoDetail, user } = this.props;
-    const { closeModal, deletePhoto, id, fetchFeedPhotos } = this.props;
+    const { closeModal, deletePhoto, id, fetchFeedPhotos, fetchSinglePhoto } = this.props;
 
     if (photoDetail) {
       return(
@@ -82,9 +92,7 @@ class PhotoDetail extends React.Component {
             </div>
 
             <div className='modal-photo-detail-like-comment'>
-              <button className='unliked-button'>
-                <i className="fa fa-heart-o" aria-hidden="false"></i>
-              </button>
+              <LikesContainer isLikedByCurrentUser={ photoDetail.liked_by_current_user} photoId={ id }/>
               &nbsp;
               <button className='comment-button'>
                 <i className="fa fa-comment-o" aria-hidden="true"></i>
@@ -93,7 +101,7 @@ class PhotoDetail extends React.Component {
             </div>
 
             <div className='modal-photo-detail-like-count'>
-              <span>9001 likes</span>
+              <span>{ photoDetail.num_likes } { this.likeOrLikes(photoDetail.num_likes) }</span>
             </div>
 
             <div className='modal-photo-detail-timestamp'>

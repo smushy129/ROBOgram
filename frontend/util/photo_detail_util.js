@@ -1,4 +1,5 @@
 export const fetchSinglePhoto = (id) => {
+  debugger
   return $.ajax({
     method: 'GET',
     url: `/api/photos/${id}`
