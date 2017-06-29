@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 import LikesContainer from '../likes/likes_container';
+import CommentFormDetailContainer from '../comments/comment_form_detail_container';
 
 class PhotoDetail extends React.Component {
   constructor(props) {
@@ -109,9 +110,7 @@ class PhotoDetail extends React.Component {
             </div>
 
             <div className='modal-photo-detail-comments-section'>
-              <textarea className='modal-photo-detail-comments-box'
-                aria-label="Add a comment…" placeholder="Add a comment…">
-              </textarea>
+              <CommentFormDetailContainer photoId={ photoDetail.id }/>
             </div>
 
           </div>

@@ -9,7 +9,6 @@ const _defaultState = {
 
 const PhotoFeedReducer = (state = _defaultState, action) => {
   // debugger
-
   switch (action.type) {
     case RECEIVE_FEED_PHOTOS:
       return merge({}, _defaultState, { photos: action.photos });
@@ -21,10 +20,8 @@ const PhotoFeedReducer = (state = _defaultState, action) => {
     //   return merge({}, state, { photos :action.photos });
     case RECEIVE_COMMENT:
       const photoId = action.comment.photoId;
-      const commentArr = Object.assign([], state.photos[photoId].comments);
-      commentArr.push(action.comment);
-
-      return merge({}, state, { photos: { [photoId]: { comments: commentArr }}});
+      const commentId = action.comment.commentId;
+        return merge({}, state, { photos: { [photoId]: { comments: { [commentId]: action.comment }}}});
 
     default:
       return state;

@@ -33,6 +33,6 @@ class Photo < ActiveRecord::Base
   has_many :comments, dependent: :destroy,
     class_name: "Comment",
     primary_key: :id,
-    foreign_key: :user_id
+    foreign_key: :photo_id
 
 end
