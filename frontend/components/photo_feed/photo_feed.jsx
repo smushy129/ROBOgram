@@ -5,7 +5,6 @@ import PhotoFeedIndexItemContainer from './photo_feed_index_item_container';
 class PhotoFeed extends React.Component {
   constructor(props) {
     super(props);
-
     this.parsePhotos = this.parsePhotos.bind(this);
   }
 
@@ -21,7 +20,6 @@ class PhotoFeed extends React.Component {
         <PhotoFeedIndexItemContainer photo={ photos[id]} key={ id } />
       );
     });
-
     return photosList;
   }
 

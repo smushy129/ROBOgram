@@ -8,7 +8,6 @@ import { selectComments } from '../../reducers/selectors';
 class PhotoFeedIndexItem extends React.Component {
   constructor(props) {
     super(props);
-
   }
 
   likeOrLikes(num_likes) {
@@ -56,7 +55,6 @@ class PhotoFeedIndexItem extends React.Component {
       });
     }
 
-
     return (
       <li className='photo-card'>
         <div className='photo-card-header'>
@@ -98,8 +96,6 @@ class PhotoFeedIndexItem extends React.Component {
          <div className='photo-feed-comment'>
              <CommentFormContainer photoId={ photo.id }/>
          </div>
-
-
         </div>
       </li>
     );

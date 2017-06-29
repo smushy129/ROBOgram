@@ -8,9 +8,7 @@ const _defaultState = {
 };
 
 const PhotoDetailReducer = (state = _defaultState, action) => {
-
   switch (action.type) {
-
     case RECEIVE_SINGLE_PHOTO:
       return action.photoDetail;
 
