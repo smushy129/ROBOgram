@@ -1,5 +1,4 @@
 import React from 'react';
-// import PhotoFeedIndexItem from './photo_feed_index_item';
 import PhotoFeedIndexItemContainer from './photo_feed_index_item_container';
 
 class PhotoFeed extends React.Component {

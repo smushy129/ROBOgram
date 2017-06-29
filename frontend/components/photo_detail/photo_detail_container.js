@@ -6,6 +6,7 @@ import { fetchSinglePhoto, deletePhoto } from '../../actions/photo_detail_action
 import { closeModal } from '../../actions/modal_actions';
 import { fetchFeedPhotos } from '../../actions/photo_feed_actions';
 import { createLike, destroyLike } from '../../actions/like_actions';
+import { deleteComment } from '../../actions/comment_actions';
 
 const mapStateToProps = (state) => ({
   photoDetail: state.photoDetail,
@@ -19,7 +20,8 @@ const mapDispatchToProps = (dispatch) => ({
   deletePhoto: (id, callback) => { return dispatch(deletePhoto(id, callback)); },
   fetchFeedPhotos: () => { return dispatch(fetchFeedPhotos()); },
   createLike: (photo_id) => { return dispatch(createLike(photo_id)); },
-  destroyLike: (photo_id) => { return dispatch(destroyLike(photo_id)); }
+  destroyLike: (photo_id) => { return dispatch(destroyLike(photo_id)); },
+  deleteComment: (commentId) => { return dispatch(deleteComment(commentId)); }
 });
 
 export default connect(

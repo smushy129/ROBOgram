@@ -11,6 +11,7 @@ class PhotoDetail extends React.Component {
 
     this.goBack = this.goBack.bind(this);
     this.renderDeleteBtn = this.renderDeleteBtn.bind(this);
+    this.deleteCommentBtn = this.deleteCommentBtn.bind(this);
   }
 
   componentDidMount() {
@@ -61,6 +62,20 @@ class PhotoDetail extends React.Component {
     }
   }
 
+  deleteCommentBtn(comment) {
+      const { deleteComment, currentUser } = this.props;
+
+    if (currentUser.username === comment.username) {
+      return(
+        <button onClick={ () => deleteComment(comment.id) } className='comment-delete-btn'>
+           <i className="fa fa-times" aria-hidden="true"></i>
+        </button>
+      );
+    } else {
+      return null;
+    }
+  }
+
   render() {
     const { photoDetail, user, closeModal, deletePhoto, id, fetchFeedPhotos, fetchSinglePhoto } = this.props;
 
@@ -78,6 +93,8 @@ class PhotoDetail extends React.Component {
                   &nbsp;
                   { comment.body }
                 </p>
+
+                { this.deleteCommentBtn(comment) }
               </div>
             </li>
           );
