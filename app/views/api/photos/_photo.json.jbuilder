@@ -14,6 +14,7 @@ json.comments do
     json.set! comment.id do
       json.id comment.id
       json.userId comment.user_id
+      json.body comment.body
       json.photoId comment.photo_id
       json.username comment.user.username
       json.createdAt comment.created_at

@@ -21,7 +21,7 @@ const PhotoFeedReducer = (state = _defaultState, action) => {
     case RECEIVE_COMMENT:
       const photoId = action.comment.photoId;
       const commentId = action.comment.commentId;
-        return merge({}, state, { photos: { [photoId]: { comments: { [commentId]: action.comment }}}});
+      return merge({}, state, { photos: { [photoId]: { comments: { [commentId]: action.comment }}}});
 
     default:
       return state;

@@ -23,9 +23,9 @@ class PhotoFeedIndexItem extends React.Component {
 
     const comments = selectComments(photo.comments);
     let photoComments;
-
     if (comments) {
       photoComments = comments.map( (comment) => {
+        debugger
         return (
           <li key={comment.id}>
             { comment.body }
@@ -65,9 +65,8 @@ class PhotoFeedIndexItem extends React.Component {
               &nbsp; { photo.caption }
             </li>
 
-            <div>
-              { photoComments }
-            </div>
+            { photoComments }
+
          </ul>
 
          <div className='time-ago'>

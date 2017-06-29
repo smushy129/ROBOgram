@@ -10,9 +10,8 @@ export const selectedPhotos = (state) => {
 };
 
 export const selectComments = (comments) => {
+
   if (comments) {
-    return orderBy(values(comments), ['createdAt'], ['asc']);
-  } else {
-    return [];
+    return Object.keys(comments).map(id => comments[id]);
   }
 };
