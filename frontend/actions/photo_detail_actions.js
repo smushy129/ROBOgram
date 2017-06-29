@@ -1,6 +1,7 @@
 import * as APIUtil from '../util/photo_detail_util';
 export const RECEIVE_SINGLE_PHOTO = "RECEIVE_SINGLE_PHOTO";
 export const DELETE_PHOTO = "DELETE_PHOTO";
+export const CLEAR_PHOTO_DETAIL_STATE = "CLEAR_PHOTO_DETAIL_STATE";
 
 export const receiveSinglePhoto = (photoDetail) => {
   return ({
@@ -13,6 +14,12 @@ export const deletePhotoFromState = (photo) => {
   return({
     type: DELETE_PHOTO,
     photo: photo,
+  });
+};
+
+export const clearPhotoDetailState = () => {
+  return ({
+    type: CLEAR_PHOTO_DETAIL_STATE
   });
 };
 
