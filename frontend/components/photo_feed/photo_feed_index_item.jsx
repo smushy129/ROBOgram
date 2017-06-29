@@ -2,6 +2,8 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 import LikesContainer from '../likes/likes_container';
+import CommentFormContainer from '../comments/comment_form_container';
+import { selectComments } from '../../reducers/selectors';
 
 class PhotoFeedIndexItem extends React.Component {
   constructor(props) {
@@ -18,6 +20,20 @@ class PhotoFeedIndexItem extends React.Component {
 
   render() {
     const { photo } = this.props;
+
+    const comments = selectComments(this.props.photo.comments);
+    let photoComments;
+
+    if (comments) {
+      photoComments = comments.map( (comment) => {
+        return (
+          <li key={comment.id}>
+            { comment.body }
+          </li>
+        );
+      });
+    }
+
 
     return (
       <li className='photo-card'>
@@ -48,6 +64,10 @@ class PhotoFeedIndexItem extends React.Component {
               <Link to={`/users/${photo.user_id}`}>{ photo.username }</Link>
               &nbsp; { photo.caption }
             </li>
+
+            <div>
+              { photoComments }
+            </div>
          </ul>
 
          <div className='time-ago'>
@@ -55,9 +75,7 @@ class PhotoFeedIndexItem extends React.Component {
          </div>
 
          <div className='photo-feed-comment'>
-           <textarea className='comments-box'
-             aria-label="Add a comment…" placeholder="Add a comment…">
-           </textarea>
+             <CommentFormContainer photoId={ photo.id }/>
          </div>
 
 

@@ -1,4 +1,6 @@
 class Api::FollowsController < ApplicationController
+  before_action :require_logged_in
+
   def index
 
   end

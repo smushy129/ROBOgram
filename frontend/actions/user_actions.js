@@ -10,6 +10,6 @@ export const receiveSingleUser = (user) => {
 };
 
 export const fetchSingleUser = (id) => (dispatch) => {
-  return APIUtil.fetchSingleUser(id).
-    then( (user) => { return dispatch(receiveSingleUser(user)); });
+  return APIUtil.fetchSingleUser(id)
+    .then( (user) => { return dispatch(receiveSingleUser(user)); });
 };

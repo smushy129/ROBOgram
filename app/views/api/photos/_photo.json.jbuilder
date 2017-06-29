@@ -8,6 +8,7 @@ json.created_at photo.created_at
 json.timestamp time_ago_in_words(photo.created_at)
 json.liked_by_current_user current_user.isLiked(photo.id)
 json.num_likes photo.likes.length
+json.comments photo.comments
 
 json.likes do
   photo.likes.each do |like|
