@@ -6,9 +6,9 @@ export const addComment = (comment) => {
   });
 };
 
-export const destroyComment = (comment_id) => {
+export const destroyComment = (commentId) => {
   return $.ajax({
     method: 'DELETE',
-    url: `api/comments/${comment_id}`
+    url: `api/comments/${commentId}`
   });
 };

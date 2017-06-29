@@ -18,8 +18,8 @@ class PhotoFeedIndexItem extends React.Component {
     }
   }
 
-  render() {
-    const { photo } = this.props;
+    render() {
+    const { photo, deleteComment } = this.props;
 
     const comments = selectComments(photo.comments);
     let photoComments;
@@ -27,7 +27,17 @@ class PhotoFeedIndexItem extends React.Component {
       photoComments = comments.map( (comment) => {
         return (
           <li key={comment.id}>
-            { comment.body }
+            <div className='photo-feed-comment-list-item'>
+              <p>
+                <Link to={`/users/${comment.userId}`}>{ comment.username }</Link>
+                &nbsp;
+                { comment.body }
+              </p>
+
+             <button onClick={ () => deleteComment(comment.id) }>
+                <i className="fa fa-times" aria-hidden="true"></i>
+             </button>
+            </div>
           </li>
         );
       });
@@ -61,7 +71,7 @@ class PhotoFeedIndexItem extends React.Component {
           <ul className='photo-card-comments'>
             <li>
               <Link to={`/users/${photo.user_id}`}>{ photo.username }</Link>
-              &nbsp; { photo.caption }
+              &nbsp;{ photo.caption }
             </li>
 
             { photoComments }

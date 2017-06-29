@@ -22,7 +22,7 @@ export const addComment = (comment) => (dispatch) => {
     .then( (comment) => dispatch(receiveComment(comment)));
 };
 
-export const deleteComment = (comment_id) => (dispatch) => {
-  return APIUtil.deleteComment(comment_id)
+export const deleteComment = (commentId) => (dispatch) => {
+  return APIUtil.deleteComment(commentId)
     .then( (comment) => dispatch(deleteComment(comment)));
 };

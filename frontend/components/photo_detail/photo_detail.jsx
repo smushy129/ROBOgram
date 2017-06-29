@@ -52,7 +52,7 @@ class PhotoDetail extends React.Component {
     const { photoDetail, user } = this.props;
     const { closeModal, deletePhoto, id, fetchFeedPhotos, fetchSinglePhoto } = this.props;
 
-    if (photoDetail) {
+    if (photoDetail.id) {
 
       const comments = selectComments(photoDetail.comments);
       let photoComments;
@@ -88,7 +88,7 @@ class PhotoDetail extends React.Component {
                   <span onClick={ () => closeModal() }>{ user.username }</span>
                 </div>
 
-                <button className='delete-photo-btn' onClick={ () => deletePhoto(id, this.goBack).then( () => fetchFeedPhotos()) }>
+                <button className='delete-photo-btn' onClick={ () => deletePhoto(id, this.goBack) }>
                   <i className="fa fa-trash-o" aria-hidden="true"></i>
                 </button>
               </div>
@@ -113,7 +113,7 @@ class PhotoDetail extends React.Component {
             <div className='modal-photo-detail-like-comment'>
                 <LikesContainer isLikedByCurrentUser={ photoDetail.liked_by_current_user} photoId={ id }/>
               &nbsp;
-              <button className='comment-button'>
+              <button className='modal-comment-button'>
                 <i className="fa fa-comment-o" aria-hidden="true"></i>
               </button>
 

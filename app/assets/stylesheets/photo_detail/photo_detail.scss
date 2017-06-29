@@ -53,6 +53,7 @@
 .modal-photo-detail-caption {
   display: flex;
   padding: 10px;
+  line-height: 24px;
 }
 
 .modal-photo-detail-body {
@@ -64,7 +65,7 @@
 }
 
 .modal-photo-detail-body li {
-  padding: 5px 0;
+  padding: 3px 0;
 }
 
 .modal-photo-detail-like-comment {
@@ -79,6 +80,16 @@
   border: none;
   cursor:pointer;
   overflow: hidden;
+}
+
+.modal-comment-button {
+  font-size: 27px;
+  background-color: Transparent;
+  background-repeat:no-repeat;
+  border: none;
+  cursor:pointer;
+  overflow: hidden;
+  padding-top: 7px;
 }
 
 .modal-photo-detail-like-count {
@@ -125,6 +136,10 @@
   overflow: hidden;
 }
 
+.delete-photo-btn:focus {
+  outline: 0;
+}
+
 .username-and-delete {
   display: flex;
   justify-content: space-between;
@@ -139,5 +154,9 @@
     text-decoration: none;
     font-weight: bold;
     color: black;
+  }
+
+  p {
+    line-height: 22px;
   }
 }
