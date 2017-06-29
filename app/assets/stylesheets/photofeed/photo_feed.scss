@@ -113,3 +113,20 @@
   width: 100%;
   overflow: hidden;
 }
+
+.photo-feed-comment-list-item {
+  display: flex;
+  justify-content: space-between;
+}
+
+.photo-feed-comment-list-item button {
+  background-color: Transparent;
+  background-repeat:no-repeat;
+  border: none;
+  cursor:pointer;
+  overflow: hidden;
+}
+
+.photo-feed-comment-list-item button:focus {
+  outline: none;
+}

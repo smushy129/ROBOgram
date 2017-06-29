@@ -15,7 +15,7 @@ class Api::CommentsController < ApplicationController
   end
 
   def destroy
-    @comment = current_user.comments.find(id: params[:id])
+    @comment = current_user.comments.find_by(id: params[:id])
 
     if @comment.destroy
       render :show

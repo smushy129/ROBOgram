@@ -13,7 +13,7 @@ users = User.create(
     password: "password",
     name: 'Eric Cartman',
     bio: 'i am a robot, i swear.',
-    website: 'https://en.wikipedia.org/wiki/Awesom-O',
+    website: '',
     avatar: File.open("app/assets/images/awesomoAVATAR.png")
   },
   {
@@ -21,7 +21,7 @@ users = User.create(
     password: "password",
     name: 'Robocop',
     bio: 'My friends call me Murphy. You call me... Robocop',
-    website: 'https://en.wikipedia.org/wiki/RoboCop',
+    website: '',
     avatar: File.open("app/assets/images/robocopAVATAR.jpg")
   },
   {
@@ -29,7 +29,7 @@ users = User.create(
     password: "password",
     name: 'WALL-E',
     bio: 'Wa... WwALL-E.',
-    website: 'https://en.wikipedia.org/wiki/WALL-E',
+    website: '',
     avatar: File.open("app/assets/images/walleAVATAR.jpg")
   },
   {
@@ -37,7 +37,7 @@ users = User.create(
     password: "password",
     name: 'Megatron',
     bio: 'I am... MEGATRON!',
-    website: 'https://en.wikipedia.org/wiki/Megatron',
+    website: '',
     avatar: File.open("app/assets/images/megatronAVATAR.jpg")
   },
   {
@@ -45,7 +45,7 @@ users = User.create(
     password: "password",
     name: 'Optimus Prime',
     bio: 'Autobots, roll out!',
-    website: 'https://en.wikipedia.org/wiki/Optimus_Prime',
+    website: '',
     avatar: File.open("app/assets/images/optimusAVATAR.jpeg")
   },
   {
@@ -53,7 +53,7 @@ users = User.create(
     password: "password",
     name: 'R2D2',
     bio: '*BEEP*',
-    website: 'https://en.wikipedia.org/wiki/R2-D2',
+    website: '',
     avatar: File.open("app/assets/images/r2d2AVATAR.png")
   },
   {
@@ -61,7 +61,7 @@ users = User.create(
     password: "password",
     name: 'Bender',
     bio: 'I’m going to build my own theme park with blackjack and hookers',
-    website: "https://en.wikipedia.org/wiki/Bender",
+    website: "",
     avatar: File.open("app/assets/images/benderAVATAR.jpg")
   }
 ])

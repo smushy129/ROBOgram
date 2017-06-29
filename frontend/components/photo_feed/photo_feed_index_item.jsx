@@ -8,6 +8,7 @@ import { selectComments } from '../../reducers/selectors';
 class PhotoFeedIndexItem extends React.Component {
   constructor(props) {
     super(props);
+
   }
 
   likeOrLikes(num_likes) {
@@ -18,8 +19,22 @@ class PhotoFeedIndexItem extends React.Component {
     }
   }
 
-    render() {
-    const { photo, deleteComment } = this.props;
+  deleteCommentBtn(comment) {
+    const { deleteComment, currentUser } = this.props;
+
+    if (currentUser.username === comment.username) {
+      return(
+        <button onClick={ () => deleteComment(comment.id) }>
+           <i className="fa fa-times" aria-hidden="true"></i>
+        </button>
+      );
+    } else {
+      return null;
+    }
+  }
+
+  render() {
+    const { photo } = this.props;
 
     const comments = selectComments(photo.comments);
     let photoComments;
@@ -34,9 +49,7 @@ class PhotoFeedIndexItem extends React.Component {
                 { comment.body }
               </p>
 
-             <button onClick={ () => deleteComment(comment.id) }>
-                <i className="fa fa-times" aria-hidden="true"></i>
-             </button>
+             { this.deleteCommentBtn(comment) }
             </div>
           </li>
         );

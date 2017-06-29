@@ -1,5 +1,6 @@
 import React from 'react';
-import PhotoFeedIndexItem from './photo_feed_index_item';
+// import PhotoFeedIndexItem from './photo_feed_index_item';
+import PhotoFeedIndexItemContainer from './photo_feed_index_item_container';
 
 class PhotoFeed extends React.Component {
   constructor(props) {
@@ -17,7 +18,7 @@ class PhotoFeed extends React.Component {
 
     let photosList = Object.keys(photos).map( (id) => {
       return (
-        <PhotoFeedIndexItem photo={ photos[id]} key={ id } />
+        <PhotoFeedIndexItemContainer photo={ photos[id]} key={ id } />
       );
     });
 
