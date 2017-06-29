@@ -61,13 +61,11 @@ class PhotoDetail extends React.Component {
           return (
             <li key={comment.id}>
               <div className='photo-detail-comment-list-item'>
-                <div className='photo-detail-comment-list-item-username'>
+                <p>
                   <Link to={`/users/${comment.userId}`} onClick={ () => closeModal() }>{ comment.username }</Link>
-                </div>
-                &nbsp;
-                <div className='photo-detail-comment-list-item-body'>
+                  &nbsp;
                   { comment.body }
-                </div>
+                </p>
               </div>
             </li>
           );

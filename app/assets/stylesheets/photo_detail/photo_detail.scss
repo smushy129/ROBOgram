@@ -134,10 +134,10 @@
 
 .photo-detail-comment-list-item {
   display: flex;
-}
 
-.photo-detail-comment-list-item-username a {
-  text-decoration: none;
-  font-weight: bold;
-  color: black;
+  a {
+    text-decoration: none;
+    font-weight: bold;
+    color: black;
+  }
 }
