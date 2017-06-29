@@ -25,7 +25,6 @@ class PhotoFeedIndexItem extends React.Component {
     let photoComments;
     if (comments) {
       photoComments = comments.map( (comment) => {
-        debugger
         return (
           <li key={comment.id}>
             { comment.body }
