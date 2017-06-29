@@ -10,10 +10,11 @@ class PhotoDetail extends React.Component {
     super(props);
 
     this.goBack = this.goBack.bind(this);
+    this.renderDeleteBtn = this.renderDeleteBtn.bind(this);
   }
 
   componentDidMount() {
-    this.props.fetchSinglePhoto(this.props.id);
+      this.props.fetchSinglePhoto(this.props.id);
   }
 
   getMonth() {
@@ -40,17 +41,28 @@ class PhotoDetail extends React.Component {
     this.props.closeModal();
  }
 
- likeOrLikes(num_likes) {
-   if (num_likes === 1)
-     return "like";
-   else {
-     return "likes";
-   }
- }
+  likeOrLikes(num_likes) {
+    if (num_likes === 1)
+      return "like";
+    else {
+      return "likes";
+    }
+  }
+
+  renderDeleteBtn(id, deletePhoto, user, callback) {
+    if (this.props.currentUser.username === user.username) {
+      return(
+        <button className='delete-photo-btn' onClick={ () => deletePhoto(id, this.goBack) }>
+          <i className="fa fa-trash-o" aria-hidden="true"></i>
+        </button>
+      );
+    } else {
+      return null;
+    }
+  }
 
   render() {
-    const { photoDetail, user } = this.props;
-    const { closeModal, deletePhoto, id, fetchFeedPhotos, fetchSinglePhoto } = this.props;
+    const { photoDetail, user, closeModal, deletePhoto, id, fetchFeedPhotos, fetchSinglePhoto } = this.props;
 
     if (photoDetail.id) {
 
@@ -88,9 +100,7 @@ class PhotoDetail extends React.Component {
                   <span onClick={ () => closeModal() }>{ user.username }</span>
                 </div>
 
-                <button className='delete-photo-btn' onClick={ () => deletePhoto(id, this.goBack) }>
-                  <i className="fa fa-trash-o" aria-hidden="true"></i>
-                </button>
+                { this.renderDeleteBtn(id, deletePhoto, user, this.goBack)}
               </div>
             </div>
 
