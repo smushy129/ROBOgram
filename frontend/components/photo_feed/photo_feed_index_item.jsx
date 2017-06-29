@@ -21,14 +21,16 @@ class PhotoFeedIndexItem extends React.Component {
   deleteCommentBtn(comment) {
     const { deleteComment, currentUser } = this.props;
 
-    if (currentUser.username === comment.username) {
-      return(
-        <button onClick={ () => deleteComment(comment.id) }>
-           <i className="fa fa-times" aria-hidden="true"></i>
-        </button>
-      );
-    } else {
-      return null;
+    if (currentUser) {
+      if (currentUser.username === comment.username) {
+        return(
+          <button onClick={ () => deleteComment(comment.id) }>
+             <i className="fa fa-times" aria-hidden="true"></i>
+          </button>
+        );
+      } else {
+        return null;
+      }
     }
   }
 
