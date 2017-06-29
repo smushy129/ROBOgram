@@ -1,12 +1,13 @@
 import merge from 'lodash/merge';
 import { RECEIVE_SINGLE_PHOTO, DELETE_PHOTO } from '../actions/photo_detail_actions';
-import { DESTROY_DETAIL_COMMENT, RECEIVE_DETAIL_COMMENT } from '../actions/comment_detail_actions';
+import { RECEIVE_COMMENT, DESTROY_COMMENT } from '../actions/comment_actions';
 
 const _defaultState = {
-  comments: [],
+  comments: {},
 };
 
 const PhotoDetailReducer = (state = _defaultState, action) => {
+
   switch (action.type) {
 
     case RECEIVE_SINGLE_PHOTO:
@@ -15,10 +16,9 @@ const PhotoDetailReducer = (state = _defaultState, action) => {
     case DELETE_PHOTO:
       return _defaultState;
 
-    case RECEIVE_DETAIL_COMMENT:
-      const photoId = action.comment.photoId;
-      const commentsArr = Object.assign([], state.comments);
-      return merge({}, state, { comments: commentsArr });
+    case RECEIVE_COMMENT:
+      const commentId = action.comment.id;
+      return merge({}, state, { comments: { [commentId]: action.comment }});
 
     default:
       return state;

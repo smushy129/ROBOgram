@@ -21,7 +21,7 @@ class CommentForm extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
-
+    
     if (!this.state.body) {
       return;
     }

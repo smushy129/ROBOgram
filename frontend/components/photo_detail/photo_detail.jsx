@@ -2,7 +2,8 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 import LikesContainer from '../likes/likes_container';
-import CommentFormDetailContainer from '../comments/comment_form_detail_container';
+import CommentFormContainer from '../comments/comment_form_container';
+import { selectComments } from '../../reducers/selectors';
 
 class PhotoDetail extends React.Component {
   constructor(props) {
@@ -52,6 +53,19 @@ class PhotoDetail extends React.Component {
     const { closeModal, deletePhoto, id, fetchFeedPhotos, fetchSinglePhoto } = this.props;
 
     if (photoDetail) {
+
+      const comments = selectComments(photoDetail.comments);
+      let photoComments;
+      if (comments) {
+        photoComments = comments.map( (comment) => {
+          return (
+            <li key={comment.id}>
+              { comment.body }
+            </li>
+          );
+        });
+      }
+
       return(
         <div className='modal-photo-detail' onClick={ (e) => e.stopPropagation() }>
           <img className='modal-photo-detail-image' src={ photoDetail.image_url }/>
@@ -86,14 +100,12 @@ class PhotoDetail extends React.Component {
 
             <div className='modal-photo-detail-body'>
               <ul>
-                <li><span>robocop</span> nice outfit!</li>
-                <li><span>terminator</span> i have the same shoes!</li>
-                <li><span>wall-E</span> *machine noises*</li>
+                { photoComments }
               </ul>
             </div>
 
             <div className='modal-photo-detail-like-comment'>
-              <LikesContainer isLikedByCurrentUser={ photoDetail.liked_by_current_user} photoId={ id }/>
+                <LikesContainer isLikedByCurrentUser={ photoDetail.liked_by_current_user} photoId={ id }/>
               &nbsp;
               <button className='comment-button'>
                 <i className="fa fa-comment-o" aria-hidden="true"></i>
@@ -110,7 +122,7 @@ class PhotoDetail extends React.Component {
             </div>
 
             <div className='modal-photo-detail-comments-section'>
-              <CommentFormDetailContainer photoId={ photoDetail.id }/>
+              <CommentFormContainer photoId={ id }/>
             </div>
 
           </div>
