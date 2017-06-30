@@ -1,6 +1,7 @@
 import React from 'react';
 import { selectedPhotos } from '../../reducers/selectors';
 import PhotoDetailContainer from '../photo_detail/photo_detail_container';
+import UploadAvatarContainer from '../avatar_upload/upload_avatar_container';
 
 class userProfile extends React.Component {
   constructor(props) {
@@ -61,48 +62,53 @@ class userProfile extends React.Component {
   }
 
   render() {
-    const { user } = this.props;
+    const { user, openModal } = this.props;
     let userPhotos = this.userPhotos();
 
     return (
       <section className='user-data'>
         <div className ='user-profile'>
-          <div className="profile-img">
-            <img src={user.avatar_url} />
+          <div className='user-profile-contain'>
+            <div className="profile-img">
+              <button onClick={ () => openModal(<UploadAvatarContainer />)}
+                className='upload-avatar-button'>
+                <img src={user.avatar_url} />
+              </button>
+            </div>
+
+            <ul className='user-profile-details'>
+              <div className='username-follow-btn'>
+                <li className='user-profile-username'>{user.username}</li>
+                { this.followOrEditProfileButton() }
+              </div>
+
+              <div className="user-meta-data">
+                <span className='post-count'>
+                  <li>{user.num_photos}</li>
+                  &nbsp;
+                  <p>posts</p>
+                </span>
+
+                <span className='follower-count'>
+                  <li>{user.num_followers}</li>
+                  &nbsp;
+                  <p>followers</p>
+                </span>
+
+                <span className='following-count'>
+                  <li>{user.num_followees}</li>
+                  &nbsp;
+                  <p>following</p>
+                </span>
+              </div>
+
+              <div className='deets'>
+                <li className='user-profile-name'>{user.name}</li>
+                &nbsp;
+                <li>{user.bio} <a href={user.website}>{user.website}</a></li>
+              </div>
+            </ul>
           </div>
-
-          <ul className='user-profile-details'>
-            <div className='username-follow-btn'>
-              <li className='user-profile-username'>{user.username}</li>
-              { this.followOrEditProfileButton() }
-            </div>
-
-            <div className="user-meta-data">
-              <span className='post-count'>
-                <li>{user.num_photos}</li>
-                &nbsp;
-                <p>posts</p>
-              </span>
-
-              <span className='follower-count'>
-                <li>{user.num_followers}</li>
-                &nbsp;
-                <p>followers</p>
-              </span>
-
-              <span className='following-count'>
-                <li>{user.num_followees}</li>
-                &nbsp;
-                <p>following</p>
-              </span>
-            </div>
-
-            <div className='deets'>
-              <li className='user-profile-name'>{user.name}</li>
-              &nbsp;
-              <li>{user.bio} <a href={user.website}>{user.website}</a></li>
-            </div>
-          </ul>
         </div>
 
         <section className='user-photos-section'>
