@@ -4,3 +4,13 @@ export const fetchSingleUser = (id) => {
     url: `/api/users/${id}`
   });
 };
+
+export const updateAvatar = (formData, id) => {
+  return $.ajax({
+    method: 'PATCH',
+    url: `api/users/${id}`,
+    contentType: false,
+    processData: false,
+    data: formData
+  });
+};

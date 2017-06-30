@@ -13,7 +13,6 @@ class UploadAvatar extends React.Component {
 
     this.updateFile = this.updateFile.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
-    this.goBack = this.goBack.bind(this);
     this.updateDragDropFile = this.updateDragDropFile.bind(this);
   }
 
@@ -41,16 +40,11 @@ class UploadAvatar extends React.Component {
     }
   }
 
-  goBack() {
-    const { currentUser } = this.props;
-    this.props.closeModal();
-    this.props.history.push(`/users/${currentUser.id}`);
-  }
-
   handleSubmit(e) {
     let formData = new FormData();
     formData.append("user[avatar]", this.state.imageFile);
-    this.props.uploadAvatar(formData, this.goBack);
+    this.props.updateAvatar(formData, this.props.user.id)
+    .then( () => this.props.closeModal());
   }
 
   render() {

@@ -9,7 +9,13 @@ export const receiveSingleUser = (user) => {
   });
 };
 
+
 export const fetchSingleUser = (id) => (dispatch) => {
   return APIUtil.fetchSingleUser(id)
+    .then( (user) => { return dispatch(receiveSingleUser(user)); });
+};
+
+export const updateAvatar = formData => dispatch => {
+  return APIUtil.updateAvatar(formData)
     .then( (user) => { return dispatch(receiveSingleUser(user)); });
 };

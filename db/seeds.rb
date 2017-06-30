@@ -180,6 +180,16 @@ photos = Photo.create(
     },
     {
       user_id: User.find_by_username('optimusprime').id,
+      caption: 'Wadah is the best',
+      image: File.open("app/assets/images/optimus5.jpg")
+    },
+    {
+      user_id: User.find_by_username('bender').id,
+      caption: 'I should have probably checked my seeds to make sure Wadah didnt tamper with them',
+      image: File.open("app/assets/images/bender2.jpg")
+    },
+    {
+      user_id: User.find_by_username('optimusprime').id,
       caption: "BUMBLE!",
       image: File.open("app/assets/images/optimus8.jpg")
     },
