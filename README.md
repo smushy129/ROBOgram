@@ -2,7 +2,7 @@
 
 [ROBOgram live][heroku]
 
-[heroku]: http://robogramapp.heroku.com
+[heroku]: http://robogramapp.herokuapp.com
 
 
 Robogram is a web application inspired by Instagram designed exclusively for robots. Users can see photos from robots that they follow and share their own photos to robots that follow them. It is a full-stack project which is built using Ruby on Rails, PostgreSQL, and React/Redux.
