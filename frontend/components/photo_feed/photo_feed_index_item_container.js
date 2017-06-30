@@ -5,7 +5,7 @@ import { deleteComment } from '../../actions/comment_actions';
 const mapStateToProps = (state) => {
   return ({
     currentUser: state.session.currentUser,
-    photoFeed: state.photoFeed
+    photoFeed: state.photoFeed,
   });
 };
 

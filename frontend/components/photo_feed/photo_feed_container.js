@@ -4,9 +4,9 @@ import { connect } from 'react-redux';
 import PhotoFeed from './photo_feed';
 import { fetchFeedPhotos } from '../../actions/photo_feed_actions';
 
-const mapStateToProps = ({photoFeed}) => {
+const mapStateToProps = (state) => {
   return ({
-    photoFeed: photoFeed
+    photoFeed: state.photoFeed,
   });
 };
 

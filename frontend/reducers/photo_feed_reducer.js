@@ -28,7 +28,19 @@ const PhotoFeedReducer = (state = _defaultState, action) => {
       let photoid = action.comment.photoId;
       let commentid = action.comment.id;
       delete newState.photos[photoid].comments[commentid];
+      return newState;
 
+    case RECEIVE_LIKE:
+      // debugger
+      newState.photos[action.like.photoId].liked_by_current_user = true;
+      newState.photos[action.like.photoId].num_likes += 1;
+      return merge({}, newState, { photos: { [action.like.photoId]: { likes: { [action.like.userId]: action.like }}}});
+
+    case REMOVE_LIKE:
+      // debugger
+      delete newState.photos[action.like.photoId].likes[action.like.userId];
+      newState.photos[action.like.photoId].liked_by_current_user = false;
+      newState.photos[action.like.photoId].num_likes -= 1;
       return newState;
 
     default:

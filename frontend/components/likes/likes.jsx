@@ -12,16 +12,16 @@ class Likes extends React.Component {
       return (
         <button className='liked-button' onClick={ () => destroyLike(photoId)
           .then((like) => fetchSinglePhoto(like.like.photoId))
-            .then( () => fetchFeedPhotos()) }>
+            }>
           <i className="fa fa-heart" aria-hidden="true"></i>
         </button>
       );
     } else {
       return (
-              <button className='unliked-button' onClick={ () => createLike(photoId)
-                .then((like) => fetchSinglePhoto(like.like.photoId))
-                  .then( () => fetchFeedPhotos()) }>
-            <i className="fa fa-heart-o" aria-hidden="false"></i>
+        <button className='unliked-button' onClick={ () => createLike(photoId)
+          .then((like) => fetchSinglePhoto(like.like.photoId))
+            }>
+          <i className="fa fa-heart-o" aria-hidden="false"></i>
         </button>
       );
     }
