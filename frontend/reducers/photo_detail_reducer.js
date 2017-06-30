@@ -8,6 +8,8 @@ const _defaultState = {
 };
 
 const PhotoDetailReducer = (state = _defaultState, action) => {
+  const newState = Object.assign({}, state);
+
   switch (action.type) {
     case RECEIVE_SINGLE_PHOTO:
       return action.photoDetail;
@@ -18,6 +20,10 @@ const PhotoDetailReducer = (state = _defaultState, action) => {
     case RECEIVE_COMMENT:
       const commentId = action.comment.id;
       return merge({}, state, { comments: { [commentId]: action.comment }});
+
+    case DESTROY_COMMENT:
+      delete newState.comments[action.comment.id];
+      return newState;
 
     case CLEAR_PHOTO_DETAIL_STATE:
       return _defaultState;
