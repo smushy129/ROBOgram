@@ -21,11 +21,15 @@ export const unfollow = (follow) => {
 export const createFollow = (followee_id) => (dispatch) => {
   return APIUtil.createFollow(followee_id)
     .then( (follow) => dispatch(receiveFollow(follow)))
-      .then( (user) => { return dispatch(fetchSingleUser(user.follow[1].followee_id)); });
+      .then( (user) => {
+        const id = parseInt(Object.keys(user.follow)[0]);
+        return dispatch(fetchSingleUser(user.follow[id].followee_id)); });
 };
 
 export const deleteFollow = (follower_id) => (dispatch) => {
   return APIUtil.deleteFollow(follower_id)
     .then( (follow) => dispatch(unfollow(follow)))
-      .then( (user) => { return dispatch(fetchSingleUser(user.follow[1].followee_id)); });
+      .then( (user) => {
+        const id = parseInt(Object.keys(user.follow)[0]);
+        return dispatch(fetchSingleUser(user.follow[id].followee_id)); });
 };

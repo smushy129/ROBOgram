@@ -36,7 +36,7 @@ class PhotoFeedIndexItem extends React.Component {
 
   render() {
     const { photo } = this.props;
-    debugger
+  
     const comments = selectComments(photo.comments);
     let photoComments;
     if (comments) {
