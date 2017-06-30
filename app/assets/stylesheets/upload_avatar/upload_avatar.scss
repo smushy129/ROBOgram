@@ -13,3 +13,73 @@
 .upload-avatar-button:focus {
   outline: none;
 }
+
+.upload-avatar {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fff;
+  font-family: sans-serif;
+  width: 700px;
+  height: 400px;
+  border-radius: 8px;
+
+  input {
+    font-size: 14px;
+    border: 0;
+    border: none;
+  }
+
+  input:focus {
+    outline: none;
+  }
+
+  label {
+    width: 100%;
+  }
+
+  img {
+    height: 200px;
+    width: 200px;
+    border-radius: 8px;
+  }
+
+  p {
+    font-size: 32px;
+    font-weight: bold;
+    text-align: center;
+  }
+
+  button {
+    padding: 14px 8px;
+    background: #3897f0;
+    border-color: #3897f0;
+    color: #fff;
+    -webkit-appearance: none;
+    border-style: solid black;
+    border-width: 3px;
+    font-size: 28px;
+    font-weight: 600;
+    outline: none;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 100%;
+    cursor: pointer;
+  }
+}
+
+.upload-avatar-content {
+  padding-top: 3%;
+  width: 700px;
+  height: 85%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+
+  p {
+    padding-bottom: 20px;
+  }
+}

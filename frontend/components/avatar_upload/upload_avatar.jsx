@@ -49,8 +49,8 @@ class UploadAvatar extends React.Component {
 
   render() {
     return(
-      <div className='upload-modal' onClick={ (e) => e.stopPropagation() }>
-        <div className='upload-modal-content'>
+      <div className='upload-avatar' onClick={ (e) => e.stopPropagation() }>
+        <div className='upload-avatar-content'>
           <p>Drag and Drop an Image</p>
 
           <div className='img-preview'>
