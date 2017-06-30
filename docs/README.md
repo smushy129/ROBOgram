@@ -2,7 +2,7 @@
 
 [ROBOgram live][heroku]
 
-[heroku]: http://www.herokuapp.com/ROBOgram
+[heroku]: http://robogramapp.heroku.com
 
 ## Minimum Viable Product
 
