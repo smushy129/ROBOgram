@@ -140,7 +140,7 @@ class PhotoDetail extends React.Component {
             <div className='modal-photo-detail-like-comment'>
                 <LikesContainer isLikedByCurrentUser={ photoDetail.liked_by_current_user} photoId={ id }/>
               &nbsp;
-              <button className='modal-comment-button'>
+              <button className='modal-comment-button' onClick={() => {document.getElementById(`${id}`).focus();}}>
                 <i className="fa fa-comment-o" aria-hidden="true"></i>
               </button>
 

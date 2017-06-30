@@ -82,6 +82,10 @@
   overflow: hidden;
 }
 
+.comment-button:focus {
+  outline: none;
+}
+
 .modal-comment-button {
   font-size: 27px;
   background-color: Transparent;
@@ -90,6 +94,10 @@
   cursor:pointer;
   overflow: hidden;
   padding-top: 7px;
+}
+
+.modal-comment-button {
+  outline: none;
 }
 
 .modal-photo-detail-like-count {

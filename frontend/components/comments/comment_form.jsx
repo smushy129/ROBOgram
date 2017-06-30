@@ -21,7 +21,7 @@ class CommentForm extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
-    
+
     if (!this.state.body) {
       return;
     }
@@ -35,6 +35,7 @@ class CommentForm extends React.Component {
     return(
       <form onSubmit={this.handleSubmit}>
         <input className='comments-box'
+          id={this.props.photoId}
           type='text'
           placeholder='Add a comment...'
           value={this.state.body}

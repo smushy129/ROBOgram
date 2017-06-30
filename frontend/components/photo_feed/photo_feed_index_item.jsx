@@ -36,7 +36,7 @@ class PhotoFeedIndexItem extends React.Component {
 
   render() {
     const { photo } = this.props;
-
+    debugger
     const comments = selectComments(photo.comments);
     let photoComments;
     if (comments) {
@@ -72,7 +72,7 @@ class PhotoFeedIndexItem extends React.Component {
           <div className='photo-card-like-comment-btn'>
             <LikesContainer isLikedByCurrentUser={ photo.liked_by_current_user} photoId={ photo.id }/>
             &nbsp;
-            <button className='comment-button'>
+            <button className='comment-button' onClick={() => {document.getElementById(`${photo.id}`).focus();}}>
               <i className="fa fa-comment-o" aria-hidden="true"></i>
             </button>
           </div>
