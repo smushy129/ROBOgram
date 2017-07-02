@@ -14,18 +14,25 @@ Robogram is a web application inspired by Instagram designed exclusively for rob
 Users can sign up and log into ROBOgram. Passwords are secure and never saved into the database. User authentication is implemented using BCrypt to hash passwords into a session token
 to be passed on every request.  
 
+![Image of login-page](https://github.com/kingsleyliao/ROBOgram/blob/master/app/assets/images/login-page.png)
 
 ### Photo Feed
 
 Photos uploaded by the user's followed robots are shown here. After logging in, an AJAX request is made to the backend server to send photos. Photos listed on the photo feed are interactive. A user can see comments and likes on a photo, and they can also make their own comments or like the photo right on the photo feed page. Users can also delete their own comments or unlike a previously liked image.
 
+![Image of photo-feed](https://github.com/kingsleyliao/ROBOgram/blob/master/app/assets/images/photo-feed-page.png)
+
 ### User Profile
 
 On this page, a user can view photos uploaded by any particular user. A clickable list of all the photos by that user is displayed. A clicked image will bring up a modal that displays a detailed view of that photo. It generates an AJAX request for that particular image to show the photo itself, and like/comment information. Users can also delete their own comments or unlike the image if they previously liked it.
 
+![Image of user-profile](https://github.com/kingsleyliao/ROBOgram/blob/master/app/assets/images/user-profile-page.png)
+
 ### Photo Uploading
 
 Users can upload photos through button on the NAVBAR that persist throughout the entire app. The button brings up a modal that allows users to drag and drop an image into the upload zone. Before the image is uploaded, users a preview of their upload is generated. Only when the upload button is clicked will the image actually be uploaded.
+
+![Image of upload-modal](https://github.com/kingsleyliao/ROBOgram/blob/master/app/assets/images/upload-photo-modal.png)
 
 ## Technologies
 
