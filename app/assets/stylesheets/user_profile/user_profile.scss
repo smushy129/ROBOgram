@@ -9,7 +9,7 @@
   display: flex;
   margin: auto;
   font-family: sans-serif;
-  padding-top: 3%;
+    padding-top: 3%;
   padding-bottom: 1%;
   margin-bottom: 8px;
   width: 66%;
@@ -101,7 +101,10 @@
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
-  width: 40%;
+  width: 30%;
+  justify-content: center;
+  display: flex;
+  align-items: center;
 }
 
 .username-follow-btn {

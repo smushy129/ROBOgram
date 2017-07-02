@@ -2,6 +2,7 @@ import React from 'react';
 import { selectedPhotos } from '../../reducers/selectors';
 import PhotoDetailContainer from '../photo_detail/photo_detail_container';
 import UploadAvatarContainer from '../avatar_upload/upload_avatar_container';
+import { Link } from 'react-router-dom';
 
 class userProfile extends React.Component {
   constructor(props) {
@@ -43,9 +44,8 @@ class userProfile extends React.Component {
   }
 
   followOrEditProfileButton() {
-    let currentUser = this.props.currentUser;
     let currentUserProfile = this.props.user;
-    const { deleteFollow, createFollow } = this.props;
+    const { deleteFollow, createFollow, currentUser } = this.props;
 
 
     if (currentUserProfile.followers) {
@@ -55,7 +55,7 @@ class userProfile extends React.Component {
     }
 
     if (currentUser.id === currentUserProfile.id) {
-      return <button className='edit-profile-btn'>Edit Profile</button>;
+      return (<Link className="edit-profile-btn" to={`/users/${this.props.currentUser.id}/edit`}>Edit Profile</Link>);
     } else {
       return <button className='follow-btn' onClick={ () => createFollow(currentUserProfile.id) }>Follow</button>;
     }

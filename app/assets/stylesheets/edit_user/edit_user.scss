@@ -1,0 +1,145 @@
+.edit-user-page {
+  display: flex;
+  width: 90%;
+  margin: auto;
+  justify-content: center;
+  font-family: sans-serif;
+  margin-top: 5%;
+  height: 100vh;
+}
+
+.edit-user-body {
+  display: flex;
+  background-color: #fff;
+  height: 375px;
+  width: 900px;
+}
+
+.left-panel {
+  display: flex;
+  font-weight: bold;
+  font-size: 18px;
+  padding: 15px 20px;
+  border-right: 1px solid lightgrey;
+  width: 300px;
+  justify-content: center;
+}
+
+.edit-user-section {
+  padding: 25px 100px;
+  width: 100%;
+}
+
+.edit-header {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  width: 54%;
+  font-size: 24px;
+}
+
+.edit-header img {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  margin-right: 20px;
+}
+
+.edit-user-form {
+  display: flex;
+  flex-direction: column;
+  margin-top: 10%;
+}
+
+.edit-name {
+  display: flex;
+  margin-bottom: 15px;
+  font-size: 16px;
+}
+
+.edit-name div {
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 20px;
+  width: 25%;
+  font-weight: bold;
+  align-items: center;
+}
+
+.edit-name input {
+  padding: 10px;
+  width: 100%;
+  font-size: 16px;
+}
+
+.edit-username {
+  display: flex;
+  margin-bottom: 15px;
+  font-size: 16px;
+}
+
+.edit-username div {
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 20px;
+  width: 25%;
+  font-weight: bold;
+  align-items: center;
+}
+
+.edit-username input {
+  padding: 10px;
+  width: 100%;
+  font-size: 16px;
+}
+
+.edit-bio {
+  display: flex;
+  margin-bottom: 15px;
+}
+
+.edit-bio div {
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 20px;
+  width: 25%;
+  font-weight: bold;
+  align-items: center;
+}
+
+.edit-bio textarea {
+  padding: 10px;
+  width: 100%;
+  font-size: 16px;
+}
+
+.edit-user-submit-btn {
+  display: flex;
+}
+
+.edit-user-submit-btn div {
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 20px;
+  width: 18%;
+}
+
+.edit-user-submit-btn button {
+  padding: 5px 30px;
+  background: #3897f0;
+  border-color: #3897f0;
+  color: #fff;
+  border-radius: 3px;
+  border-style: solid;
+  border-width: 1px;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 26px;
+  outline: none;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  margin-top: 4px;
+  margin-bottom: 14px;
+  cursor: pointer;
+}

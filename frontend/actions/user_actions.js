@@ -19,3 +19,9 @@ export const updateAvatar = formData => dispatch => {
   return APIUtil.updateAvatar(formData)
     .then( (user) => { return dispatch(receiveSingleUser(user)); });
 };
+
+export const updateUser = user => dispatch => {
+  return APIUtil.updateUser(user).then(user => (
+    dispatch(receiveSingleUser(user))
+  ));
+};
