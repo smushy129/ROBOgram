@@ -36,7 +36,7 @@ class userProfile extends React.Component {
       });
     } else {
       return (
-        <h1> No photos yet! </h1>
+        null
       );
     }
     return allUserPhotos.reverse();

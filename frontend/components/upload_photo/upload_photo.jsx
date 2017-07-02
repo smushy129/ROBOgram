@@ -66,10 +66,10 @@ class UploadPhoto extends React.Component {
     return(
       <div className='upload-modal' onClick={ (e) => e.stopPropagation() }>
         <div className='upload-modal-content'>
-          <p>Drag and Drop an Image</p>
+          <p>Upload a New Picture</p>
 
           <div className='img-preview'>
-            <Dropzone className="drag-drop-zone" onDrop={ this.updateDragDropFile }><img src={this.state.imageUrl}/></Dropzone>
+            <Dropzone className="drag-drop-zone" onDrop={ this.updateDragDropFile }><img src={this.state.imageUrl}/>Click or Drag an Image</Dropzone>
           </div>
 
           <label>
