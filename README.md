@@ -18,13 +18,13 @@ to be passed on every request.
 
 ### Photo Feed
 
-Photos uploaded by the user's followed robots are shown here. After logging in, an AJAX request is made to the backend server to send photos. Photos listed on the photo feed are interactive. A user can see comments and likes on a photo, and they can also make their own comments or like the photo right on the photo feed page. Users can also delete their own comments or unlike a previously liked image.
+Photos uploaded by the user's followed robots are shown here. After logging in, an AJAX request is made to the backend server to send photos. Photos listed on the photo feed are interactive. A user can see comments and likes for a photo and can also like and comment right on the feed.
 
 ![Image of photo-feed](https://github.com/kingsleyliao/ROBOgram/blob/master/app/assets/images/photo-feed-page.png)
 
 ### User Profile
 
-On this page, a user can view photos uploaded by any particular user. A clickable list of all the photos by that user is displayed. A clicked image will bring up a modal that displays a detailed view of that photo. It generates an AJAX request for that particular image to show the photo itself, and like/comment information. Users can also delete their own comments or unlike the image if they previously liked it.
+On this page, a user can view photos uploaded by any particular user. A clickable list of all the photos by that user is displayed. A clicked image will bring up a modal that displays a detailed view of that photo by generating an AJAX request for that photo, likes, and comments. Users can also interact with the image in this view by liking and commenting.
 
 ![Image of user-profile](https://github.com/kingsleyliao/ROBOgram/blob/master/app/assets/images/user-profile-page.png)
 

@@ -27,6 +27,19 @@ const App = () => (
       <ProtectedRoute exact path="/photos/:id" component={PhotoDetailContainer} />
       <ProtectedRoute path="/" component={PhotoFeedContainer} />
     </Switch>
+
+
+    <section className="main-footer">
+      <div>
+        Project by Kingsley Liao
+      </div>
+
+      <footer>
+        <a href="https://github.com/kingsleyliao"><i className="fa fa-github" aria-hidden="true"></i></a>
+        &nbsp; &nbsp; &nbsp;
+        <a href="https://www.linkedin.com/in/kingsleyliao/"><i className="fa fa-linkedin" aria-hidden="true"></i></a>
+      </footer>
+    </section>
   </div>
 );
 
