@@ -31,25 +31,15 @@ const PhotoFeedReducer = (state = _defaultState, action) => {
       return newState;
 
     case RECEIVE_LIKE:
-      if (Object.keys(newState.photos).length !== 0) {
-        newState.photos[action.like.photoId].liked_by_current_user = true;
-        newState.photos[action.like.photoId].num_likes += 1;
-        return merge({}, newState, { photos: { [action.like.photoId]: { likes: { [action.like.userId]: action.like }}}});
-      } else {
-        return newState;
-      }
-      break;
+      newState.photos[action.like.photoId].liked_by_current_user = true;
+      newState.photos[action.like.photoId].num_likes += 1;
+      return merge({}, newState, { photos: { [action.like.photoId]: { likes: { [action.like.userId]: action.like }}}});
 
     case REMOVE_LIKE:
-      if (Object.keys(newState.photos).length !== 0) {
-        delete newState.photos[action.like.photoId].likes[action.like.userId];
-        newState.photos[action.like.photoId].liked_by_current_user = false;
-        newState.photos[action.like.photoId].num_likes -= 1;
-        return newState;
-      } else {
-        return newState;
-      }
-      break;
+      delete newState.photos[action.like.photoId].likes[action.like.userId];
+      newState.photos[action.like.photoId].liked_by_current_user = false;
+      newState.photos[action.like.photoId].num_likes -= 1;
+      return newState;
 
     default:
       return state;

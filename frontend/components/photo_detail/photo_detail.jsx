@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-import LikesContainer from '../likes/likes_container';
+import PhotoDetailLikesContainer from '../likes/photo_detail_likes_container';
 import CommentFormContainer from '../comments/comment_form_container';
 import { selectComments } from '../../reducers/selectors';
 
@@ -138,7 +138,7 @@ class PhotoDetail extends React.Component {
             </div>
 
             <div className='modal-photo-detail-like-comment'>
-                <LikesContainer isLikedByCurrentUser={ photoDetail.liked_by_current_user} photoId={ id }/>
+              <PhotoDetailLikesContainer isLikedByCurrentUser={ photoDetail.liked_by_current_user} photoId={ id }/>
               &nbsp;
               <button className='modal-comment-button' onClick={() => {document.getElementById(`${id}`).focus();}}>
                 <i className="fa fa-comment-o" aria-hidden="true"></i>
