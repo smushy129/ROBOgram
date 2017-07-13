@@ -18,20 +18,20 @@ export const removeLike = (like) => {
     like: like
   });
 };
-
-export const receivePhotoDetailLike = (like) => {
-  return ({
-    type: RECEIVE_PHOTO_DETAIL_LIKE,
-    like: like
-  });
-};
-
-export const removePhotoDetailLike = (like) => {
-  return ({
-    type: REMOVE_PHOTO_DETAIL_LIKE,
-    like: like
-  });
-};
+//
+// export const receivePhotoDetailLike = (like) => {
+//   return ({
+//     type: RECEIVE_PHOTO_DETAIL_LIKE,
+//     like: like
+//   });
+// };
+//
+// export const removePhotoDetailLike = (like) => {
+//   return ({
+//     type: REMOVE_PHOTO_DETAIL_LIKE,
+//     like: like
+//   });
+// };
 
 export const createLike = photo_id => (dispatch) => {
   return APIUtil.createLike(photo_id)

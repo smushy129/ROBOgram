@@ -24,9 +24,8 @@
   }
 
   img {
-    height: 200px;
-    width: 200px;
-    border-radius: 8px;
+    height: 100%;
+    width: 100%;
   }
 
   p {
@@ -87,11 +86,17 @@
 }
 
 .img-preview {
-  width: 200px;
+  width: 355px;
   height: 200px;
   background-color: lightgrey;
   border-radius: 8px;
   text-align: center;
+  display: flex;
+  justify-content: center;
+}
+
+.drag-drop-zone {
+  width: 355px;
 }
 
 .cancel-submit {

@@ -22,8 +22,9 @@
 }
 
 .photo-card-image img {
-  width: 600px;
-  height: 600px;
+  max-width: 600px;
+  max-height: 600px;
+  // object-fit: cover;
 }
 
 .photo-card-header {
