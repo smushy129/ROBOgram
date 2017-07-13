@@ -1,5 +1,5 @@
 .user-data {
-  width: 60%;
+  width: 90%;
   margin: auto;
   display: flex;
   flex-direction: column;
@@ -7,17 +7,18 @@
 
 .user-profile {
   display: flex;
-  margin: auto;
   font-family: sans-serif;
-    padding-top: 3%;
+  padding-top: 3%;
   padding-bottom: 1%;
   margin-bottom: 8px;
-  width: 66%;
+  width: 81.59%;
+  justify-content: center;
 }
 
 .user-profile-contain {
   display: flex;
   flex-direction: row;
+  margin-left: 3%;
 }
 
 .user-profile a {
@@ -38,7 +39,7 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin-right: 8%;
+  margin-left: 8%;
 }
 
 .follow-btn {
@@ -131,18 +132,12 @@
 }
 
 .user-photos-section {
-  // display: flex;
-  // justify-content: center;
   display: flex;
   height: auto;
   width: 100%;
 }
 
 .user-photos-list {
-  // display: flex;
-  // flex-wrap: wrap;
-  // justify-content: left;
-  // width: 75%;
   margin: auto;
   width: 80%;
   flex-wrap: wrap;
@@ -184,4 +179,82 @@
 .user-meta-data span {
   display: flex;
   margin-right: 40px;
+}
+
+.upload-avatar-button {
+  border-radius: 50%;
+  background-color: Transparent;
+  background-repeat:no-repeat;
+  border: none;
+  cursor:pointer;
+  overflow: hidden;
+  width: 150px;
+  height: 150px;
+}
+
+.upload-avatar-button:focus {
+  outline: none;
+}
+
+@media screen and (max-width: 866px) {
+  .upload-avatar-button {
+    border-radius: 50%;
+    background-color: Transparent;
+    background-repeat:no-repeat;
+    border: none;
+    cursor:pointer;
+    overflow: hidden;
+    width: 100px;
+    height: 100px;
+  }
+
+  .upload-avatar-button:focus {
+    outline: none;
+  }
+
+  .user-profile-contain {
+    font-size: 14px;
+    margin-left: 20%;
+  }
+
+  .user-profile-username {
+    font-size: 22px;
+    font-weight: 200;
+    font-family: -apple-system, system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  }
+
+  .user-profile-details {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 2%;
+  }
+
+  .user-profile-details div {
+    margin-bottom: 3%;
+  }
+
+  .edit-profile-btn {
+    margin-left: 20px;
+    padding: 0 8px;
+    background: 0 0;
+    border-color: #dbdbdb;
+    color: #262626;
+    cursor: pointer;
+    -webkit-appearance: none;
+    border-radius: 3px;
+    border-style: solid;
+    border-width: 1px;
+    font-size: 9px;
+    font-weight: 600;
+    line-height: 26px;
+    outline: none;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 20%;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+  }
 }
