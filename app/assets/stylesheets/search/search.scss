@@ -9,13 +9,22 @@
 }
 
 .search {
-  margin-left: 35%;
+  margin-left: 32%;
   display: flex;
   justify-content: center;
 }
 
 .search-input {
-  padding: 5px 24px;
+  padding: 5px 25px;
+  font-size: 16px;
+  text-align: center;
+  background: #fafafa;
+  border: 1px solid #dbdbdb;
+}
+
+.search-input:focus {
+  text-align: left;
+  background-color: white;
 }
 
 .search-result-item {

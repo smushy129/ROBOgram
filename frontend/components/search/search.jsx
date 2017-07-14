@@ -29,6 +29,7 @@ class Search extends React.Component {
 
   emptySearchBar() {
     this.setState({queryString: ''});
+    $(".search-input").val("");
   }
 
   handleChange(e) {
@@ -42,7 +43,7 @@ class Search extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
-    
+
   }
 
   searchResults() {
