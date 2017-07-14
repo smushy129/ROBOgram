@@ -27,7 +27,7 @@
   img {
     height: 200px;
     width: 200px;
-    border-radius: 8px;
+    border-radius: 50%;
   }
 
   p {
@@ -52,6 +52,14 @@
     white-space: nowrap;
     width: 100%;
     cursor: pointer;
+  }
+
+  .img-preview {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    font-weight: bold;
+    line-height: 35px;
   }
 }
 

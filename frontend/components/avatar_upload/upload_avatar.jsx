@@ -51,7 +51,7 @@ class UploadAvatar extends React.Component {
     return(
       <div className='upload-avatar' onClick={ (e) => e.stopPropagation() }>
         <div className='upload-avatar-content'>
-          <p>Upload a New Profile Picture</p>
+          <p>Update Profile Picture</p>
 
           <div className='img-preview'>
             <Dropzone className="drag-drop-zone" onDrop={ this.updateDragDropFile }><img src={this.state.imageUrl}/>Click or Drag an Image</Dropzone>
