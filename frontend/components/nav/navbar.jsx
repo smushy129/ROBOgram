@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link, Redirect } from 'react-router-dom';
+import Search from '../search/search_container';
 
 import UploadPhotoContainer from '../upload_photo/upload_photo_container';
 
@@ -26,6 +27,11 @@ class navbar extends React.Component {
             <div className="logo">
               <Link to="/"><img src={window.images.logo_img} /></Link>
             </div>
+
+            <div className='search-bar'>
+              <Search />
+            </div>
+
 
             <div className="nav-links">
               <button onClick={ () => openModal(<UploadPhotoContainer />) }><img src={window.images.upload_icon} /></button>

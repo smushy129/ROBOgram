@@ -1,5 +1,4 @@
 class Api::UsersController < ApplicationController
-
 	def create
 		@user = User.new(user_params)
 
@@ -10,6 +9,10 @@ class Api::UsersController < ApplicationController
 			render json: @user.errors.full_messages, status: 422
 		end
 	end
+
+  def index
+    @users = User.where('username ILIKE ? OR name ILIKE ?', "%#{params[:users]}%", "%#{params[:users]}%" ).all
+  end
 
   def update
     @user = User.find_by_id(current_user.id)
