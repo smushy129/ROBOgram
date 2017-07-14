@@ -2,6 +2,10 @@
   display: flex;
   margin: auto;
   width: 100%;
+
+  input {
+    outline: none;
+  }
 }
 
 .search {
@@ -28,12 +32,13 @@
 }
 
 .search-results {
-  position: fixed;
-  margin-top: 40px;
+  position: absolute;
+  margin-top: 37px;
   justify-content: center;
   background-color: white;
   border: 1px solid #e6e6e6;
   border-radius: 3px;
+  box-shadow: 1px 1px 1px #888888;
 
   img {
     max-width: 40px;

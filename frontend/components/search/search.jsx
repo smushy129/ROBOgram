@@ -16,6 +16,7 @@ class Search extends React.Component {
     this.addFocus = this.addFocus.bind(this);
     this.unFocus = this.unFocus.bind(this);
     this.handleClick = this.handleClick.bind(this);
+    this.emptySearchBar = this.emptySearchBar.bind(this);
   }
 
   addFocus() {
@@ -24,6 +25,10 @@ class Search extends React.Component {
 
   unFocus() {
     this.setState({focus: false});
+  }
+
+  emptySearchBar() {
+    this.setState({queryString: ''});
   }
 
   handleChange(e) {
@@ -37,6 +42,7 @@ class Search extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
+    
   }
 
   searchResults() {
@@ -50,7 +56,7 @@ class Search extends React.Component {
       let users = searchBar.map( (user, idx) => {
         return (
           <li key={idx} className='search-result-item'>
-            <Link to={`/users/${user.userId}`} onMouseDown={this.handleClick}>
+            <Link to={`/users/${user.userId}`} onMouseDown={this.handleClick} onClick={this.emptySearchBar}>
             <img src={user.avatar_url}></img>
             &nbsp; &nbsp;
             { user.username }
