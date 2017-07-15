@@ -1,6 +1,7 @@
 import { connect } from "react-redux";
 import Discover from './discover';
 import { fetchAllUsers } from '../../actions/user_actions';
+import { createFollow } from '../../actions/follow_actions';
 
 const mapStateToProps = (state) => {
   return ({
@@ -10,7 +11,8 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = (dispatch) => {
   return ({
-    fetchAllUsers: () => { return dispatch(fetchAllUsers()); }
+    fetchAllUsers: () => { return dispatch(fetchAllUsers()); },
+    createFollow: () => { return dispatch(createFollow()); }
   });
 };
 
