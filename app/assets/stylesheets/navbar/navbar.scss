@@ -40,9 +40,11 @@
   font-size: 28px;
   font-family: sans-serif;
   font-weight: lighter;
-  margin: 0 17px;
+  padding-bottom: 4px;
+  margin: 0 14px;
 }
 
 .nav-links {
   display: flex;
+  align-items: center;
 }

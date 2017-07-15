@@ -11,7 +11,13 @@ class Api::UsersController < ApplicationController
 	end
 
   def index
-    @users = User.where('username ILIKE ? OR name ILIKE ?', "%#{params[:users]}%", "%#{params[:users]}%" ).all
+    if params[:users]
+      @users = User
+        .where('username ILIKE ? OR name ILIKE ?', "%#{params[:users]}%", "%#{params[:users]}%" ).all
+    else
+      @users = User.all
+    end
+
   end
 
   def update

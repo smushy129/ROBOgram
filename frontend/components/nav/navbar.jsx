@@ -34,6 +34,7 @@ class navbar extends React.Component {
 
 
             <div className="nav-links">
+              <Link to="/discover"><img src={window.images.discover_icon} /></Link>
               <button onClick={ () => openModal(<UploadPhotoContainer />) }><img src={window.images.upload_icon} /></button>
               <Link to={`/users/${currentUser.id}`}><img src={window.images.profile_icon} /></Link>
               <button onClick={ this.handleLogOut } ><img src={window.images.logout_icon} /></button>

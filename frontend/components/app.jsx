@@ -11,6 +11,7 @@ import UserProfileContainer from './user_profile/user_profile_container';
 import ModalContainer from './modal/modal_container';
 import PhotoDetailContainer from './photo_detail/photo_detail_container';
 import EditUserContainer from './edit_user/edit_user_container';
+import DiscoverContainer from './discover/discover_container';
 
 const App = () => (
   <div>
@@ -24,6 +25,7 @@ const App = () => (
       <AuthRoute exact path="/login" component={LoginFormContainer} />
       <AuthRoute exact path="/signup" component={SignupFormContainer} />
       <ProtectedRoute exact path="/users/:id/edit" component={EditUserContainer} />
+      <ProtectedRoute exact path="/discover" component={DiscoverContainer} />
       <ProtectedRoute exact path="/photos/:id" component={PhotoDetailContainer} />
       <ProtectedRoute path="/" component={PhotoFeedContainer} />
     </Switch>
