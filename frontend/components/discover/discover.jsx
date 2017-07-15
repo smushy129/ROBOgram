@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 class Discover extends React.Component {
   constructor(props) {
@@ -20,11 +21,11 @@ class Discover extends React.Component {
             <img src={user.avatar_url}></img>
             &nbsp; &nbsp;
             <div>
-              <p>{user.username}</p>
+              <p><Link to={`/users/${user.userId}`}>{user.username}</Link></p>
               <span>{user.name}</span>
             </div>
           </section>
-          <button className='follow-btn' onClick={ () => createFollow(user.id) }>Follow</button>
+          <button className='follow-btn' onClick={ () => createFollow(user.userId) }>Follow</button>
         </li>
       );
     });

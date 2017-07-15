@@ -16,6 +16,11 @@ class Api::FollowsController < ApplicationController
     end
   end
 
+  def discover
+    @follows = Follow.
+      where.not("follower_id = ?", "#{current_user.id}")
+  end
+
   def destroy
     @follow = current_user.follows_as_follower.find_by_followee_id(params[:id])
 

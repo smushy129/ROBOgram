@@ -13,9 +13,12 @@ class Api::UsersController < ApplicationController
   def index
     if params[:users]
       @users = User
-        .where('username ILIKE ? OR name ILIKE ?', "%#{params[:users]}%", "%#{params[:users]}%" ).all
+        .where('username ILIKE ? OR name ILIKE ?', "%#{params[:users]}%", "%#{params[:users]}%" )
+        .limit(10)
     else
-      @users = User.all
+      allUsers = User.all
+      userFollows = current_user.followees
+      @users = allUsers - userFollows - [current_user]
     end
 
   end
