@@ -1,7 +1,7 @@
 import * as APIUtil from '../util/user_util';
 
 export const RECEIVE_SINGLE_USER = "RECEIVE_SINGLE_USER";
-export const RECEIVE_ALL_USERS = "RECEIVE_ALL_USERS";
+export const RECEIVE_NOT_FOLLOWED_USERS = "RECEIVE_NOT_FOLLOWED_USERS";
 
 export const receiveSingleUser = (user) => {
   return ({
@@ -10,9 +10,9 @@ export const receiveSingleUser = (user) => {
   });
 };
 
-export const receiveAllUsers = (users) => {
+export const receiveNotFollowedUsers = (users) => {
   return ({
-    type: RECEIVE_ALL_USERS,
+    type: RECEIVE_NOT_FOLLOWED_USERS,
     users: users,
   });
 };
@@ -34,7 +34,7 @@ export const updateUser = user => dispatch => {
   ));
 };
 
-export const fetchAllUsers = () => dispatch => {
-  return APIUtil.fetchAllUsers()
-    .then( (users) => { return dispatch(receiveAllUsers(users)); });
+export const fetchNotFollowedUsers = () => dispatch => {
+  return APIUtil.fetchNotFollowedUsers()
+    .then( (users) => { return dispatch(receiveNotFollowedUsers(users)); });
 };

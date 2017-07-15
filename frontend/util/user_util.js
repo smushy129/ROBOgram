@@ -23,7 +23,7 @@ export const updateUser = (user) => {
   });
 };
 
-export const fetchAllUsers = () => {
+export const fetchNotFollowedUsers = () => {
   return $.ajax({
     method: 'GET',
     url: `api/users`

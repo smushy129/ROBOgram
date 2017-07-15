@@ -4,16 +4,15 @@ import { Link } from 'react-router-dom';
 class Discover extends React.Component {
   constructor(props) {
     super(props);
-    console.log(props);
     this.allUsers = this.allUsers.bind(this);
   }
 
   componentDidMount() {
-    this.props.fetchAllUsers();
+    this.props.fetchNotFollowedUsers();
   }
 
   allUsers() {
-    const { discover } = this.props;
+    const { discover, createFollow, fetchNotFollowedUsers } = this.props;
     let allUsers = discover.map( (user, idx) => {
       return (
         <li key={idx} className='user-list-item'>
@@ -25,7 +24,8 @@ class Discover extends React.Component {
               <span>{user.name}</span>
             </div>
           </section>
-          <button className='follow-btn' onClick={ () => createFollow(user.userId) }>Follow</button>
+          <button className='follow-btn' onClick={ () => createFollow(user.userId)
+            .then( () => fetchNotFollowedUsers()) }>Follow</button>
         </li>
       );
     });
