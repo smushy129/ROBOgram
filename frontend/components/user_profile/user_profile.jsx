@@ -113,7 +113,7 @@ class userProfile extends React.Component {
 
         <section className='user-photos-section'>
           <ul className='user-photos-list'>
-            {userPhotos}
+            { userPhotos }
           </ul>
 
         </section>

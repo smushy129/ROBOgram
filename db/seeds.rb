@@ -51,7 +51,7 @@ users = User.create(
     {
       username: "r2d2",
       password: "password",
-      name: 'R2D2',
+      name: 'R2-D2',
       bio: '*BEEP*',
       website: '',
       avatar: File.open("app/assets/images/r2d2AVATAR.png")
@@ -63,6 +63,22 @@ users = User.create(
       bio: 'I bend things',
       website: "",
       avatar: File.open("app/assets/images/benderAVATAR.jpg")
+    },
+    {
+      username: "astroboy",
+      password: "password",
+      name: 'Astro Boy',
+      bio: 'This is my destiny',
+      website: '',
+      avatar: File.open("app/assets/images/astroboyAVATAR.jpg")
+    },
+    {
+      username: "eve",
+      password: "password",
+      name: 'Eve',
+      bio: 'Directive?',
+      website: "",
+      avatar: File.open("app/assets/images/eveAVATAR.jpg")
     }
   ]
 )
@@ -79,8 +95,13 @@ photos = Photo.create(
       image: File.open("app/assets/images/awesomo3.jpg")
     },
     {
+      user_id: User.find_by_username('astroboy').id,
+      caption: 'time to get serious!',
+      image: File.open("app/assets/images/astroboy2.jpg")
+    },
+    {
       user_id: User.find_by_username('robocop').id,
-      caption: 'Your move, creep',
+      caption: 'New toy',
       image: File.open("app/assets/images/robocop4.jpg")
     },
     {
@@ -90,12 +111,17 @@ photos = Photo.create(
     },
     {
       user_id: User.find_by_username('robocop').id,
-      caption: 'My new dark look',
+      caption: 'OG Robocop',
       image: File.open("app/assets/images/robocop1.jpg")
     },
     {
+      user_id: User.find_by_username('r2d2').id,
+      caption: '*beep*',
+      image: File.open("app/assets/images/r2d23.jpg")
+    },
+    {
       user_id: User.find_by_username('robocop').id,
-      caption: "This wall can't hold me.",
+      caption: "New movie new me.",
       image: File.open("app/assets/images/robocop2.jpeg")
     },
     {
@@ -104,9 +130,19 @@ photos = Photo.create(
       image: File.open("app/assets/images/bender4.jpg")
     },
     {
+      user_id: User.find_by_username('r2d2').id,
+      caption: '*beep*',
+      image: File.open("app/assets/images/r2d24.jpg")
+    },
+    {
       user_id: User.find_by_username('megatron').id,
       caption: 'Silly autobots.',
       image: File.open("app/assets/images/megatron4.jpg")
+    },
+    {
+      user_id: User.find_by_username('astroboy').id,
+      caption: 'i got moves',
+      image: File.open("app/assets/images/astroboy1.jpg")
     },
     {
       user_id: User.find_by_username('robocop').id,
@@ -129,6 +165,11 @@ photos = Photo.create(
       image: File.open("app/assets/images/bender3.jpg")
     },
     {
+      user_id: User.find_by_username('eve').id,
+      caption: 'Directive?',
+      image: File.open("app/assets/images/eve1.jpg")
+    },
+    {
       user_id: User.find_by_username('walle').id,
       caption: 'werk werk werk werk werk',
       image: File.open("app/assets/images/walle2.jpg")
@@ -145,8 +186,13 @@ photos = Photo.create(
     },
     {
       user_id: User.find_by_username('megatron').id,
-      caption: 'Call me if you see this guy.',
+      caption: 'Call me if you see this mug.',
       image: File.open("app/assets/images/megatron3.jpg")
+    },
+    {
+      user_id: User.find_by_username('eve').id,
+      caption: 'Directive?',
+      image: File.open("app/assets/images/eve2.jpg")
     },
     {
       user_id: User.find_by_username('optimusprime').id,
@@ -160,12 +206,12 @@ photos = Photo.create(
     },
     {
       user_id: User.find_by_username('megatron').id,
-      caption: 'My tank mode. Impressed?',
+      caption: 'Making light work of autobots',
       image: File.open("app/assets/images/megatron1.jpg")
     },
     {
       user_id: User.find_by_username('optimusprime').id,
-      caption: 'optimus prime? more like DESERT PRIME LOL',
+      caption: 'TODAY WE RIDE',
       image: File.open("app/assets/images/optimus4.jpg")
     },
     {
@@ -177,6 +223,16 @@ photos = Photo.create(
       user_id: User.find_by_username('bender').id,
       caption: 'Kneel before me!',
       image: File.open("app/assets/images/bender2.jpg")
+    },
+    {
+      user_id: User.find_by_username('eve').id,
+      caption: 'Directive?',
+      image: File.open("app/assets/images/eve3.jpg")
+    },
+    {
+      user_id: User.find_by_username('walle').id,
+      caption: 'gazing into space thinking about stuff',
+      image: File.open("app/assets/images/walle3.png")
     },
     {
       user_id: User.find_by_username('optimusprime').id,
@@ -194,9 +250,9 @@ photos = Photo.create(
       image: File.open("app/assets/images/r2d22.jpg")
     },
     {
-      user_id: User.find_by_username('megatron').id,
-      caption: 'My life motto.',
-      image: File.open("app/assets/images/megatron5.jpg")
+      user_id: User.find_by_username('walle').id,
+      caption: 'best friends <3',
+      image: File.open("app/assets/images/walle4.jpg")
     },
     {
       user_id: User.find_by_username('optimusprime').id,
