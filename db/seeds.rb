@@ -196,11 +196,6 @@ photos = Photo.create(
     },
     {
       user_id: User.find_by_username('optimusprime').id,
-      caption: 'The last knight',
-      image: File.open("app/assets/images/optimus6.jpg")
-    },
-    {
-      user_id: User.find_by_username('optimusprime').id,
       caption: 'Freedom is the right of all sentient beings',
       image: File.open("app/assets/images/optimus1.jpg")
     },
@@ -334,6 +329,22 @@ follows = Follow.create(
     {
       follower_id: User.find_by_username('robocop').id,
       followee_id: User.find_by_username('optimusprime').id
+    },
+    {
+      follower_id: User.find_by_username('astroboy').id,
+      followee_id: User.find_by_username('bender').id
+    },
+    {
+      follower_id: User.find_by_username('astroboy').id,
+      followee_id: User.find_by_username('awesomo').id
+    },
+    {
+      follower_id: User.find_by_username('eve').id,
+      followee_id: User.find_by_username('walle').id
+    },
+    {
+      follower_id: User.find_by_username('walle').id,
+      followee_id: User.find_by_username('eve').id
     },
   ]
 )

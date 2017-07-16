@@ -3,14 +3,14 @@ class Api::PhotosController < ApplicationController
 
   def index
     followee_photos = []
+    user = User.where(id: current_user.id).includes(photos: [:likes, :user, comments: [:user]]).first
+    followee_photos << user.photos
 
-    followee_photos.concat(current_user.photos)
+    followee_ids = current_user.followees.ids
+    followees = User.where(id: followee_ids).includes(photos: [:likes, :user, comments: [:user]])
+    followee_photos << followees.map(&:photos)
 
-    current_user.followees.each_with_index do |followee, idx|
-      followee_photos.concat(followee.photos)
-    end
-
-    @photos = followee_photos
+    @photos = followee_photos.flatten
 
     render :index
   end
