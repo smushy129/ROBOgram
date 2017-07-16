@@ -33,6 +33,7 @@
   height: 100%;
   max-width: 150px;
   max-height: 150px;
+  object-fit: cover;
 }
 
 .user-profile-details {
@@ -254,6 +255,15 @@
     justify-content: center;
     display: flex;
     align-items: center;
+  }
+
+  .user-photos-list {
+    margin: auto;
+    width: 80%;
+    flex-wrap: wrap;
+    display: flex;
+    max-width: 940px;
+    justify-content: center;
   }
 }
 
