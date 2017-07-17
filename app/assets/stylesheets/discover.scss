@@ -1,5 +1,6 @@
 .user-list {
   width: 30%;
+  min-width: 300px;
   margin: auto;
   margin-top: 50px;
   font-family: sans-serif;
@@ -27,7 +28,7 @@
   padding: 8px 16px;
 
   button {
-    width: 11%;
+    width: 80px;
     padding: 0 8px;
   }
 
