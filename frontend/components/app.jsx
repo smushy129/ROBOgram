@@ -36,7 +36,7 @@ const App = () => (
         &nbsp; &nbsp; &nbsp;
         <a href="https://www.linkedin.com/in/kingsleyliao/">LINKEDIN</a>
         &nbsp; &nbsp; &nbsp;
-        <a href="https://www.kingsleyliao.com/">PORTFOLIO</a>
+        <a href="http://www.kingsleyliao.com/">PORTFOLIO</a>
       </footer>
     </section>
   </div>
