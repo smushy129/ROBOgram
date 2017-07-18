@@ -34,9 +34,11 @@ class Discover extends React.Component {
 
   render() {
     return (
-      <ul className='user-list'>
-        { this.allUsers() }
-      </ul>
+      <section className='discover-user-body'>
+        <ul className='user-list'>
+          { this.allUsers() }
+        </ul>
+      </section>
     );
   }
 }
