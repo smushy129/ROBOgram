@@ -4,11 +4,23 @@ import PhotoFeedIndexItemContainer from './photo_feed_index_item_container';
 class PhotoFeed extends React.Component {
   constructor(props) {
     super(props);
+
+    this.state = {
+      end: 5
+    };
+
     this.parsePhotos = this.parsePhotos.bind(this);
+    this.infiniteScroll = this.infiniteScroll.bind(this);
   }
 
-  componentWillMount() {
+  componentDidMount() {
+    window.bottom = false;
+    window.addEventListener("scroll", this.infiniteScroll);
     this.props.fetchFeedPhotos();
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener("scroll", this.infiniteScroll);
   }
 
   parsePhotos() {
@@ -22,6 +34,19 @@ class PhotoFeed extends React.Component {
     return photosList;
   }
 
+  infiniteScroll() {
+    $(window).scroll(function() {
+      if ($(window).scrollTop() <= $(document).height() - $(window).height() && $(window).scrollTop() >= $(document).height() - $(window).height() - 200) {
+        window.bottom = true;
+      }
+    });
+
+    if (window.bottom) {
+      this.setState({ end: this.state.end + 5 });
+      window.bottom = false;
+    }
+  }
+
   ifNotEmptyObj(obj) {
     return Object.keys(obj).length !== 0;
   }
@@ -30,7 +55,7 @@ class PhotoFeed extends React.Component {
      let photosList;
 
      if (this.ifNotEmptyObj(this.props.photoFeed.photos)) {
-       photosList = this.parsePhotos().reverse();
+       photosList = this.parsePhotos().reverse().slice(0, this.state.end);
      }
 
     return (
@@ -42,5 +67,7 @@ class PhotoFeed extends React.Component {
     );
   }
 }
+
+
 
 export default PhotoFeed;

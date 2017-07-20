@@ -3,13 +3,17 @@ class Api::PhotosController < ApplicationController
 
   def index
     followee_photos = []
-    user = User.where(id: current_user.id).includes(photos: [:likes, :user, comments: [:user]]).first
+    user = User.where(id: current_user.id)
+      .includes(photos: [:likes, :user, comments: [:user]])
+      .first
+
     followee_photos << user.photos
-
     followee_ids = current_user.followees.ids
-    followees = User.where(id: followee_ids).includes(photos: [:likes, :user, comments: [:user]])
-    followee_photos << followees.map(&:photos)
 
+    followees = User.where(id: followee_ids)
+      .includes(photos: [:likes, :user, comments: [:user]])
+
+    followee_photos << followees.map(&:photos)
     @photos = followee_photos.flatten
 
     render :index
