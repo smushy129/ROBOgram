@@ -34,6 +34,16 @@ class PhotoFeedIndexItem extends React.Component {
     }
   }
 
+  doubleCLike() {
+    const { photo, createLike, destroyLike } = this.props;
+
+    if (photo.liked_by_current_user) {
+      return destroyLike(photo.id);
+    } else {
+      return createLike(photo.id);
+    }
+  }
+
   render() {
     const { photo } = this.props;
 
@@ -65,7 +75,7 @@ class PhotoFeedIndexItem extends React.Component {
         </div>
 
         <div className='photo-card-image'>
-          <img src={ photo.image_url } />
+          <img src={ photo.image_url } onDoubleClick={ () => this.doubleCLike() }/>
         </div>
 
         <div className='photo-card-info'>
