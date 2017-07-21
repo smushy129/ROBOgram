@@ -14,14 +14,12 @@ class EditUser extends React.Component {
   }
 
   componentDidMount () {
-    const { user } = this.props;
     this.props.fetchSingleUser(this.props.match.params.id)
     .then(() => {
       this.setState ({
-        id: `${user.id}`,
-        username: `${user.username}`,
-        name: `${user.name}`,
-        bio: `${user.bio}`,
+        username: `${this.props.user.username}`,
+        name: `${this.props.user.name}`,
+        bio: `${this.props.user.bio}`,
       });
     });
   }
