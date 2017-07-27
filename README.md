@@ -43,7 +43,7 @@ Users can also discover other users to follow in a convenient list. The discover
 
 ### Infinite Scrolling
 
-The user's feed is optimized by loading images only when the user scrolls down to near the bottom of the page. This saves on loading resources that the user may not even look at.
+The user's feed is optimized by loading images only when the user scrolls down to near the bottom of the page. This saves on loading unnecessary resources and decreases render times.
 
 ## Technologies
 
