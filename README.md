@@ -34,6 +34,17 @@ Users can upload photos through button on the NAVBAR that persist throughout the
 
 ![Image of upload-modal](https://github.com/kingsleyliao/ROBOgram/blob/master/app/assets/images/upload-photo-modal.png)
 
+### Search & Discover
+Users can conveniently find other users by typing into the search bar. Typing into the search bar sends an AJAX request for users that match the user's query.
+Users can also discover other users to follow in a convenient list. The discover feature sends an AJAX request for users the current user is not following.
+
+![Image of searchbar](https://github.com/kingsleyliao/ROBOgram/blob/master/app/assets/images/searchbar.png)
+![Image of discover](https://github.com/kingsleyliao/ROBOgram/blob/master/app/assets/images/discover-page.png)
+
+### Infinite Scrolling
+
+The user's feed is optimized by loading images only when the user scrolls down to near the bottom of the page. This saves on loading resources that the user may not even look at.
+
 ## Technologies
 
 ### Backend
@@ -71,9 +82,6 @@ Many features will be coming to Robogram in the future. See below for upcoming f
 
 Users can tag photos with #hashtags that can be searched.
 
-### Search
-
-Users can search users or photos
 
 ### Direct Messaging
 
@@ -82,7 +90,3 @@ Send live messages to other users
 ### Videos
 
 Users can upload videos that can be played
-
-### Infinite Scrolling
-
-Infinite scrolling of images for faster page load
