@@ -34,11 +34,14 @@ Users can upload photos through button on the NAVBAR that persist throughout the
 
 ![Image of upload-modal](https://github.com/kingsleyliao/ROBOgram/blob/master/app/assets/images/upload-photo-modal.png)
 
-### Search & Discover
+### Search
 Users can conveniently find other users by typing into the search bar. Typing into the search bar sends an AJAX request for users that match the user's query.
-Users can also discover other users to follow in a convenient list. The discover feature sends an AJAX request for users the current user is not following.
 
 ![Image of searchbar](https://github.com/kingsleyliao/ROBOgram/blob/master/app/assets/images/searchbar.png)
+
+### Discover
+Users can discover other users to follow in a convenient list. The discover feature sends an AJAX request for users the current user is not following.
+
 ![Image of discover](https://github.com/kingsleyliao/ROBOgram/blob/master/app/assets/images/discover-page.png)
 
 ### Infinite Scrolling
