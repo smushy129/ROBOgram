@@ -58,8 +58,15 @@ class PhotoFeed extends React.Component {
        photosList = this.parsePhotos().reverse().slice(0, this.state.end);
      }
 
+     if(!photosList) {
+       return(
+        <div className="rainbow-progress-bar"></div>
+      );
+     }
+
     return (
       <div>
+
         <ul className='photo-feed'>
           { photosList }
         </ul>

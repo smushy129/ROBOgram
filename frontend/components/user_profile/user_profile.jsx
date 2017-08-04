@@ -8,6 +8,10 @@ class userProfile extends React.Component {
   constructor(props) {
     super(props);
 
+    this.state = {
+      loading: true
+    };
+
     this.followOrEditProfileButton = this.followOrEditProfileButton.bind(this);
    }
 
@@ -64,6 +68,12 @@ class userProfile extends React.Component {
   render() {
     const { user, openModal } = this.props;
     let userPhotos = this.userPhotos();
+
+    if(this.state.loading) {
+      return(
+        <div className="rainbow-progress-bar"></div>
+      );
+    }
 
     return (
       <section className='user-data'>
