@@ -8,6 +8,7 @@ class userProfile extends React.Component {
   constructor(props) {
     super(props);
     this.followOrEditProfileButton = this.followOrEditProfileButton.bind(this);
+    this.uploadAvatarButton = this.uploadAvatarButton.bind(this);
    }
 
   componentDidMount() {
@@ -60,6 +61,23 @@ class userProfile extends React.Component {
     }
   }
 
+  uploadAvatarButton() {
+    const { user, openModal, currentUser } = this.props;
+
+    if(currentUser.id == this.props.match.params.id) {
+      return(
+        <button onClick={ () => openModal(<UploadAvatarContainer />)}
+          className='upload-avatar-button'>
+          <img src={user.avatar_url}/>
+        </button>
+      );
+    } else {
+        return(
+          <img src={user.avatar_url}  />
+        );
+    }
+  }
+
   render() {
     const { user, openModal } = this.props;
     let userPhotos = this.userPhotos();
@@ -75,10 +93,7 @@ class userProfile extends React.Component {
         <div className ='user-profile'>
           <div className='user-profile-contain'>
             <div className="profile-img">
-              <button onClick={ () => openModal(<UploadAvatarContainer />)}
-                className='upload-avatar-button'>
-                <img src={user.avatar_url} />
-              </button>
+              { this.uploadAvatarButton() }
             </div>
 
             <ul className='user-profile-details'>
