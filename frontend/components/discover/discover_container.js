@@ -5,7 +5,7 @@ import { createFollow } from '../../actions/follow_actions';
 
 const mapStateToProps = (state) => {
   return ({
-    discover: state.discover
+    discover: state.discover,
   });
 };
 

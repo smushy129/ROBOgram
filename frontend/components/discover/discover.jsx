@@ -13,6 +13,12 @@ class Discover extends React.Component {
 
   allUsers() {
     const { discover, createFollow, fetchNotFollowedUsers } = this.props;
+    if(!discover) {
+      return(
+       <div className="rainbow-progress-bar"></div>
+     );
+    }
+
     let allUsers = discover.map( (user, idx) => {
       return (
         <li key={idx} className='user-list-item'>
@@ -33,10 +39,12 @@ class Discover extends React.Component {
   }
 
   render() {
+    const allUsers = this.allUsers();
+
     return (
       <section className='discover-user-body'>
         <ul className='user-list'>
-          { this.allUsers() }
+          { allUsers }
         </ul>
       </section>
     );

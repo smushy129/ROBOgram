@@ -7,7 +7,7 @@ const DiscoverReducer = (state = [], action) => {
       return action.users;
 
     default:
-      return state;
+      return null;
   }
 };
 
