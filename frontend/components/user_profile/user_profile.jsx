@@ -82,6 +82,61 @@ class userProfile extends React.Component {
     const { user, openModal } = this.props;
     let userPhotos = this.userPhotos();
 
+    if(user.num_photos === 0) {
+      return (
+        <section className='user-data'>
+          <div className ='user-profile'>
+            <div className='user-profile-contain'>
+              <div className="profile-img">
+                { this.uploadAvatarButton() }
+              </div>
+
+              <ul className='user-profile-details'>
+                <div className='username-follow-btn'>
+                  <li className='user-profile-username'>{user.username}</li>
+                  { this.followOrEditProfileButton() }
+                </div>
+
+                <div className="user-meta-data">
+                  <span className='post-count'>
+                    <li>{user.num_photos}</li>
+                    &nbsp;
+                    <p>posts</p>
+                  </span>
+
+                  <span className='follower-count'>
+                    <li>{user.num_followers}</li>
+                    &nbsp;
+                    <p>followers</p>
+                  </span>
+
+                  <span className='following-count'>
+                    <li>{user.num_followees}</li>
+                    &nbsp;
+                    <p>following</p>
+                  </span>
+                </div>
+
+                <div className='deets'>
+                  <li className='user-profile-name'>{user.name}</li>
+                  &nbsp;
+                  <li>{user.bio} <a href={user.website}>{user.website}</a></li>
+                </div>
+              </ul>
+            </div>
+          </div>
+
+          <section className='user-photos-section'>
+            <ul className='user-photos-list'>
+              { userPhotos }
+            </ul>
+
+          </section>
+
+        </section>
+      );
+    }
+
     if(!userPhotos || user.id != this.props.match.params.id) {
       return(
         <div className="rainbow-progress-bar"></div>

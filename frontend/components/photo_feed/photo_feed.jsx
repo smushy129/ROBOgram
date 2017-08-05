@@ -47,15 +47,11 @@ class PhotoFeed extends React.Component {
     }
   }
 
-  ifNotEmptyObj(obj) {
-    return Object.keys(obj).length !== 0;
-  }
-
   render() {
      const { currentUser } = this.props;
      let photosList;
 
-     if (this.ifNotEmptyObj(this.props.photoFeed.photos)) {
+     if (this.props.photoFeed.photos.length !== 0) {
        photosList = this.parsePhotos().reverse().slice(0, this.state.end);
      }
 

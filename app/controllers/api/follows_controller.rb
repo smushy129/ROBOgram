@@ -1,10 +1,6 @@
 class Api::FollowsController < ApplicationController
   before_action :require_logged_in
 
-  def index
-
-  end
-
   def create
     @follow = Follow.new(followee_id: params[:followee_id])
     @follow.follower_id = current_user.id
