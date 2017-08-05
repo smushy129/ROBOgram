@@ -54,8 +54,8 @@ class PhotoFeed extends React.Component {
      if (this.props.photoFeed.photos.length !== 0) {
        photosList = this.parsePhotos().reverse().slice(0, this.state.end);
      }
-
-     if(!photosList && currentUser.num_followees > 0) {
+     
+     if(photosList.length === 0 && currentUser.num_followees > 0) {
        return(
         <div className="rainbow-progress-bar"></div>
       );
