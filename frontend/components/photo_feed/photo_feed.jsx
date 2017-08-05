@@ -52,13 +52,14 @@ class PhotoFeed extends React.Component {
   }
 
   render() {
+     const { currentUser } = this.props;
      let photosList;
 
      if (this.ifNotEmptyObj(this.props.photoFeed.photos)) {
        photosList = this.parsePhotos().reverse().slice(0, this.state.end);
      }
 
-     if(!photosList) {
+     if(!photosList && currentUser.num_followees > 0) {
        return(
         <div className="rainbow-progress-bar"></div>
       );
@@ -66,7 +67,6 @@ class PhotoFeed extends React.Component {
 
     return (
       <div>
-
         <ul className='photo-feed'>
           { photosList }
         </ul>

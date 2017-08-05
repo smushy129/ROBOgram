@@ -4,6 +4,8 @@ class Api::UsersController < ApplicationController
 
 		if @user.save
 			login(@user)
+      @follow = Follow.new(followee_id: 1, follower_id: current_user.id)
+      @follow.save
 			render "api/users/show"
 		else
 			render json: @user.errors.full_messages, status: 422

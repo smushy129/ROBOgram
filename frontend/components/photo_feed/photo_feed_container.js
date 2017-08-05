@@ -7,6 +7,7 @@ import { fetchFeedPhotos } from '../../actions/photo_feed_actions';
 const mapStateToProps = (state) => {
   return ({
     photoFeed: state.photoFeed,
+    currentUser: state.session.currentUser,
   });
 };
 
