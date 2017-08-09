@@ -13,11 +13,6 @@ class Discover extends React.Component {
 
   allUsers() {
     const { discover, createFollow, fetchNotFollowedUsers } = this.props;
-    if(discover.length === 0) {
-      return(
-       <div className="rainbow-progress-bar"></div>
-     );
-    }
 
     let allUsers = discover.map( (user, idx) => {
       return (
