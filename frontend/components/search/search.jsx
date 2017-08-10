@@ -9,21 +9,17 @@ class Search extends React.Component {
       focus: false
     };
 
-    this.handleSubmit = this.handleSubmit.bind(this);
-    this.handleChange = this.handleChange.bind(this);
+    this.preventDefault = this.preventDefault.bind(this);
     this.searchResults = this.searchResults.bind(this);
-    this.addFocus = this.addFocus.bind(this);
-    this.unFocus = this.unFocus.bind(this);
-    this.handleClick = this.handleClick.bind(this);
+    this.focus = this.focus.bind(this);
+    this.handleChange = this.handleChange.bind(this);
     this.emptySearchBar = this.emptySearchBar.bind(this);
   }
 
-  addFocus() {
-    this.setState({focus: true});
-  }
-
-  unFocus() {
-    this.setState({focus: false});
+  focus(boolean) {
+    return (boolean) => {
+      this.setState({focus: boolean});
+    };
   }
 
   emptySearchBar() {
@@ -40,9 +36,8 @@ class Search extends React.Component {
     }
   }
 
-  handleSubmit(e) {
+  preventDefault(e) {
     e.preventDefault();
-
   }
 
   searchResults() {
@@ -71,14 +66,10 @@ class Search extends React.Component {
     }
   }
 
-  handleClick(e) {
-    e.preventDefault();
-  }
-
  render () {
     return (
       <section className="search">
-          <form onSubmit={this.handleSubmit}>
+          <form onSubmit={this.preventDefault}>
             <label>
               <i id='search-icon' className="fa fa-search" aria-hidden="true"></i>
               <input
@@ -86,8 +77,8 @@ class Search extends React.Component {
                 placeholder="Search"
                 className="search-input"
                 onChange={ this.handleChange }
-                onFocus={this.addFocus}
-                onBlur={this.unFocus}
+                onFocus={this.focus(true)}
+                onBlur={this.focus(false)}
                 >
               </input>
 
