@@ -2,6 +2,7 @@
   display: flex;
   margin: auto;
   width: 100%;
+  justify-content: center;
 
   input {
     outline: none;
@@ -9,7 +10,6 @@
 }
 
 .search {
-  margin-left: 32%;
   display: flex;
   justify-content: center;
 }
@@ -66,5 +66,11 @@
 
   li:hover {
     background-color: #fafafa;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .search-bar {
+    display: none;
   }
 }
