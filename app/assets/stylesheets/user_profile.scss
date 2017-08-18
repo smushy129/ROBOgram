@@ -140,7 +140,7 @@
 
 .user-photos-list {
   margin: auto;
-  width: 80%;
+  width: 100%;
   flex-wrap: wrap;
   display: flex;
   max-width: 940px;
@@ -148,21 +148,17 @@
 
 .user-photo-list-item {
   margin: 1%;
-  max-width: 293px;
-  max-height: 293px;
+  height: 293px;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-
 
 .user-photo-list-item img {
   width: 100%;
   height: 100%;
   max-width: 293px;
   max-height: 293px;
-  margin-bottom: 31%;
-  margin-top: 31%;
   object-fit: cover;
   cursor: pointer;
 }
@@ -195,102 +191,31 @@
   outline: none;
 }
 
-@media screen and (max-width: 866px) {
-  .upload-avatar-button {
-    border-radius: 50%;
-    background-color: Transparent;
-    background-repeat:no-repeat;
-    border: none;
-    cursor:pointer;
-    overflow: hidden;
-    width: 100px;
-    height: 100px;
-  }
-
-  .profile-img img {
-    border-radius: 50%;
-    width: 100%;
-    height: 100%;
-    width: 75px;
-    height: 75px;
-    object-fit: cover;
-  }
-
-  .upload-avatar-button:focus {
-    outline: none;
-  }
-
-  .user-profile-contain {
-    font-size: 14px;
-    margin-left: 20%;
-  }
-
-  .user-profile-username {
-    font-size: 22px;
-    font-weight: 200;
-    font-family: -apple-system, system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-  }
-
-  .user-profile-details {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    margin-left: 2%;
-  }
-
-  .user-profile-details div {
-    margin-bottom: 3%;
-  }
-
-  .edit-profile-btn {
-    margin-left: 20px;
-    padding: 0 8px;
-    background: 0 0;
-    border-color: #dbdbdb;
-    color: #262626;
-    cursor: pointer;
-    -webkit-appearance: none;
-    border-radius: 3px;
-    border-style: solid;
-    border-width: 1px;
-    font-size: 9px;
-    font-weight: 600;
-    line-height: 26px;
-    outline: none;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    width: 20%;
-    justify-content: center;
-    display: flex;
-    align-items: center;
-  }
-
+@media screen and (max-width: 1035px) {
   .user-photos-list {
-    margin: auto;
-    width: 80%;
-    flex-wrap: wrap;
-    display: flex;
-    max-width: 940px;
-    justify-content: center;
+    width: 650px;
   }
 }
 
-// .user-photo-list-item {
-//   margin: 1%;
-//   height: auto;
-//   width: 31%;
-//   justify-content: center;
-//   align-items: center;
-// }
-//
-//
-// .user-photo-list-item img {
-//   margin: auto;
-//   width: 100%;
-//   height: 100%;
-//   max-width: 293px;
-//   max-height: 293px;
-//   object-fit: cover;
-//   cursor: pointer;
-// }
+@media screen and (max-width: 680px) {
+  .user-photos-list {
+    justify-content: center;
+  }
+
+  .user-photo-list-item {
+    margin: 1%;
+    height: 586px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .user-photo-list-item img {
+    width: 100%;
+    height: 100%;
+    max-width: 586px;
+    max-height: 586px;
+    object-fit: cover;
+    cursor: pointer;
+  }
+}
