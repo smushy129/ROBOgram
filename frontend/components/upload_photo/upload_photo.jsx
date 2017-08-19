@@ -66,23 +66,31 @@ class UploadPhoto extends React.Component {
     return(
       <div className='upload-modal' onClick={ (e) => e.stopPropagation() }>
         <div className='upload-modal-content'>
-          <p>Upload a New Picture</p>
 
           <div className='img-preview'>
-            <Dropzone className="drag-drop-zone" onDrop={ this.updateDragDropFile }><img src={this.state.imageUrl}/>Click or Drag an Image</Dropzone>
+            <div className="upload-side">
+              <p>Upload an Image</p>
+
+              <label>
+                <textarea rows="4" cols="50" className='upload-caption'type="text"
+                  onChange={this.updateCaption}
+                  placeholder='Add a caption'
+                  />
+              </label>
+
+              <div className='cancel-submit'>
+                <button onClick={this.handleSubmit}>Upload</button>
+                &nbsp; &nbsp;
+                <button onClick={() => this.props.closeModal() }>Cancel</button>
+              </div>
+            </div>
+            <Dropzone className="drag-drop-zone"
+              onDrop={ this.updateDragDropFile }>
+              <img src={this.state.imageUrl}/>
+            </Dropzone>
           </div>
 
-          <label>
-            <input className='upload-caption'type="text"
-              onChange={this.updateCaption}
-              placeholder='Add a caption'
-              />
-          </label>
-        </div>
 
-        <div className='cancel-submit'>
-          <button onClick={() => this.props.closeModal() }>Cancel</button>
-          <button onClick={this.handleSubmit}>Upload</button>
         </div>
       </div>
     );
