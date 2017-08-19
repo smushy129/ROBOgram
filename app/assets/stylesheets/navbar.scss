@@ -75,7 +75,7 @@
   a {
     font-size: 16px;
     text-align: center;
-    padding: 8px;
+    padding: 16px;
     font-weight: bold;
   }
 
@@ -96,38 +96,34 @@
 }
 
 
-@media screen and (max-width: 1100px) {
-  .discover-icon {
+@media screen and (max-width: 1200px) {
+  .nav-links {
     display: none;
   }
-  .upload-icon {
-    display: none;
-  }
-  .logout-icon {
-    display: none;
-  }
-  .user-icon {
-    display: none;
-  }
+
   .menu-icon {
     display: flex;
   }
+
   .nav-group {
-    width: 70%;
+    width: 90%;
+
+    a {
+      margin: 0;
+    }
   }
 }
 
 @media screen and (max-width: 680px) {
   .nav-group {
     width: 90%;
+    padding-left: 0;
+    padding-right: 0;
   }
 
   .logo {
     margin: 0;
     padding-top: 5px;
-  }
-
-  .logo img {
-    width: 90%;
+    margin-right: 15px;
   }
 }

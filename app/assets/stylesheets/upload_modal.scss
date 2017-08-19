@@ -98,7 +98,8 @@
 .drag-drop-zone {
   width: 400px;
   height: 400px;
-  background-color: #d8d8d8;
+  background-image: url(asset-path("dragdropfile.gif"));
+  background-size: cover;
 }
 
 .cancel-submit {

@@ -19,7 +19,6 @@ class Modal extends React.Component {
     if (isOpen) {
       return (
         <div className='modal-body' onClick={ this.clearAndCloseModal }>
-
           <div className='modal-content'>
             { component }
           </div>

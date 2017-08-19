@@ -89,8 +89,6 @@ class UploadPhoto extends React.Component {
               <img src={this.state.imageUrl}/>
             </Dropzone>
           </div>
-
-
         </div>
       </div>
     );

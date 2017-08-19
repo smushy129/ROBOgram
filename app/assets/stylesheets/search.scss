@@ -73,10 +73,24 @@
   .search-bar {
     margin-right: 10px;
   }
+}
+
+@media screen and (max-width: 680px) {
+  #search-icon {
+    display: none;
+  }
+
   .search-input{
     padding: 5px 0px;
   }
 }
 
 @media screen and (max-width: 680px) {
+  .search-bar {
+    display: none;
+  }
+
+  .nav-group {
+    justify-content: space-around;
+  }
 }
