@@ -51,18 +51,25 @@ class UploadAvatar extends React.Component {
     return(
       <div className='upload-avatar' onClick={ (e) => e.stopPropagation() }>
         <div className='upload-avatar-content'>
-          <p>Update Profile Picture</p>
-
           <div className='img-preview'>
-            <Dropzone className="drag-drop-zone" onDrop={ this.updateDragDropFile }><img src={this.state.imageUrl}/>Click or Drag an Image</Dropzone>
+            <div className="upload-avatar-side">
+              <p>Update Profile Picture</p>
+              <div className='cancel-submit'>
+                <button onClick={this.handleSubmit}>Upload</button>
+                &nbsp; &nbsp;
+                <button onClick={() => this.props.closeModal() }>Cancel</button>
+              </div>
+            </div>
+
+            <Dropzone className="drag-drop-zone"
+              onDrop={ this.updateDragDropFile }><img
+              src={this.state.imageUrl}/>
+            </Dropzone>
           </div>
 
         </div>
 
-        <div className='cancel-submit'>
-          <button onClick={() => this.props.closeModal() }>Cancel</button>
-          <button onClick={this.handleSubmit}>Upload</button>
-        </div>
+
       </div>
     );
   }
