@@ -27,6 +27,7 @@
 .logo {
   margin: 0;
   padding-top: 5px;
+  margin-right: 15px;
 }
 
 .nav-links a img {
@@ -44,7 +45,89 @@
   margin: 0 14px;
 }
 
+.menu-links {
+  display: flex;
+}
+
 .nav-links {
   display: flex;
   align-items: center;
+}
+
+.menu-links {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.menu-icon {
+  display: none;
+}
+
+.dropdown {
+  position: absolute;
+  top: 64px;
+  background-color: white;
+  justify-content: center;
+  flex-direction: column;
+
+  a {
+    font-size: 16px;
+    text-align: center;
+    padding: 8px;
+    font-weight: bold;
+  }
+
+  button {
+    font-size: 16px;
+    text-align: center;
+    padding: 8px;
+    font-weight: bold;
+  }
+
+  a:hover {
+    background-color: #fafafa;
+  }
+
+  button:hover {
+    background-color: #fafafa;
+  }
+}
+
+
+@media screen and (max-width: 1100px) {
+  .discover-icon {
+    display: none;
+  }
+  .upload-icon {
+    display: none;
+  }
+  .logout-icon {
+    display: none;
+  }
+  .user-icon {
+    display: none;
+  }
+  .menu-icon {
+    display: flex;
+  }
+  .nav-group {
+    width: 70%;
+  }
+}
+
+@media screen and (max-width: 680px) {
+  .nav-group {
+    width: 90%;
+  }
+
+  .logo {
+    margin: 0;
+    padding-top: 5px;
+  }
+
+  .logo img {
+    width: 90%;
+  }
 }

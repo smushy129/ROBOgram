@@ -69,8 +69,14 @@
   }
 }
 
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 1100px) {
   .search-bar {
-    display: none;
+    margin-right: 10px;
   }
+  .search-input{
+    padding: 5px 0px;
+  }
+}
+
+@media screen and (max-width: 680px) {
 }

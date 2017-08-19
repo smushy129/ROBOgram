@@ -4,12 +4,38 @@ import Search from '../search/search_container';
 
 import UploadPhotoContainer from '../upload_photo/upload_photo_container';
 
-
 class navbar extends React.Component {
   constructor(props) {
     super(props);
 
+    this.state = {
+      showMenu: false,
+    };
+
+    this.closeMenu = this.closeMenu.bind(this);
+    this.handleShow = this.handleShow.bind(this);
     this.handleLogOut = this.handleLogOut.bind(this);
+  }
+
+  componentWillMount() {
+    const closeAction = this.closeMenu;
+    window.onclick = function(event) {
+      if (event.target.parentNode.className !== 'menu-icon') {
+        closeAction();
+      }
+    };
+  }
+
+  closeMenu() {
+    this.setState({showMenu: false});
+  }
+
+  handleShow() {
+    if(this.state.showMenu) {
+      this.setState({showMenu: false});
+    } else {
+      this.setState({showMenu: true});
+    }
   }
 
   handleLogOut() {
@@ -32,12 +58,25 @@ class navbar extends React.Component {
               <Search />
             </div>
 
+            <div className="menu-links">
+              <button className="menu-icon"
+                onClick={ this.handleShow } >
+                <img src={window.images.menu} />
+              </button>
+
+              <div className="dropdown" style={{display: this.state.showMenu ? 'flex' : 'none'}}>
+                <Link to="/discover">Discover</Link>
+                <button onClick={ () => openModal(<UploadPhotoContainer />) }>Upload</button>
+                <Link to={`/users/${currentUser.id}`}>Profile</Link>
+                <button onClick={ this.handleLogOut } >Logout</button>
+              </div>
+            </div>
 
             <div className="nav-links">
-              <Link to="/discover"><img src={window.images.discover_icon} /></Link>
-              <button onClick={ () => openModal(<UploadPhotoContainer />) }><img src={window.images.upload_icon} /></button>
-              <Link to={`/users/${currentUser.id}`}><img src={window.images.profile_icon} /></Link>
-              <button onClick={ this.handleLogOut } ><img src={window.images.logout_icon} /></button>
+              <Link className="discover-icon" to="/discover"><img src={window.images.discover_icon} /></Link>
+              <button className="upload-icon" onClick={ () => openModal(<UploadPhotoContainer />) }><img src={window.images.upload_icon} /></button>
+              <Link className="user-icon" to={`/users/${currentUser.id}`}><img src={window.images.profile_icon} /></Link>
+              <button className="logout-icon" onClick={ this.handleLogOut } ><img src={window.images.logout_icon} /></button>
             </div>
           </hgroup>
         </header>
