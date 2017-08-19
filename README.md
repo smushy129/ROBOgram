@@ -68,7 +68,7 @@ React/Redux are JavaScript libraries built at frontend to make a single-page App
 - NPM (Node Package Manager) to manage dependencies.
 - Webpack module bundler to bundle JS files.
 - Babel compile JS files for compatible code.
-- SCSS / CSS3 create the User Interface.
+- SCSS / CSS3 create a responsive user interface.
 
 ## Additional Resources
 - [View Wireframes](https://github.com/kingsleyliao/ROBOgram/tree/master/docs/wireframes)
@@ -84,7 +84,6 @@ Many features will be coming to Robogram in the future. See below for upcoming f
 ### Hashtags
 
 Users can tag photos with #hashtags that can be searched.
-
 
 ### Direct Messaging
 
