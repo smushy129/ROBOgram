@@ -13,33 +13,56 @@ import PhotoDetailContainer from './photo_detail/photo_detail_container';
 import EditUserContainer from './edit_user/edit_user_container';
 import DiscoverContainer from './discover/discover_container';
 
-const App = () => (
-  <div>
-    <ModalContainer />
-    <header>
-      <NavbarContainer />
-    </header>
+class App extends React.Component {
+  constructor(props) {
+    super(props);
 
-    <Switch>
-      <Route exact path='/users/:id' component={ UserProfileContainer }/>
-      <AuthRoute exact path="/login" component={LoginFormContainer} />
-      <AuthRoute exact path="/signup" component={SignupFormContainer} />
-      <ProtectedRoute exact path="/users/:id/edit" component={EditUserContainer} />
-      <ProtectedRoute exact path="/discover" component={DiscoverContainer} />
-      <ProtectedRoute exact path="/photos/:id" component={PhotoDetailContainer} />
-      <ProtectedRoute path="/" component={PhotoFeedContainer} />
-    </Switch>
+    this.state = {
+      showMenu: false
+    };
+    this.handleShow = this.handleShow.bind(this);
+  }
 
-    <section className="main-footer">
-      <footer>
-        <a href="https://github.com/kingsleyliao">GITHUB</a>
-        &nbsp; &nbsp; &nbsp;
-        <a href="https://www.linkedin.com/in/kingsleyliao/">LINKEDIN</a>
-        &nbsp; &nbsp; &nbsp;
-        <a href="http://www.kingsleyliao.com/">PORTFOLIO</a>
-      </footer>
-    </section>
-  </div>
-);
+  handleShow(bool) {
+    return (e) => {
+      e.stopPropagation();
+      this.setState({showMenu: bool});
+    };
+  }
+
+  render() {
+    return (
+      <div onClick={ this.handleShow(false) }>
+        <ModalContainer />
+        <header>
+          <NavbarContainer
+            showMenu={this.state.showMenu}
+            handleShow={ this.state.showMenu ? this.handleShow(false) : this.handleShow(true) }/>
+        </header>
+
+        <Switch>
+          <Route exact path='/users/:id' component={ UserProfileContainer }/>
+          <AuthRoute exact path="/login" component={LoginFormContainer} />
+          <AuthRoute exact path="/signup" component={SignupFormContainer} />
+          <ProtectedRoute exact path="/users/:id/edit" component={EditUserContainer} />
+          <ProtectedRoute exact path="/discover" component={DiscoverContainer} />
+          <ProtectedRoute exact path="/photos/:id" component={PhotoDetailContainer} />
+          <ProtectedRoute path="/" component={PhotoFeedContainer} />
+        </Switch>
+
+        <section className="main-footer">
+          <footer>
+            <a href="https://github.com/kingsleyliao">GITHUB</a>
+            &nbsp; &nbsp; &nbsp;
+            <a href="https://www.linkedin.com/in/kingsleyliao/">LINKEDIN</a>
+            &nbsp; &nbsp; &nbsp;
+            <a href="http://www.kingsleyliao.com/">PORTFOLIO</a>
+          </footer>
+        </section>
+      </div>
+    );
+  }
+}
+
 
 export default App;

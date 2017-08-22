@@ -7,35 +7,7 @@ import UploadPhotoContainer from '../upload_photo/upload_photo_container';
 class navbar extends React.Component {
   constructor(props) {
     super(props);
-
-    this.state = {
-      showMenu: false,
-    };
-
-    this.closeMenu = this.closeMenu.bind(this);
-    this.handleShow = this.handleShow.bind(this);
     this.handleLogOut = this.handleLogOut.bind(this);
-  }
-
-  componentWillMount() {
-    const closeAction = this.closeMenu;
-    window.onclick = function(event) {
-      if (event.target.parentNode.className !== 'menu-icon') {
-        closeAction();
-      }
-    };
-  }
-
-  closeMenu() {
-    this.setState({showMenu: false});
-  }
-
-  handleShow() {
-    if(this.state.showMenu) {
-      this.setState({showMenu: false});
-    } else {
-      this.setState({showMenu: true});
-    }
   }
 
   handleLogOut() {
@@ -45,7 +17,7 @@ class navbar extends React.Component {
   }
 
   render() {
-    const { currentUser, openModal } = this.props;
+    const { currentUser, openModal, handleShow, showMenu } = this.props;
     return (
       currentUser ? (
         <header className="header">
@@ -60,11 +32,11 @@ class navbar extends React.Component {
 
             <div className="menu-links">
               <button className="menu-icon"
-                onClick={ this.handleShow } >
+                onClick={ handleShow } >
                 <img src={window.images.menu} />
               </button>
 
-              <div className="dropdown" style={{display: this.state.showMenu ? 'flex' : 'none'}}>
+              <div className="dropdown" style={{display: showMenu ? 'flex' : 'none'}}>
                 <Link to="/discover">Discover</Link>
                 <button onClick={ () => openModal(<UploadPhotoContainer />) }>Upload</button>
                 <Link to={`/users/${currentUser.id}`}>Profile</Link>
