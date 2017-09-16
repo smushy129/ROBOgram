@@ -116,3 +116,9 @@
 .dont-have-account p {
   margin-top: 28px;
 }
+
+@media screen and (max-width: 800px) {
+  .auth-phone-img {
+    display: none;
+  }
+}
