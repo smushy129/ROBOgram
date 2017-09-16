@@ -6,6 +6,7 @@ import ModalReducer from './modal_reducer';
 import PhotoDetailReducer from './photo_detail_reducer';
 import SearchReducer from './search_reducer';
 import DiscoverReducer from './discover_reducer';
+import ErrorsReducer from './errorsReducer'
 
 const RootReducer = combineReducers({
   session: SessionReducer,
@@ -15,6 +16,7 @@ const RootReducer = combineReducers({
   photoDetail: PhotoDetailReducer,
   searchBar: SearchReducer,
   discover: DiscoverReducer,
+  errors: ErrorsReducer,
 });
 
 export default RootReducer;

@@ -17,8 +17,10 @@ class Photo < ActiveRecord::Base
   validates :user, presence: true
   validates :caption, length: { maximum: 140 }
 
+
   has_attached_file :image
   validates_attachment_content_type :image, content_type: /\Aimage\/.*\z/
+  validates_with AttachmentSizeValidator, attributes: :image, less_than: 5.megabytes
 
   belongs_to :user,
     class_name: "User",

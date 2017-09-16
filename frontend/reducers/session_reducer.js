@@ -26,6 +26,7 @@ const SessionReducer = (state = nullUser, action) => {
     case UNDISPLAY_ERRORS:
       const emptyErrors = action.errors;
       return merge({}, nullUser, { errors });
+      
     default:
       return state;
   }
