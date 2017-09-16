@@ -26,7 +26,10 @@ class Api::PhotosController < ApplicationController
     if @photo.save
       render :show
     else
-      render json: @photo.errors.full_messages, status: 422
+      render(
+        json: ["Upload failed. File size must be under 5 MB"],
+        status: 422
+      )
     end
   end
 

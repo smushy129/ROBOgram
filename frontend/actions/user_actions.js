@@ -1,5 +1,5 @@
 import * as APIUtil from '../util/user_util';
-
+import { receiveErrors } from './error_actions'
 export const RECEIVE_SINGLE_USER = "RECEIVE_SINGLE_USER";
 export const RECEIVE_NOT_FOLLOWED_USERS = "RECEIVE_NOT_FOLLOWED_USERS";
 
@@ -25,7 +25,12 @@ export const fetchSingleUser = (id) => (dispatch) => {
 
 export const updateAvatar = formData => dispatch => {
   return APIUtil.updateAvatar(formData)
-    .then( (user) => { return dispatch(receiveSingleUser(user)); });
+    .then( (user) => {
+      return dispatch(receiveSingleUser(user));
+    }, (error) => {
+      return dispatch(receiveErrors(error.responseJSON));
+    }
+  );
 };
 
 export const updateUser = user => dispatch => {

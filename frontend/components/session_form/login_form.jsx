@@ -60,7 +60,6 @@ class LoginForm extends React.Component {
   render() {
     return(
       <section className="auth-page">
-
         <div className="auth-phone-img">
           <img src={window.images.auth_img} />
         </div>

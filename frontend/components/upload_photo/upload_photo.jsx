@@ -1,6 +1,7 @@
 import React from 'react';
 import { Redirect } from 'react-router-dom';
 import Dropzone from 'react-dropzone';
+import Errors from '../errors/errors'
 
 class UploadPhoto extends React.Component {
   constructor(props){
@@ -83,6 +84,7 @@ class UploadPhoto extends React.Component {
                 &nbsp; &nbsp;
                 <button onClick={() => this.props.closeModal() }>Cancel</button>
               </div>
+              <Errors />
             </div>
             <Dropzone className="drag-drop-zone"
               onDrop={ this.updateDragDropFile }>

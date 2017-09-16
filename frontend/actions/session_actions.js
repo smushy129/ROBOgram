@@ -2,7 +2,7 @@ import * as APIUtil from '../util/session_api_util';
 import { removeFeed } from './photo_feed_actions';
 
 export const RECEIVE_CURRENT_USER = 'RECEIVE_CURRENT_USER';
-export const RECEIVE_ERRORS = 'RECEIVE_ERRORS';
+export const LOGIN_ERRORS =  'LOGIN_ERRORS';
 export const UNDISPLAY_ERRORS = 'UNDISPLAY_ERRORS';
 export const SIGN_OUT = "SIGN_OUT";
 
@@ -22,7 +22,7 @@ export const signOut = currentUser => {
 
 export const receiveErrors = errors => {
   return ({
-    type: RECEIVE_ERRORS,
+    type: LOGIN_ERRORS,
     errors
   });
 };
